@@ -1,0 +1,4793 @@
+{
+ "sema": "kapi-1",
+ "kopya": "A",
+ "tamamlandi": true,
+ "kalan": [],
+ "gezilen": [
+  "s1/orta/r1c1",
+  "s1/orta/r1c2",
+  "s1/orta/r1c3",
+  "s1/orta/r1c4",
+  "s1/orta/r2c1",
+  "s1/orta/r2c2",
+  "s1/orta/r2c3",
+  "s1/orta/r2c4",
+  "s1/orta/r3c1",
+  "s1/orta/r3c2",
+  "s1/orta/r3c3",
+  "s1/orta/r3c4",
+  "s1/orta/r4c1",
+  "s1/orta/r4c2",
+  "s1/orta/r4c3",
+  "s1/orta/r4c4"
+ ],
+ "kaynak": {
+  "pdf": "Kapı 1stromlaufplan.pdf",
+  "sayfalar": [
+   1
+  ]
+ },
+ "kunye": {
+  "baslik": "Stromlaufplan Tuersteuerung Tuer 1 IST E-Antrieb",
+  "parcaNo": "A 628 821 76 50",
+  "format": "A2",
+  "tarih": "2004-05-14"
+ },
+ "varsayilan": {
+  "renk": "ws",
+  "kesit": "0.75",
+  "ham": "Alle Leitungen ohne Querschnittangaben haben A = 0.75mm²\nAlle Leitungen ohne Farbangaben sind ws\nDarstellung generell stromlos bzw. drucklos\n------- Variante / # Systemlieferant\n⊛ Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant"
+ },
+ "cihazlar": [
+  {
+   "kod": "HT332",
+   "yol": [
+    "4",
+    "50"
+   ],
+   "adDe": "Variante",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     234,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "04A03",
+   "yol": [
+    "23",
+    "48"
+   ],
+   "adDe": "Steuergeraet Flexibel programmierte Steuerung (FPS",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     276,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "not": "ad listede '(FPS' diye bitiyor, kapanış parantezi yok"
+  },
+  {
+   "kod": "41A01",
+   "yol": [
+    "75"
+   ],
+   "adDe": "Steuergeraet Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     319,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "42A01",
+   "yol": [
+    "23..66"
+   ],
+   "adDe": "Steuergeraet Tuer 2",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     361,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "not": "yol sütununda aralık yazıyor: '23..66'"
+  },
+  {
+   "kod": "60A01",
+   "yol": [
+    "62"
+   ],
+   "adDe": "Steuergeraet I-Modul",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     403,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41B01",
+   "yol": [
+    "15"
+   ],
+   "adDe": "Druckwellenschalter Einklemmschutz Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     445,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41B02",
+   "yol": [
+    "18"
+   ],
+   "adDe": "Druckwellenschalter Einklemmschutz Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     487,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41E01.1",
+   "yol": [
+    "46",
+    "49"
+   ],
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     529,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "ham": "41E01.1-2 | 46,49 | Beleuchtung Einstieg Tuer 1",
+   "not": "listede tek satır '41E01.1-2'; kod 41E01.1 ve 41E01.2 diye ikiye açıldı (çizimde iki lamba var). Yol sütunu iki yolu birlikte veriyor ('46,49'); hangi kodun hangi yolda olduğu listeden anlaşılmıyor"
+  },
+  {
+   "kod": "41E01.2",
+   "yol": [
+    "46",
+    "49"
+   ],
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     529,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "ham": "41E01.1-2 | 46,49 | Beleuchtung Einstieg Tuer 1",
+   "not": "listede tek satır '41E01.1-2'; kod 41E01.1 ve 41E01.2 diye ikiye açıldı. Yol sütunu iki yolu birlikte veriyor ('46,49')"
+  },
+  {
+   "kod": "41F01",
+   "yol": [
+    "59"
+   ],
+   "adDe": "Sicherung Schwenkschiebetuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     571,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41H01",
+   "yol": [
+    "74"
+   ],
+   "adDe": "Warnsummer Tuerlauf und Rampe Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     613,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41K01",
+   "yol": [
+    "57"
+   ],
+   "adDe": "Relais Stromversorgung Elektrotuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     655,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41M02",
+   "yol": [
+    "44"
+   ],
+   "adDe": "Motor Fluegel in Fahrtrichtung HI Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     55,
+     697,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41M03",
+   "yol": [
+    "38"
+   ],
+   "adDe": "Motor Fluegel in Fahrtrichtung VO Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     236,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41R01",
+   "yol": [
+    "50"
+   ],
+   "adDe": "Potentiometer Fluegel in Fahrtrichtung VO Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     277,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41R02",
+   "yol": [
+    "56"
+   ],
+   "adDe": "Potentiometer Fluegel in Fahrtrichtung HI Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     319,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41S10",
+   "yol": [
+    "12"
+   ],
+   "adDe": "Schalter Hand/Automatik Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     361,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41S11",
+   "yol": [
+    "21"
+   ],
+   "adDe": "Schalter Werkstatt Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     403,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41S21.1",
+   "yol": [
+    "4",
+    "8"
+   ],
+   "adDe": "Schalter Nothahn Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     445,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "ham": "41S21.1-2 | 4,8 | Schalter Nothahn Tuer 1",
+   "not": "listede tek satır '41S21.1-2'; kod 41S21.1 ve 41S21.2 diye ikiye açıldı (çizimde iki anahtar var). Yol sütunu iki yolu birlikte veriyor ('4,8'); hangi kodun hangi yolda olduğu listeden anlaşılmıyor"
+  },
+  {
+   "kod": "41S21.2",
+   "yol": [
+    "4",
+    "8"
+   ],
+   "adDe": "Schalter Nothahn Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     445,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "ham": "41S21.1-2 | 4,8 | Schalter Nothahn Tuer 1",
+   "not": "listede tek satır '41S21.1-2'; kod 41S21.1 ve 41S21.2 diye ikiye açıldı. Yol sütunu iki yolu birlikte veriyor ('4,8')"
+  },
+  {
+   "kod": "41S29",
+   "yol": [
+    "42"
+   ],
+   "adDe": "Schalter Antriebsmotor Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     487,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41S30",
+   "yol": [
+    "42"
+   ],
+   "adDe": "Schalter Antriebsmotor Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     529,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "W0901",
+   "yol": [
+    "60"
+   ],
+   "adDe": "Masse 1 Dach(quer)kanal",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     571,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "X02.25-43",
+   "yol": [
+    "60",
+    "63"
+   ],
+   "adDe": "Steckverbinder Hauptschalttafel (E-Fach)",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     613,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "not": "kod listede aralık olarak yazıyor ('X02.25-43'), olduğu gibi alındı; çizimde soketler X02.25 ve X02.43 olarak geçiyor"
+  },
+  {
+   "kod": "X0203",
+   "yol": [
+    "60"
+   ],
+   "adDe": "Verteiler Hauptschalttafel Kl. 30/3",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     655,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "X08.11-17",
+   "yol": [
+    "4..73"
+   ],
+   "adDe": "Steckverbinder Tueren",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     160,
+     697,
+     1130,
+     42
+    ]
+   },
+   "emin": true,
+   "not": "kod listede aralık olarak yazıyor ('X08.11-17'), yol sütunu da aralık ('4..73'); olduğu gibi alındı; çizimde soketler X08.11 … X08.17 olarak geçiyor"
+  },
+  {
+   "kod": "X0809",
+   "yol": [
+    "75"
+   ],
+   "adDe": "CAN-Sternpunkt Komfort",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c3",
+    "kutu": [
+     260,
+     236,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "41Y03",
+   "yol": [
+    "50"
+   ],
+   "adDe": "Magnetventil Ruecksteller Nothahn Tuer 1",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c3",
+    "kutu": [
+     260,
+     278,
+     1130,
+     42
+    ]
+   },
+   "emin": true
+  }
+ ],
+ "kablolar": [
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.2",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "5",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     215,
+     355,
+     245,
+     70
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; iki anahtarın üst (3) pinleri arası sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a001"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S10",
+     "soket": null,
+     "pin": "10",
+     "pinAdi": null,
+     "ham": "10"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "9",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     452,
+     355,
+     240,
+     70
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; 41S10 üst pin yazısı dönük '10' (1000 dpi büyütmede okundu)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a002"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S10",
+     "soket": null,
+     "pin": "10",
+     "pinAdi": null,
+     "ham": "10"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "12",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     688,
+     355,
+     180,
+     70
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a003"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "15",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     865,
+     355,
+     185,
+     70
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a004"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S11",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1045,
+     355,
+     185,
+     70
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; sürekli çizgi. 41S11 pin 2'den çıkan uzun çizgi (yukarı, sağa) ayrı parça: s1/orta/r1c2'de yazıldı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a005"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.2",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "5",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     270,
+     650,
+     250,
+     110
+    ]
+   },
+   "emin": true,
+   "not": "çizgi sürekli (kesikli değil); altında 'HT332' varyant işareti yazıyor. 41S21.1 pin 2'de #4023 çizgisiyle (NHB'ye) aynı pinde buluşuyor",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a006"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "15",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     862,
+     650,
+     190,
+     70
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; iki 'P' (basınç) anahtarının alt (1) pinleri arası çizgi: pin 1'den çapraz iner, yatay gider, 41B02 pin 1'e yukarı çıkar. 41B01 pin 1'de DW'ye giden #4027 çizgisiyle aynı pinde",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a007"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": ""
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1045,
+     650,
+     65,
+     185
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; 41B02 pin 1'den çapraz iner, düşey gider; X08.16/2 üstünde, X08.17/2 çizgisinin katıldığı noktada (şemada kod yazmıyor, düğüm ~d1) dallanır",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a008"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": ""
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "2",
+     "ham": "X08. 16/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1098,
+     826,
+     14,
+     50
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; kısa düşey kol, ucu yalnız siyah dikdörtgen (soket pini)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a009"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": ""
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "2",
+     "ham": "X08. 17/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "17",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     980,
+     770,
+     130,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.17/2'den yukarı, sağa, çapraz inip ~d1 noktasına katılır",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a010"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "10",
+     "pinAdi": "HS10",
+     "ham": "HS10 IV-18/10"
+    },
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": "42A01"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "23",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1395,
+     525,
+     75,
+     295
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; soketten çapraz sola inip düşey okla 42A01'e gidiyor. Aynı soket pininde (IV-18/10) sağa giden ikinci çizgi (#4002) ayrı parça: s1/orta/r1c2'de",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a011"
+  },
+  {
+   "etiket": "4002",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "10",
+     "pinAdi": "HS10",
+     "ham": "HS10 IV-18/10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "1",
+     "ham": "X08. 11/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "27",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     428,
+     535,
+     185,
+     185
+    ]
+   },
+   "emin": true,
+   "not": "etiket '#'sız '4002' (düşey parçada, X08.11/1'in alt/yarım daire tarafı); aynı soketin üst tarafındaki çizgi '#4002'",
+   "no": "4002",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a012"
+  },
+  {
+   "etiket": "#4002",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "1",
+     "ham": "X08. 11/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "1",
+     "ham": "X08. 12/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "27",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     585,
+     355,
+     150,
+     220
+    ]
+   },
+   "emin": true,
+   "not": "etiket X08.11/1'den yukarı çıkan düşey parçanın yanında; çizgi X08.12/1'den X08.17/1'e kırık (testere) biçiminde sürüyor, her X08.1x/1 siyah dikdörtgen ucunda bir dal, sonra 41S29 pin 2'ye varıyor",
+   "no": "4002",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a013"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "1",
+     "ham": "X08. 12/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "1",
+     "ham": "X08. 13/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "30",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     722,
+     355,
+     130,
+     110
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4002 ile sürekli çizgi (kırık çizgi, X08.12/1 dalından çapraz çıkıp yatay gidip X08.13/1'e iniyor)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a014"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "1",
+     "ham": "X08. 13/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "1",
+     "ham": "X08. 14/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "32",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     840,
+     355,
+     130,
+     110
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4002 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a015"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "1",
+     "ham": "X08. 14/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "1",
+     "ham": "X08. 15/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "34",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     958,
+     355,
+     130,
+     110
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4002 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a016"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "1",
+     "ham": "X08. 15/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "1",
+     "ham": "X08. 16/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "36",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     1076,
+     355,
+     130,
+     110
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4002 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a017"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "1",
+     "ham": "X08. 16/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "1",
+     "ham": "X08. 17/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "38",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     1194,
+     355,
+     130,
+     110
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4002 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a018"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "1",
+     "ham": "X08. 17/1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S29",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "40",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     1312,
+     355,
+     130,
+     135
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4002 ile sürekli çizgi; 41S29 pin 2'ye yukarıdan iniyor (aynı pine sağ üstten ikinci bir çizgi daha geliyor, o ayrı parça: r1c3)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a019"
+  },
+  {
+   "etiket": "#4136",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S29",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S30",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "41",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     1405,
+     738,
+     40,
+     160
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4136",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a020"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S11",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "86",
+     "pinAdi": null,
+     "ham": "86"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "37",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     0,
+     118,
+     1240,
+     672
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; sayfanın en üstündeki uzun çizgi: 41S11 pin 2'den yukarı çıkıp (r1c1/r1c2) y≈122'de sağa gidiyor, sağda aşağı inip röle 41K01 pin 86'ya çapraz giriyor. Aynı 86 pinine ikinci bir çizgi daha geliyor (41S29 pin 2'den)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a021"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S29",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "86",
+     "pinAdi": null,
+     "ham": "86"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "48",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     400,
+     178,
+     780,
+     612
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; 41S29 pin 2'den çapraz çıkıp yukarı, y≈183'te sağa, sonra aşağı inip 41K01 pin 86'ya düşey giriyor",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a022"
+  },
+  {
+   "etiket": "4039",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "4",
+     "pinAdi": "HS8",
+     "ham": "HS8 IV-18/4"
+    },
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": "42A01"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "52",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     870,
+     270,
+     195,
+     285
+    ]
+   },
+   "emin": true,
+   "not": "soketten çapraz sağa inip, yatay gidip düşey okla 42A01'e çıkıyor; etiket '#'sız '4039' (okun yanında)",
+   "no": "4039",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a023"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "4",
+     "pinAdi": "HS8",
+     "ham": "HS8 IV-18/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "9",
+     "ham": "X08. 11/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     870,
+     415,
+     18,
+     85
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz kısa düşey çizgi; X08.11/9'un diğer yanındaki #4039 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a024"
+  },
+  {
+   "etiket": "#4039",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "9",
+     "ham": "X08. 11/9"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41Y03",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     848,
+     510,
+     40,
+     160
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4039",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a025"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41Y03",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "85",
+     "pinAdi": null,
+     "ham": "85"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "51",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     870,
+     890,
+     305,
+     175
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; 41Y03 pin 2 soketinin altından çapraz sağa inip düşey, yatay (y≈1060) ve çapraz yukarı 41K01 pin 85'e varıyor. 41Y03 pin 2'den lambalara giden kısa düşey çizgi ayrı parça (r2c3)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a026"
+  },
+  {
+   "etiket": "#2,5-4134",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "3",
+     "ham": "X08. 11/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "30",
+     "pinAdi": null,
+     "ham": "30"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "56",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     1262,
+     510,
+     40,
+     275
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4134",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "id": "a027"
+  },
+  {
+   "etiket": "2,5rt-4001",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "3",
+     "ham": "X08. 11/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X02.43",
+     "pin": "1",
+     "ham": "X02. 43/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "59",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c3",
+    "kutu": [
+     1285,
+     180,
+     190,
+     335
+    ]
+   },
+   "emin": true,
+   "not": "X08.11/3'ün üst (yarım daire) tarafından yukarı çıkıp sağa, sonra aşağı iniyor; etiket '#'sız",
+   "no": "4001",
+   "isaret": null,
+   "kesit": "2.5",
+   "renk": "rt",
+   "id": "a028"
+  },
+  {
+   "etiket": "6005",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "60A01",
+     "hedef": null,
+     "ham": "60A01"
+    },
+    {
+     "tur": "soket",
+     "soket": "X02.25",
+     "pin": "4",
+     "ham": "X02. 25/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "62",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c4",
+    "kutu": [
+     590,
+     255,
+     45,
+     245
+    ]
+   },
+   "emin": true,
+   "not": "ok 60A01'e yukarı; etiket '#'sız '6005'; X02.25/4'ün altındaki çizgi '#6005' (sonraki kırpıntılarda)",
+   "no": "6005",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a029"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X02.43",
+     "pin": "1",
+     "ham": "X02. 43/1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41F01",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "41F01 20A"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "59",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c4",
+    "kutu": [
+     430,
+     535,
+     15,
+     265
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz uzun düşey çizgi; sigortanın üst ucuna giriyor (sigortada pin yazısı yok). Sigortanın alt ucundaki çizgi '4rt-0027' ayrı parça",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a030"
+  },
+  {
+   "etiket": "#4023",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "5",
+     "pinAdi": "NHB",
+     "ham": "NHB 15/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "8",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     475,
+     525,
+     80,
+     130
+    ]
+   },
+   "emin": true,
+   "not": "üst ucu r1c1'de: 41S21.1 pin 2 soketinden düşey iniyor (sürekli çizgi); etiket alt uçta",
+   "no": "4023",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a031"
+  },
+  {
+   "etiket": "#4037",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S10",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "12",
+     "pinAdi": "AUTO",
+     "ham": "AUTO 15/12"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "11",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     650,
+     525,
+     85,
+     130
+    ]
+   },
+   "emin": true,
+   "not": "üst ucu r1c1'de: 41S10 alt pin 1'den düşey iniyor",
+   "no": "4037",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a032"
+  },
+  {
+   "etiket": "#4027",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "3",
+     "pinAdi": "DW",
+     "ham": "DW 15/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "14",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     828,
+     525,
+     85,
+     130
+    ]
+   },
+   "emin": true,
+   "not": "üst ucu r1c1'de: 41B01 alt pin 1 soketinden düşey iniyor (41B01-1 ile 41B02-1 birbirine bağlı)",
+   "no": "4027",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a033"
+  },
+  {
+   "etiket": "#4022",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S11",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "2",
+     "pinAdi": "WFAT",
+     "ham": "WFAT 15/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1182,
+     525,
+     90,
+     130
+    ]
+   },
+   "emin": true,
+   "not": "üst ucu r1c1/r1c2'de: 41S11 alt pin 1 soketinden düşey iniyor",
+   "no": "4022",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a034"
+  },
+  {
+   "etiket": "#4048",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "11",
+     "ham": "X08. 12/11"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "7",
+     "pinAdi": "RMPST",
+     "ham": "RMPST 15/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "25",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1478,
+     440,
+     90,
+     215
+    ]
+   },
+   "emin": true,
+   "not": "X08.12/11 siyah dikdörtgeninin altından düşey iniyor; aynı X08.12/11 noktasına soldan çapraz çizgi (X08.16/4'ten) katılıyor",
+   "no": "4048",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a035"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "4",
+     "ham": "X08. 17/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "4",
+     "ham": "X08. 16/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1278,
+     440,
+     130,
+     85
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.17/4'ten aşağı, sağa, çapraz yukarı X08.16/4'e; #4048 ile sürekli çizgi (zincir: X08.17/4 - X08.16/4 - X08.12/11 - RMPST)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a036"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "4",
+     "ham": "X08. 16/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "11",
+     "ham": "X08. 12/11"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "24",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1395,
+     440,
+     130,
+     85
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.16/4'ten aşağı, sağa, çapraz yukarı X08.12/11'e; #4048 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a037"
+  },
+  {
+   "etiket": "#4047",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "10",
+     "ham": "X08. 12/10"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "8",
+     "pinAdi": "TBL",
+     "ham": "TBL 15/8"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "27",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     565,
+     420,
+     90,
+     235
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4047",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a038"
+  },
+  {
+   "etiket": "#4046",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "3",
+     "ham": "X08. 15/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "11",
+     "pinAdi": "HW",
+     "ham": "HW 15/11"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "29",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     685,
+     420,
+     80,
+     235
+    ]
+   },
+   "emin": true,
+   "not": "X08.15/3 noktasından sağa çapraz çizgi de çıkıyor (X08.14/3'e, ayrı parça)",
+   "no": "4046",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a039"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "3",
+     "ham": "X08. 15/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "3",
+     "ham": "X08. 14/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "30",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     715,
+     455,
+     135,
+     65
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.15/3'ten çapraz aşağı, yatay sağa, düşey yukarı X08.14/3'e; etiketli #4046 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a040"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "3",
+     "ham": "X08. 14/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "3",
+     "ham": "X08. 13/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "32",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     835,
+     455,
+     130,
+     65
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4046 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a041"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "3",
+     "ham": "X08. 13/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "8",
+     "ham": "X08. 12/8"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "34",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     955,
+     455,
+     130,
+     65
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4046 ile sürekli çizgi (zincirin sonu X08.12/8)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a042"
+  },
+  {
+   "etiket": "#4044",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "3",
+     "ham": "X08. 16/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "6",
+     "pinAdi": "LS",
+     "ham": "LS 15/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "37",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     1155,
+     420,
+     85,
+     235
+    ]
+   },
+   "emin": true,
+   "not": "X08.16/3 noktasından sağa çapraz çizgi de çıkıyor (X08.17/3'e, ayrı parça)",
+   "no": "4044",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a043"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "3",
+     "ham": "X08. 16/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "3",
+     "ham": "X08. 17/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "39",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     1190,
+     455,
+     130,
+     65
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.16/3'ten çapraz aşağı, yatay sağa, düşey yukarı X08.17/3'e; etiketli #4044 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a044"
+  },
+  {
+   "etiket": "#4137",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S30",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "15",
+     "pinAdi": "EIN2",
+     "ham": "EIN2 15/15"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "41",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     1395,
+     380,
+     90,
+     275
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4137",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a045"
+  },
+  {
+   "etiket": "#br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "85",
+     "pinAdi": null,
+     "ham": "85"
+    },
+    {
+     "tur": "devam",
+     "cihaz": null,
+     "hedef": "74",
+     "ham": "74"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "54",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     1140,
+     280,
+     55,
+     245
+    ]
+   },
+   "emin": true,
+   "not": "etiket '#br' (numarasız, kesit yok); düşey çizgi aşağı okla bitiyor, okun altında yalnız '74' yazıyor (hedef yazım biçimi sayfa/yol değil, tek sayı; bileşen listesinde 41H01 yol 74)",
+   "no": null,
+   "isaret": "#",
+   "kesit": null,
+   "renk": "br",
+   "id": "a046"
+  },
+  {
+   "etiket": "#2,5-4135",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "87",
+     "pinAdi": null,
+     "ham": "87"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "1",
+     "pinAdi": "Kl.15",
+     "ham": "Kl.15 18/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "56",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     1255,
+     270,
+     85,
+     395
+    ]
+   },
+   "emin": true,
+   "not": "pin adı 'Kl.15': ikinci harf düz dikey çizgi (küçük l ile büyük I ayırt edilemiyor, 'EIN2' deki I ile aynı çizgi)",
+   "no": "4135",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "id": "a047"
+  },
+  {
+   "etiket": "4rt-0027",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41F01",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "41F01 20A"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "X0203",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0203"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "59",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     1430,
+     150,
+     95,
+     300
+    ]
+   },
+   "emin": true,
+   "not": "sigortanın alt ucundan çıkıp açık daire (terminal) ucunda bitiyor; dairenin altında 'X0203' yazıyor",
+   "no": "0027",
+   "isaret": null,
+   "kesit": "4",
+   "renk": "rt",
+   "id": "a048"
+  },
+  {
+   "etiket": "#4034",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "4",
+     "pinAdi": "ESB",
+     "ham": "ESB 15/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     835,
+     440,
+     90,
+     220
+    ]
+   },
+   "emin": true,
+   "not": "lamba kodu etiketin konumundan: sağ lamba (yol 49) '41E01.1' etiketinin solunda; sol lamba '41E01.2'",
+   "no": "4034",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a049"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.2",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "47",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     690,
+     165,
+     190,
+     90
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; sol lambanın üst pin 2'sinden yukarı, sağa, çapraz inip sağ lambanın pin 2 soketine katılıyor",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a050"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41Y03",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     865,
+     168,
+     20,
+     72
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz kısa düşey çizgi (iki yarım daire arası); 41Y03 pin 2'den çapraz çıkıp 41K01 pin 85'e giden çizgi r1c3'te yazıldı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a051"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.2",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "47",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c3",
+    "kutu": [
+     690,
+     440,
+     190,
+     85
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; sol lambanın alt pin 1'inden aşağı, sağa, çapraz yukarı sağ lambanın pin 1'ine katılıyor (aynı pinden #4034 ESB'ye iniyor)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a052"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X02.25",
+     "pin": "4",
+     "ham": "X02. 25/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "2",
+     "ham": "X08. 11/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "62",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     605,
+     0,
+     15,
+     470
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz uzun düşey çizgi (r1c4'te X02.25/4'ün altından başlıyor, r2c4'te X08.11/2'nin üst yarım dairesine iniyor); X08.11/2'nin altındaki #6005 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a053"
+  },
+  {
+   "etiket": "#6005",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "2",
+     "ham": "X08. 11/2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "12",
+     "pinAdi": "C3",
+     "ham": "C3 18/12"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "62",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     575,
+     480,
+     80,
+     180
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "6005",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a054"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": "42A01"
+    },
+    {
+     "tur": "dugum",
+     "kod": "~d2",
+     "ham": ""
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "66",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     765,
+     0,
+     165,
+     295
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz KALIN (demet) çizgi: r1c4'te '42A01' okundan başlıyor, aşağıda yatay kalın çubukta bitiyor (düğüm ~d2 = çubuk); çubuğun altından iki ince kablo (1sw/rt, 1ws/li) ayrılıyor",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a055"
+  },
+  {
+   "etiket": "1sw/rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d2",
+     "ham": ""
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "4",
+     "pinAdi": "CANHS",
+     "ham": "CANHS 9/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "65",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     745,
+     285,
+     60,
+     365
+    ]
+   },
+   "emin": true,
+   "not": "kalın çubuğun sol ucundan iniyor; çizgiyi çaprazlayan eğik çizgi (iki çizgi arası) bükümlü çift simgesi gibi, kablo değil",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "sw/rt",
+   "id": "a056"
+  },
+  {
+   "etiket": "1ws/li",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d2",
+     "ham": ""
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "6",
+     "pinAdi": "CANLS",
+     "ham": "CANLS 9/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "67",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     865,
+     285,
+     60,
+     365
+    ]
+   },
+   "emin": true,
+   "not": "kalın çubuğun sağ ucundan iniyor; CANLS (9/6) pininde 4060 çizgisiyle (CANRS'ten gelen) aynı pinde buluşuyor",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "ws/li",
+   "id": "a057"
+  },
+  {
+   "etiket": "4060",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "5",
+     "pinAdi": "CANRS",
+     "ham": "CANRS 9/5"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "6",
+     "pinAdi": "CANLS",
+     "ham": "CANLS 9/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "69",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     905,
+     490,
+     125,
+     160
+    ]
+   },
+   "emin": true,
+   "not": "CANRS pininden yukarı, sola, aşağı ve çapraz inip CANLS soketinin üstüne katılıyor: iki ucu da 41A01 pini (köprü)",
+   "no": "4060",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a058"
+  },
+  {
+   "etiket": "1ws/rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0809",
+     "soket": "I-18",
+     "pin": "4",
+     "pinAdi": null,
+     "ham": "I-18/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "1",
+     "pinAdi": "CANHF",
+     "ham": "CANHF 9/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "72",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     1165,
+     160,
+     55,
+     490
+    ]
+   },
+   "emin": true,
+   "not": "üst ucu r1c4/r2c4'te X0809 (kesik-noktalı kutu) altındaki I-18/4 soketi; eğik çizgi bükümlü çift simgesi",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "ws/rt",
+   "id": "a059"
+  },
+  {
+   "etiket": "1gr/li",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0809",
+     "soket": "I-18",
+     "pin": "6",
+     "pinAdi": null,
+     "ham": "I-18/6"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "3",
+     "pinAdi": "CANLF",
+     "ham": "CANLF 9/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "74",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c4",
+    "kutu": [
+     1285,
+     160,
+     55,
+     490
+    ]
+   },
+   "emin": false,
+   "not": "etiketin 2. karakteri 'q'ya benziyor (bu yazı tipinde g de böyle çiziliyor); 'gr' (gri) olarak yazıldı, g/q ayırt edilemedi",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "gr/li",
+   "id": "a060"
+  },
+  {
+   "etiket": "#4049",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "10",
+     "pinAdi": "HWA1",
+     "ham": "HWA1 15/10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "7",
+     "ham": "X08. 15/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "21",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     1250,
+     205,
+     70,
+     240
+    ]
+   },
+   "emin": true,
+   "not": "41A01 kutusunun alt kenarındaki pin; çizgi aşağı iniyor, X08.15/7 noktasından sağa kırık çizgi zinciri çıkıyor (X08.14/7, X08.13/7 ... r3c2'de devam)",
+   "no": "4049",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a061"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "7",
+     "ham": "X08. 15/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "7",
+     "ham": "X08. 14/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     1278,
+     378,
+     130,
+     90
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.15/7'den çapraz yukarı, yatay sağa, düşey aşağı X08.14/7'ye; etiketli #4049 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a062"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "7",
+     "ham": "X08. 14/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "7",
+     "ham": "X08. 13/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "24",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     1395,
+     378,
+     130,
+     90
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4049 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a063"
+  },
+  {
+   "etiket": "#4009",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "11",
+     "ham": "X08. 11/11"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "5",
+     "ham": "X08. 13/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "3",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     180,
+     455,
+     160,
+     170
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi (X08.11/11'den aşağı, sağa, X08.13/5'e yukarı)",
+   "no": "4009",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a064"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "5",
+     "ham": "X08. 13/5"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "5",
+     "ham": "X08. 14/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "6",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     330,
+     465,
+     125,
+     155
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.13/5 dalından çapraz aşağı, düşey, yatay, düşey yukarı X08.14/5'e; etiketli #4009 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a065"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "5",
+     "ham": "X08. 14/5"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "5",
+     "ham": "X08. 15/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "8",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     447,
+     465,
+     130,
+     155
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4009 ile sürekli çizgi (zincirin sonu X08.15/5)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a066"
+  },
+  {
+   "etiket": "#4010",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "12",
+     "ham": "X08. 11/12"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "6",
+     "ham": "X08. 13/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "11",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     655,
+     455,
+     160,
+     170
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi (X08.11/12'den aşağı, sağa, X08.13/6'ya yukarı)",
+   "no": "4010",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a067"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "6",
+     "ham": "X08. 13/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "6",
+     "ham": "X08. 14/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "14",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     805,
+     465,
+     125,
+     155
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4010 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a068"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "6",
+     "ham": "X08. 14/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "6",
+     "ham": "X08. 15/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "16",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     922,
+     465,
+     130,
+     155
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4010 ile sürekli çizgi (zincirin sonu X08.15/6)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a069"
+  },
+  {
+   "etiket": "#4004",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "4",
+     "ham": "X08. 11/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "3",
+     "ham": "X08. 12/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "3",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     180,
+     750,
+     160,
+     165
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi",
+   "no": "4004",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a070"
+  },
+  {
+   "etiket": "#4005",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "5",
+     "ham": "X08. 11/5"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "4",
+     "ham": "X08. 12/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "7",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     418,
+     750,
+     160,
+     165
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi",
+   "no": "4005",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a071"
+  },
+  {
+   "etiket": "#4006",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "6",
+     "ham": "X08. 11/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "5",
+     "ham": "X08. 12/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "11",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     655,
+     750,
+     160,
+     165
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi",
+   "no": "4006",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a072"
+  },
+  {
+   "etiket": "#4007",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "7",
+     "ham": "X08. 11/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "6",
+     "ham": "X08. 12/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "15",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     893,
+     750,
+     160,
+     165
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi",
+   "no": "4007",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a073"
+  },
+  {
+   "etiket": "#4008",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "8",
+     "ham": "X08. 11/8"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "9",
+     "ham": "X08. 12/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "19",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     1130,
+     750,
+     160,
+     165
+    ]
+   },
+   "emin": true,
+   "not": "U biçimli çizgi",
+   "no": "4008",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a074"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "7",
+     "ham": "X08. 13/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "10",
+     "ham": "X08. 11/10"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "26",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     482,
+     378,
+     130,
+     92
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.13/7'den çapraz yukarı, yatay sağa, düşey aşağı X08.11/10'a; etiketli #4049 ile sürekli çizgi (zincirin sonu X08.11/10)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a075"
+  },
+  {
+   "etiket": "#4050",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "13",
+     "pinAdi": "FGA",
+     "ham": "FGA 15/13"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "2",
+     "ham": "X08. 13/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "29",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     690,
+     205,
+     80,
+     270
+    ]
+   },
+   "emin": true,
+   "not": "41A01 alt kenar pini; X08.13/2 noktasından sağa kırık çizgi zinciri çıkıyor (X08.14/2, X08.15/2)",
+   "no": "4050",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a076"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "2",
+     "ham": "X08. 13/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "2",
+     "ham": "X08. 14/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "30",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     718,
+     378,
+     130,
+     92
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4050 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a077"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "2",
+     "ham": "X08. 14/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "2",
+     "ham": "X08. 15/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "32",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     836,
+     378,
+     130,
+     92
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4050 ile sürekli çizgi (zincirin sonu X08.15/2)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a078"
+  },
+  {
+   "etiket": "#2,5-4074",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "4",
+     "pinAdi": "MOT+V",
+     "ham": "MOT+V 18/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M03",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "35",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     1040,
+     205,
+     70,
+     385
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4074",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "id": "a079"
+  },
+  {
+   "etiket": "#2,5-4075",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "5",
+     "pinAdi": "MOT-V",
+     "ham": "MOT-V 18/5"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M03",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "37",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     1160,
+     205,
+     70,
+     385
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4075",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "id": "a080"
+  },
+  {
+   "etiket": "#2,5-4083",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "8",
+     "pinAdi": "MOT-H",
+     "ham": "MOT-H 18/8"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "41",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     360,
+     205,
+     75,
+     385
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4083",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "id": "a081"
+  },
+  {
+   "etiket": "#2,5-4082",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "7",
+     "pinAdi": "MOT+H",
+     "ham": "MOT+H 18/7"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "43",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     478,
+     205,
+     75,
+     385
+    ]
+   },
+   "emin": true,
+   "not": null,
+   "no": "4082",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "id": "a082"
+  },
+  {
+   "etiket": "#4057",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "11",
+     "pinAdi": "ANGND",
+     "ham": "ANGND 18/11"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "46",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     660,
+     205,
+     70,
+     480
+    ]
+   },
+   "emin": true,
+   "not": "41R01 pin 3 soketinin üstünde ikinci bir çizgi daha başlıyor (41R02 pin 1'e giden, ayrı parça)",
+   "no": "4057",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a083"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     690,
+     552,
+     365,
+     138
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; 41R01 pin 3'ten çapraz yukarı, düşey, y≈557'de yatay sağa, düşey aşağı 41R02 pin 1'e. Üç düşey çizgiyle (#4031, #4032 ve 41R02 pin 1) kesişiyor, kesişmede nokta yok",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a084"
+  },
+  {
+   "etiket": "#4031",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "13",
+     "pinAdi": "POSV",
+     "ham": "POSV 18/13"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "48",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     775,
+     205,
+     80,
+     485
+    ]
+   },
+   "emin": true,
+   "not": "düz düşey çizgi; yatay çizgiyle kesişiyor, nokta yok",
+   "no": "4031",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a085"
+  },
+  {
+   "etiket": "#4032",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "10",
+     "pinAdi": "UREF",
+     "ham": "UREF 18/10"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "50",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     893,
+     205,
+     80,
+     485
+    ]
+   },
+   "emin": true,
+   "not": "41R01 pin 1 soketinin üstünde ikinci çizgi başlıyor (41R02 pin 3'e giden, ayrı parça)",
+   "no": "4032",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a086"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R02",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "53",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     925,
+     612,
+     365,
+     78
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; 41R01 pin 1'den çapraz yukarı, y≈618'de yatay sağa, düşey aşağı 41R02 pin 3'e; #4033 (41R02 pin 2) ve 41R02 pin 1 düşey çizgileriyle kesişiyor, nokta yok",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a087"
+  },
+  {
+   "etiket": "#4033",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "16",
+     "pinAdi": "POSH",
+     "ham": "POSH 18/16"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "53",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     1128,
+     205,
+     80,
+     485
+    ]
+   },
+   "emin": true,
+   "not": "düz düşey çizgi; yatay çizgiyle kesişiyor, nokta yok",
+   "no": "4033",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a088"
+  },
+  {
+   "etiket": "#2,5br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "3",
+     "pinAdi": "GND",
+     "ham": "GND 18/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "15",
+     "ham": "X08. 11/15"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "60",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     1480,
+     205,
+     75,
+     535
+    ]
+   },
+   "emin": true,
+   "not": "etiket numarasız (2,5 mm² kahverengi, '#' var). X08.11/15 noktasından sağa çapraz çıkan kırık çizgi zinciri ayrı parça (r3c4)",
+   "no": null,
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": "br",
+   "id": "a089"
+  },
+  {
+   "etiket": "2,5br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "15",
+     "ham": "X08. 11/15"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0901",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0901"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "60",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c3",
+    "kutu": [
+     1480,
+     780,
+     75,
+     115
+    ]
+   },
+   "emin": true,
+   "not": "etiket '#'sız; X08.11/15 yarım dairesinin altından düşey iniyor, şase çubuğunda (W0901) bitiyor",
+   "no": null,
+   "isaret": null,
+   "kesit": "2.5",
+   "renk": "br",
+   "id": "a090"
+  },
+  {
+   "etiket": "#4045",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "14",
+     "pinAdi": "KW",
+     "ham": "KW 15/14"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "4",
+     "ham": "X08. 15/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "64",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     690,
+     225,
+     60,
+     250
+    ]
+   },
+   "emin": true,
+   "not": "41A01 alt kenar pini; X08.15/4 pininin hemen üstündeki noktadan sağa kırık çizgi zinciri çıkıyor (X08.14/4, X08.13/4, X08.12/7)",
+   "no": "4045",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a091"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "4",
+     "ham": "X08. 15/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "4",
+     "ham": "X08. 14/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "65",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     725,
+     380,
+     125,
+     95
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.15/4 düşeyinden çapraz yukarı, yatay sağa, düşey aşağı X08.14/4'e; etiketli #4045 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a092"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "4",
+     "ham": "X08. 14/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "4",
+     "ham": "X08. 13/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "67",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     843,
+     380,
+     125,
+     95
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4045 ile sürekli çizgi",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a093"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "4",
+     "ham": "X08. 13/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "7",
+     "ham": "X08. 12/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "69",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     961,
+     380,
+     125,
+     95
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; etiketli #4045 ile sürekli çizgi (zincirin sonu X08.12/7, ondan sonra çizgi yok)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a094"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "15",
+     "ham": "X08. 11/15"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "12",
+     "ham": "X08. 12/12"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "61",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     490,
+     675,
+     125,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; GND (#2,5br) düşeyinde X08.11/15 pininin üstündeki noktadan çapraz yukarı, yatay sağa, düşey aşağı X08.12/12'ye; #2,5br ile sürekli çizgi (zincir X08.17/6 ve 41H01 pin 30'a kadar sürüyor)",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a095"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "12",
+     "ham": "X08. 12/12"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "9",
+     "ham": "X08. 13/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "63",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     608,
+     675,
+     125,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.11/15 zincirinin devamı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a096"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "9",
+     "ham": "X08. 13/9"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "9",
+     "ham": "X08. 14/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "65",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     725,
+     675,
+     125,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.11/15 zincirinin devamı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a097"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "9",
+     "ham": "X08. 14/9"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "9",
+     "ham": "X08. 15/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "67",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     843,
+     675,
+     125,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.11/15 zincirinin devamı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a098"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "9",
+     "ham": "X08. 15/9"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "6",
+     "ham": "X08. 16/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "69",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     961,
+     675,
+     125,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.11/15 zincirinin devamı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a099"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "6",
+     "ham": "X08. 16/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "6",
+     "ham": "X08. 17/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "71",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     1079,
+     675,
+     125,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.11/15 zincirinin devamı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a100"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "6",
+     "ham": "X08. 17/6"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "30",
+     "pinAdi": null,
+     "ham": "30"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~73",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     1197,
+     615,
+     68,
+     125
+    ]
+   },
+   "emin": true,
+   "not": "etiketsiz; X08.17/6 düşeyinden çapraz yukarı, düşey yukarı 41H01 pin 30 soketine; zincirin sonu. 30 pininden çıkan ikinci çizgi (#br, ok 54) ayrı parça",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a101"
+  },
+  {
+   "etiket": "#4038",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "1",
+     "pinAdi": "TSW",
+     "ham": "TSW 15/1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "87",
+     "pinAdi": null,
+     "ham": "87"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "73",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     1225,
+     225,
+     70,
+     180
+    ]
+   },
+   "emin": true,
+   "not": "41A01 alt kenar pini; düz düşey inip 41H01 pin 87 soketine giriyor. 87'nin üstündeki noktadan sağa çıkan ikinci çizgi (86 soketine) ayrı parça. 87 ile 30 arasında 41H01 simgesi (zil/summer) kesikli çizgiyle çizili; bu cihaz içi gösterim, kablo parçası yazılmadı",
+   "no": "4038",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a102"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "87",
+     "pinAdi": null,
+     "ham": "87"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "86",
+     "pinAdi": null,
+     "ham": "86"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "74",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     1257,
+     318,
+     130,
+     90
+    ]
+   },
+   "emin": false,
+   "not": "etiketsiz; 87 soketinin üst ucundan (#4038 ile aynı nokta) çapraz yukarı, yatay sağa, düşey aşağı '86' soketine (alt ucu boş soket, altında pin/çizgi yok). İki ucu da aynı cihazın pini gibi görünüyor. emin:false nedeni: 86'nın yanında cihaz kodu yazmıyor, 87 ve 30 ile aynı blokta olduğu için 41H01 yazıldı",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a103"
+  },
+  {
+   "etiket": "#br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "30",
+     "pinAdi": null,
+     "ham": "30"
+    },
+    {
+     "tur": "devam",
+     "cihaz": null,
+     "hedef": "54",
+     "ham": "54"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "74",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c4",
+    "kutu": [
+     1255,
+     612,
+     85,
+     270
+    ]
+   },
+   "emin": true,
+   "not": "etiket '#br' (numarasız, kesit yok); 41H01 pin 30'dan çapraz aşağı sağa inip düşey okla bitiyor, okun altında yalnız '54' yazıyor (hedef yazım biçimi tek sayı). r2c3'teki '#br' (41K01 pin 85, ok '74') ile karşılıklı ok çifti",
+   "no": null,
+   "isaret": "#",
+   "kesit": null,
+   "renk": "br",
+   "id": "a104"
+  }
+ ],
+ "okunamayanlar": [
+  {
+   "nerede": "bileşen listesi, ilk satır 'HT332 | 4,50 | Variante'",
+   "ne": "listede var, bağlantısı bulunamadı: ad 'Variante'. Çizimde 'HT332' yazısı yalnız etiket olarak geçiyor (yol 4'te 41S21.2 grubunun altında, yol 50'de 41Y03'ün altında); hiçbir kablo ucu yok, varyant işareti gibi duruyor",
+   "kirpinti": "s1/orta/r4c1"
+  }
+ ]
+}

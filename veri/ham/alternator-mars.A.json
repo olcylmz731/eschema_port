@@ -1,0 +1,1542 @@
+{
+ "sema": "alternator-mars",
+ "kopya": "A",
+ "tamamlandi": true,
+ "kalan": [],
+ "gezilen": [
+  "s1/orta/r1c1",
+  "s1/orta/r1c2",
+  "s1/orta/r1c3",
+  "s1/orta/r1c4",
+  "s1/orta/r2c1",
+  "s1/orta/r2c2",
+  "s1/orta/r2c3",
+  "s1/orta/r2c4",
+  "s1/orta/r3c1",
+  "s1/orta/r3c2",
+  "s1/orta/r3c3",
+  "s1/orta/r3c4",
+  "s1/orta/r4c1",
+  "s1/orta/r4c2",
+  "s1/orta/r4c3",
+  "s1/orta/r4c4"
+ ],
+ "kaynak": {
+  "pdf": "Alternatör - Marş Motoru stromlaufplan.pdf",
+  "sayfalar": [
+   1
+  ]
+ },
+ "kunye": {
+  "baslik": "Stromlaufplan Starter und Generatoren",
+  "parcaNo": "A 311 546 29 96",
+  "format": "A2",
+  "tarih": "2005-12-02",
+  "ham": {
+   "Benennung / title": "Stromlaufplan | Starter und Generatoren",
+   "Sach-Nr. / basic number": "A 311 546 29 96",
+   "Format": "A2",
+   "Sprache/lang.": "deutsch",
+   "EK/el.-code": "01",
+   "ZGS": "001",
+   "ED-KB": "BZ/028",
+   "Auftrags-Nr. / order no.": "WFR 02224/05",
+   "Datum / date (Bearb./ auth.)": "2005-12-02",
+   "Name": "Haering",
+   "Pruef./ check., Norm / stand., Freig./ rel.": "siehe / KEM"
+  }
+ },
+ "varsayilan": {
+  "renk": "ws",
+  "kesit": "0.75",
+  "ham": "BEMERKUNGEN : Alle Leitungen ohne Querschnittangaben haben A = 0.75mm2 | Alle Leitungen ohne Farbangaben sind ws | Darstellung generell stromlos bzw. drucklos | ------- Variante / # Systemlieferant | (Gelenk simgesi) Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant"
+ },
+ "cihazlar": [
+  {
+   "kod": "04A04",
+   "yol": [
+    "34"
+   ],
+   "adDe": "Steuergeraet Flexibel programmierte Steuerung (FPS",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "beyin",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     231,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "10A01",
+   "yol": [
+    "13"
+   ],
+   "adDe": "Steuergeraet Motorregelung MR",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "beyin",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     273,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "10A10",
+   "yol": [
+    "20",
+    "22"
+   ],
+   "adDe": "Steuergeraet Common Powertrain Controller CPC",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "beyin",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     317,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "24F01",
+   "yol": [
+    "31"
+   ],
+   "adDe": "Sicherung Druckluftversorgung",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "sigorta",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     360,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "01G01",
+   "yol": [
+    "21"
+   ],
+   "adDe": "Generator 1",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "guc",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     404,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "01G02",
+   "yol": [
+    "32"
+   ],
+   "adDe": "Generator 2",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "guc",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     446,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "10M01",
+   "yol": [
+    "10"
+   ],
+   "adDe": "Starter",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "motor",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     489,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "01R02",
+   "yol": [
+    "31"
+   ],
+   "adDe": "Vorerregung Generator 2",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "direnc",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     531,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "01V01",
+   "yol": [
+    "32"
+   ],
+   "adDe": "Diode Entkopplung D+",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "diyot",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     574,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "W0501",
+   "yol": [
+    "9..31"
+   ],
+   "adDe": "Masse 1 Motorraum",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "toprak",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     616,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "X03.20-54",
+   "yol": [
+    "32..36"
+   ],
+   "adDe": "Steckverbinder Nebenschalttafel",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     657,
+     1127,
+     42
+    ]
+   },
+   "emin": true,
+   "not": "Kod hücresinden taşıyor: 'X03.20-5432..36' bitişik yazılmış; kod X03.20-54, akım yolu 32..36 okundu (yakın kırpıntıda net). Aralık: X03.20'den X03.54'e."
+  },
+  {
+   "kod": "X0501",
+   "yol": [
+    "9..29"
+   ],
+   "adDe": "Verteiler Motorraum Kl. 30",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "besleme",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c1",
+    "kutu": [
+     78,
+     699,
+     1127,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "X0502",
+   "yol": [
+    "21..32"
+   ],
+   "adDe": "Steckverbinder Adapter LIMA",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     178,
+     228,
+     1132,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "X0508",
+   "yol": [
+    "14"
+   ],
+   "adDe": "Steckverbinder Starter Kl. 50 ueber PLD",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     178,
+     271,
+     1132,
+     42
+    ]
+   },
+   "emin": true
+  },
+  {
+   "kod": "X11",
+   "yol": [
+    "21",
+    "23"
+   ],
+   "adDe": "Steckverbinder Gelenk",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket",
+   "goruldu": {
+    "kirpinti": "s1/orta/r4c2",
+    "kutu": [
+     178,
+     313,
+     1132,
+     42
+    ]
+   },
+   "emin": true
+  }
+ ],
+ "kablolar": [
+  {
+   "etiket": "70sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0501"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "10M01",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": null
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "9",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     540,
+     340,
+     50,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Üst uç: X0501 çember simgesi (yol 9). Alt uç: 10M01 motorunun üstteki küçük daire ucu (r2c1/r3c1'de görülür), ucun yanında pin etiketi yok. Çizgi arada kesilmeden iniyor, başka etiket yok.",
+   "no": null,
+   "isaret": null,
+   "kesit": "70",
+   "renk": "sw",
+   "id": "a001"
+  },
+  {
+   "etiket": "1,5-1441",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "10A01",
+     "hedef": null,
+     "ham": "10A01"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0508",
+     "pin": "1",
+     "ham": "X0508. /1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "13",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     780,
+     320,
+     50,
+     140
+    ]
+   },
+   "emin": true,
+   "not": "Yukarı oklu uç 10A01'e gidiyor. Alt uç r2c1'deki X0508. /1 soket simgesi; soket adındaki nokta ve boşluk şemada böyle yazıyor.",
+   "no": "1441",
+   "isaret": null,
+   "kesit": "1.5",
+   "renk": null,
+   "id": "a002"
+  },
+  {
+   "etiket": "35rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0501"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "B+",
+     "pinAdi": null,
+     "ham": "B+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1075,
+     340,
+     50,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Üst uç: ikinci X0501 çember simgesi (yol 18). Alt uç: 01G01 jeneratörünün sol tarafındaki B+ ucu (r3c1'de görülür).",
+   "no": null,
+   "isaret": null,
+   "kesit": "35",
+   "renk": "rt",
+   "id": "a003"
+  },
+  {
+   "etiket": "0001",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "10A10",
+     "hedef": null,
+     "ham": "10A10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1190,
+     340,
+     50,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Yukarı oklu uç 10A10'a gidiyor. Alt uç, r2c1'deki kesikli kutunun içindeki ÜST X11.42/1 simgesi.",
+   "no": "0001",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a004"
+  },
+  {
+   "etiket": "0002",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "10A10",
+     "hedef": null,
+     "ham": "10A10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c1",
+    "kutu": [
+     1305,
+     340,
+     50,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Yukarı oklu uç 10A10'a gidiyor. Alt uç, r2c1'deki kesikli kutunun içindeki ÜST X11.42/2 simgesi.",
+   "no": "0002",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a005"
+  },
+  {
+   "etiket": "50sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0501"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "B+",
+     "pinAdi": null,
+     "ham": "B+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "29",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     695,
+     340,
+     50,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Üst uç: üçüncü X0501 çember simgesi (yol 29). Alt uç: 01G02 jeneratörünün sol tarafındaki B+ ucu (orta r3c2'de görülür; çizgi x≈740'ta inip B+ noktasında sağa dönüyor).",
+   "no": null,
+   "isaret": null,
+   "kesit": "50",
+   "renk": "sw",
+   "id": "a006"
+  },
+  {
+   "etiket": "2029",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "24F01",
+     "hedef": null,
+     "ham": "24F01"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "4",
+     "ham": "X03. 54/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     810,
+     345,
+     45,
+     75
+    ]
+   },
+   "emin": true,
+   "not": "Yukarı oklu uç 24F01'e gidiyor. Alt uç X03. 54/4 soket simgesinin yay (üst) tarafı.",
+   "no": "2029",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a007"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "4",
+     "ham": "X03. 54/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01V01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     845,
+     520,
+     25,
+     135
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X03. 54/4 simgesinin dolu çubuk (alt) tarafından diyotun 1 numaralı ucuna (üst, üçgenin düz kenarı) iniyor. Soket simgesinde yay ile çubuk arasında boşluk var, çizgi kesik: yukarıdaki 2029 etiketli parçayla sürekli çizgi değil.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a008"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01V01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "3",
+     "ham": "X03. 54/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "A"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     845,
+     695,
+     25,
+     120
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: diyotun 2 numaralı ucundan (alt, çubuklu kenar) X03. 54/3 simgesinin dolu çubuk (üst) tarafına iniyor. Soket simgesinde çizgi kesik (yay-çubuk arası boşluk): aşağıdaki 1082 etiketli parçayla sürekli çizgi değil, soket ucunda buluşuyor.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a009"
+  },
+  {
+   "etiket": "1082",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "3",
+     "ham": "X03. 54/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "4",
+     "ham": "X03. 53/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     820,
+     840,
+     40,
+     205
+    ]
+   },
+   "emin": true,
+   "not": "Etiket A/B satır sınırında (y≈889). Üst uç X03. 54/3 simgesinin yay tarafı, alt uç X03. 53/4 simgesinin yay (üst) tarafı.",
+   "no": "1082",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a010"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "4",
+     "ham": "X03. 53/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "3",
+     "ham": "X03. 53/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~33",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r1c2",
+    "kutu": [
+     850,
+     960,
+     200,
+     90
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz kırık çizgi (çapraz + yatay + dikey): X03. 53/4 simgesinin tepesinden, 1082 etiketli çizgiyle aynı noktadan çıkıp sağdaki X03. 53/3 simgesinin tepesine iniyor; etiketli 1082 ile sürekli çizgi. X03. 53/3 simgesinde dolu çubuk ve altında devam eden çizgi yok (r2c2'de görülür). Yatay kısım yol 31 ile 34 arasında.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a011"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0508",
+     "pin": "1",
+     "ham": "X0508. /1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "10M01",
+     "soket": null,
+     "pin": "50",
+     "pinAdi": null,
+     "ham": "50"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "13",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     810,
+     830,
+     70,
+     270
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X0508. /1 simgesinin dolu çubuk (alt) tarafından aşağı inip r3c1'de sola dönerek 10M01 motorunun sağ ucundaki 50'ye bağlanıyor. Soket simgesinde yay ile çubuk arasında boşluk var, çizgi kesik: üstteki 1,5-1441 etiketli parçayla sürekli çizgi değil, soket ucunda buluşuyor.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a012"
+  },
+  {
+   "etiket": "#4201",
+   "varyant": true,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1195,
+     430,
+     45,
+     80
+    ]
+   },
+   "emin": false,
+   "not": "Kesikli kutunun (yol 20) içinde, iki X11.42/1 simgesinin (üst ve alt) yay tarafları arasındaki kesintisiz çizgi; iki uç da aynı X11.42/1 yazısını taşıyor (kutuda yazı bir kez, yanında Gelenk işareti). Etiket kalın ve '20' karakterleri üst üste basılmış: #4201 okundu, 4-2-0 üst üste olduğu için emin:false.",
+   "no": "4201",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a013"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "1",
+     "ham": "X0502. /1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1225,
+     595,
+     30,
+     225
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: kesikli kutunun ALT X11.42/1 simgesinin çubuk tarafından X0502. /1 simgesinin yay (üst) tarafına iniyor; çizgi kutunun dışında, düz çizgi.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a014"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "1",
+     "ham": "X0502. /1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "D+",
+     "pinAdi": null,
+     "ham": "D+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1225,
+     850,
+     30,
+     250
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X0502. /1 simgesinin çubuk tarafından 01G01 jeneratörünün üstündeki D+ ucuna iniyor (r3c1'de görülür; B/C satır sınırını geçiyor).",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a015"
+  },
+  {
+   "etiket": "#4202",
+   "varyant": true,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1315,
+     425,
+     45,
+     85
+    ]
+   },
+   "emin": false,
+   "not": "Kesikli kutunun (yol 22) içinde, iki X11.42/2 simgesinin (üst ve alt) yay tarafları arasındaki kesintisiz çizgi; iki uç da aynı X11.42/2 yazısını taşıyor. Etiket kalın ve '20' karakterleri üst üste basılmış: #4202 okundu, emin:false.",
+   "no": "4202",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "id": "a016"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "2",
+     "ham": "X0502. /2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1345,
+     595,
+     30,
+     225
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: kesikli kutunun ALT X11.42/2 simgesinin çubuk tarafından X0502. /2 simgesinin yay (üst) tarafına iniyor; çizgi kutunun dışında, düz çizgi.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a017"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "2",
+     "ham": "X0502. /2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "W",
+     "pinAdi": null,
+     "ham": "W"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c1",
+    "kutu": [
+     1345,
+     850,
+     30,
+     250
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X0502. /2 simgesinin çubuk tarafından aşağı inip 01G01 jeneratörünün sağındaki W ucuna dönüyor (r3c1'de görülür; B/C satır sınırını geçiyor).",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a018"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "4",
+     "ham": "X03. 53/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01R02",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": null
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     845,
+     335,
+     25,
+     100
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X03. 53/4 simgesinin dolu çubuk (alt) tarafından 01R02 direncinin ÜST ucuna iniyor. Direncin uçlarında pin yazısı yok.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a019"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01R02",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": null
+    },
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": null
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     845,
+     500,
+     25,
+     30
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz kısa parça: 01R02 direncinin ALT ucundan, çizginin ikiye ayrıldığı noktaya (direncin hemen altında, çapraz kolun çıktığı yer; şemada kod yazmıyor, ~d1). Bu noktada nokta/işaret çizilmemiş.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a020"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": null
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.20",
+     "pin": "3",
+     "ham": "X03. 20/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     845,
+     525,
+     25,
+     135
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: ~d1 noktasından düz aşağı X03. 20/3 simgesinin dolu çubuk (üst) tarafına iniyor.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a021"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.20",
+     "pin": "3",
+     "ham": "X03. 20/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "3",
+     "ham": "X0502. /3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     845,
+     710,
+     25,
+     105
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X03. 20/3 simgesinin yay (alt) tarafı ile X0502. /3 simgesinin yay (üst) tarafı arasındaki düz çizgi. Üzerinde etiket yok.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a022"
+  },
+  {
+   "etiket": "1084",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "3",
+     "ham": "X0502. /3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "D+",
+     "pinAdi": null,
+     "ham": "D+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     820,
+     890,
+     40,
+     140
+    ]
+   },
+   "emin": true,
+   "not": "Etiket B/C satır sınırında (y≈1660 sayfa). X0502. /3 simgesinin çubuk tarafından 01G02 jeneratörünün üstündeki D+ ucuna iniyor.",
+   "no": "1084",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a023"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": null
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.31",
+     "pin": "3",
+     "ham": "X03. 31/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~34",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     855,
+     520,
+     245,
+     150
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz kırık çizgi (çapraz + yatay + dikey): ~d1 noktasından sağa çıkıp X03. 31/3 simgesinin dolu çubuk (üst) tarafına iniyor. Başlangıç yol 31, dikey kısım yol 35.",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a024"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.31",
+     "pin": "3",
+     "ham": "X03. 31/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "04A04",
+     "soket": "V-9",
+     "pin": "6",
+     "pinAdi": "H13",
+     "ham": "H13 V-9/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "35",
+    "satir": "B"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     1080,
+     700,
+     30,
+     130
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz parça: X03. 31/3 simgesinin yay (alt) tarafından V-9/6 simgesinin yay (üst) tarafına iniyor. V-9/6 simgesinin çubuğu kısa bir çizgiyle 04A04 bayrak sembolüne bağlı; bayrağın içinde H13 yazıyor, V-9/6 yazısı çubuğun yanında. Pin adı okunuşu: 'H13' (görüntüde 'HI3' gibi duruyor).",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a025"
+  },
+  {
+   "etiket": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "D+",
+     "pinAdi": null,
+     "ham": "D+"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "DF",
+     "pinAdi": null,
+     "ham": "DF"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~32",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r2c2",
+    "kutu": [
+     855,
+     985,
+     125,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Etiketsiz kırık çizgi: 01G02 jeneratörünün üstündeki D+ noktasından (1084 etiketli çizgiyle aynı noktadan) çapraz + yatay + dikey + yatay çizilip jeneratör dairesinin üst-sağındaki DF ucuna dönüyor; DF yazısı bu çerçevenin içinde (s1/yakin/r4c3'te net).",
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "id": "a026"
+  },
+  {
+   "etiket": "70sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "10M01",
+     "soket": null,
+     "pin": "31",
+     "pinAdi": null,
+     "ham": "31"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0501"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "9",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     540,
+     785,
+     50,
+     65
+    ]
+   },
+   "emin": true,
+   "not": "Üst uç 10M01 motorunun altındaki 31 ucu; alt uç W0501 toprak simgesi. (Motorun üst ucundaki 70sw ayrı parça, r1c1.)",
+   "no": null,
+   "isaret": null,
+   "kesit": "70",
+   "renk": "sw",
+   "id": "a027"
+  },
+  {
+   "etiket": "35br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "B-",
+     "pinAdi": null,
+     "ham": "B-"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0501"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c1",
+    "kutu": [
+     1195,
+     765,
+     50,
+     80
+    ]
+   },
+   "emin": true,
+   "not": "Üst uç 01G01 jeneratörünün altındaki B- ucu; alt uç W0501 toprak simgesi.",
+   "no": null,
+   "isaret": null,
+   "kesit": "35",
+   "renk": "br",
+   "id": "a028"
+  },
+  {
+   "etiket": "50sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "B-",
+     "pinAdi": null,
+     "ham": "B-"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0501"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "C"
+   },
+   "goruldu": {
+    "kirpinti": "s1/orta/r3c2",
+    "kutu": [
+     820,
+     745,
+     45,
+     90
+    ]
+   },
+   "emin": true,
+   "not": "Üst uç 01G02 jeneratörünün altındaki B- ucu; alt uç W0501 toprak simgesi. (Jeneratörün B+ ucuna giden 50sw ayrı parça, r1c2.)",
+   "no": null,
+   "isaret": null,
+   "kesit": "50",
+   "renk": "sw",
+   "id": "a029"
+  }
+ ],
+ "okunamayanlar": [
+  {
+   "nerede": "01G02 jeneratörünün sağındaki W ucu (r3c2, yol ~33, satır C)",
+   "ne": "W ucundan sağa kısa bir çizgi çıkıyor, ucu boşta: hiçbir cihaza, sokete ya da düğüme gitmiyor; iki uçlu parça olmadığı için kablo yazılmadı",
+   "kirpinti": "s1/orta/r3c2"
+  }
+ ]
+}

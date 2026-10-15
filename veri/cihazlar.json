@@ -1,0 +1,666 @@
+{
+  "01G01": {
+    "kod": "01G01",
+    "kisaAd": "A1",
+    "adTr": "Alternatör 1",
+    "adDe": "Generator 1",
+    "tur": "guc",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "21"
+      ]
+    }
+  },
+  "01G02": {
+    "kod": "01G02",
+    "kisaAd": "A2",
+    "adTr": "Alternatör 2",
+    "adDe": "Generator 2",
+    "tur": "guc",
+    "not": "W ucu çizili ama hiçbir yere bağlı değil (çemberin sağında kısa bir çizgi, ucu boşta).",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "32"
+      ]
+    }
+  },
+  "01R02": {
+    "kod": "01R02",
+    "kisaAd": null,
+    "adTr": "A2 ön uyartım direnci",
+    "adDe": "Vorerregung Generator 2",
+    "tur": "direnc",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "31"
+      ]
+    }
+  },
+  "01V01": {
+    "kod": "01V01",
+    "kisaAd": null,
+    "adTr": "D+ ayırma diyotu",
+    "adDe": "Diode Entkopplung D+",
+    "tur": "diyot",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "32"
+      ]
+    }
+  },
+  "04A03": {
+    "kod": "04A03",
+    "kisaAd": "FPS 3",
+    "adTr": "Esnek programlı kumanda modülü 3",
+    "adDe": "Steuergeraet Flexibel programmierte Steuerung (FPS",
+    "tur": "beyin",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "23",
+        "48"
+      ]
+    }
+  },
+  "04A04": {
+    "kod": "04A04",
+    "kisaAd": "FPS 4",
+    "adTr": "Esnek programlı kumanda modülü 4",
+    "adDe": "Steuergeraet Flexibel programmierte Steuerung (FPS",
+    "tur": "beyin",
+    "not": "Almanca ad listede kapanmayan parantezle '(FPS' diye bitiyor (hücre metni kesiyor); olduğu gibi yazıldı.",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "34"
+      ]
+    }
+  },
+  "10A01": {
+    "kod": "10A01",
+    "kisaAd": "MR",
+    "adTr": "Motor kumanda beyni",
+    "adDe": "Steuergeraet Motorregelung MR",
+    "tur": "beyin",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "13"
+      ]
+    }
+  },
+  "10A10": {
+    "kod": "10A10",
+    "kisaAd": "CPC",
+    "adTr": "Güç aktarma ana kumanda beyni",
+    "adDe": "Steuergeraet Common Powertrain Controller CPC",
+    "tur": "beyin",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "20",
+        "22"
+      ]
+    }
+  },
+  "10M01": {
+    "kod": "10M01",
+    "kisaAd": null,
+    "adTr": "Marş motoru",
+    "adDe": "Starter",
+    "tur": "motor",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "10"
+      ]
+    }
+  },
+  "24F01": {
+    "kod": "24F01",
+    "kisaAd": null,
+    "adTr": "Basınçlı hava beslemesi sigortası",
+    "adDe": "Sicherung Druckluftversorgung",
+    "tur": "sigorta",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "31"
+      ]
+    }
+  },
+  "41A01": {
+    "kod": "41A01",
+    "kisaAd": "Kapı 1 beyni",
+    "adTr": "Kapı 1 kumanda beyni",
+    "adDe": "Steuergeraet Tuer 1",
+    "tur": "beyin",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "75"
+      ]
+    }
+  },
+  "41B01": {
+    "kod": "41B01",
+    "kisaAd": null,
+    "adTr": "Sıkışma koruma basınç dalgası şalteri",
+    "adDe": "Druckwellenschalter Einklemmschutz Tuer 1",
+    "tur": "sensor",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "15"
+      ]
+    }
+  },
+  "41B02": {
+    "kod": "41B02",
+    "kisaAd": null,
+    "adTr": "Sıkışma koruma basınç dalgası şalteri",
+    "adDe": "Druckwellenschalter Einklemmschutz Tuer 1",
+    "tur": "sensor",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "18"
+      ]
+    }
+  },
+  "41E01.1": {
+    "kod": "41E01.1",
+    "kisaAd": null,
+    "adTr": "Giriş aydınlatması",
+    "adDe": "Beleuchtung Einstieg Tuer 1",
+    "tur": "lamba",
+    "not": "Bileşen listesinde '41E01.1-2' tek satır (iki lamba, yol 46 ve 49); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı. Şemada her lamba 20 W (Beyin Listesi: 2 x 20 W).",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "46",
+        "49"
+      ]
+    }
+  },
+  "41E01.2": {
+    "kod": "41E01.2",
+    "kisaAd": null,
+    "adTr": "Giriş aydınlatması",
+    "adDe": "Beleuchtung Einstieg Tuer 1",
+    "tur": "lamba",
+    "not": "Bileşen listesinde '41E01.1-2' tek satır (iki lamba, yol 46 ve 49); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı. Şemada her lamba 20 W (Beyin Listesi: 2 x 20 W).",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "46",
+        "49"
+      ]
+    }
+  },
+  "41F01": {
+    "kod": "41F01",
+    "kisaAd": null,
+    "adTr": "Çevirmeli-sürgülü kapı 1 sigortası",
+    "adDe": "Sicherung Schwenkschiebetuer 1",
+    "tur": "sigorta",
+    "not": "Şemada sigortanın yanında 20A yazıyor (Beyin Listesi: 20 A).",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "59"
+      ]
+    }
+  },
+  "41H01": {
+    "kod": "41H01",
+    "kisaAd": null,
+    "adTr": "Kapı hareketi ve rampa ikaz düdüğü",
+    "adDe": "Warnsummer Tuerlauf und Rampe Tuer 1",
+    "tur": "ikaz",
+    "not": "Pinler 87, 86 (üst) ve 30 (alt). 87 ile 30 arasında kesikli çizilmiş zil simgesi cihazın iç gösterimidir; kablo ya da köprü değil, kayda alınmadı (F004).",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "74"
+      ]
+    }
+  },
+  "41K01": {
+    "kod": "41K01",
+    "kisaAd": null,
+    "adTr": "Elektrikli kapı 1 besleme rölesi",
+    "adDe": "Relais Stromversorgung Elektrotuer 1",
+    "tur": "role",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "57"
+      ]
+    }
+  },
+  "41M02": {
+    "kod": "41M02",
+    "kisaAd": null,
+    "adTr": "Arka kanat motoru",
+    "adDe": "Motor Fluegel in Fahrtrichtung HI Tuer 1",
+    "tur": "motor",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "44"
+      ]
+    }
+  },
+  "41M03": {
+    "kod": "41M03",
+    "kisaAd": null,
+    "adTr": "Ön kanat motoru",
+    "adDe": "Motor Fluegel in Fahrtrichtung VO Tuer 1",
+    "tur": "motor",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "38"
+      ]
+    }
+  },
+  "41R01": {
+    "kod": "41R01",
+    "kisaAd": null,
+    "adTr": "Ön kanat konum potansiyometresi",
+    "adDe": "Potentiometer Fluegel in Fahrtrichtung VO Tuer 1",
+    "tur": "direnc",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "50"
+      ]
+    }
+  },
+  "41R02": {
+    "kod": "41R02",
+    "kisaAd": null,
+    "adTr": "Arka kanat konum potansiyometresi",
+    "adDe": "Potentiometer Fluegel in Fahrtrichtung HI Tuer 1",
+    "tur": "direnc",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "56"
+      ]
+    }
+  },
+  "41S10": {
+    "kod": "41S10",
+    "kisaAd": null,
+    "adTr": "El / otomatik şalteri",
+    "adDe": "Schalter Hand/Automatik Tuer 1",
+    "tur": "salter",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "12"
+      ]
+    }
+  },
+  "41S11": {
+    "kod": "41S11",
+    "kisaAd": null,
+    "adTr": "Atölye (servis) şalteri",
+    "adDe": "Schalter Werkstatt Tuer 1",
+    "tur": "salter",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "21"
+      ]
+    }
+  },
+  "41S21.1": {
+    "kod": "41S21.1",
+    "kisaAd": null,
+    "adTr": "Acil vana şalteri",
+    "adDe": "Schalter Nothahn Tuer 1",
+    "tur": "salter",
+    "not": "Bileşen listesinde '41S21.1-2' tek satır (iki anahtar, yol 4 ve 8); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı.",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "4",
+        "8"
+      ]
+    }
+  },
+  "41S21.2": {
+    "kod": "41S21.2",
+    "kisaAd": null,
+    "adTr": "Acil vana şalteri",
+    "adDe": "Schalter Nothahn Tuer 1",
+    "tur": "salter",
+    "not": "Bileşen listesinde '41S21.1-2' tek satır (iki anahtar, yol 4 ve 8); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı.",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "4",
+        "8"
+      ]
+    }
+  },
+  "41S29": {
+    "kod": "41S29",
+    "kisaAd": null,
+    "adTr": "Tahrik motoru şalteri",
+    "adDe": "Schalter Antriebsmotor Tuer 1",
+    "tur": "salter",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "42"
+      ]
+    }
+  },
+  "41S30": {
+    "kod": "41S30",
+    "kisaAd": null,
+    "adTr": "Tahrik motoru şalteri",
+    "adDe": "Schalter Antriebsmotor Tuer 1",
+    "tur": "salter",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "42"
+      ]
+    }
+  },
+  "41Y03": {
+    "kod": "41Y03",
+    "kisaAd": null,
+    "adTr": "Acil vana geri getirme selenoidi (opsiyon)",
+    "adDe": "Magnetventil Ruecksteller Nothahn Tuer 1",
+    "tur": "valf",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "50"
+      ]
+    }
+  },
+  "42A01": {
+    "kod": "42A01",
+    "kisaAd": "Kapı 2 beyni",
+    "adTr": "Kapı 2 kumanda beyni",
+    "adDe": "Steuergeraet Tuer 2",
+    "tur": "beyin",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "23..66"
+      ]
+    }
+  },
+  "60A01": {
+    "kod": "60A01",
+    "kisaAd": "I-Modul",
+    "adTr": null,
+    "adDe": "Steuergeraet I-Modul",
+    "tur": "beyin",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "62"
+      ]
+    }
+  },
+  "HT332": {
+    "kod": "HT332",
+    "kisaAd": null,
+    "adTr": null,
+    "adDe": "Variante",
+    "tur": "diger",
+    "not": "Varyant işareti (listede 'Variante'). Çizimde yalnız etiket olarak geçiyor (yol 4'te 41S21 çiftinin altında, yol 50'de 41Y03'ün yanında); hiçbir kablo ucu yok.",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "4",
+        "50"
+      ]
+    }
+  },
+  "W0501": {
+    "kod": "W0501",
+    "kisaAd": null,
+    "adTr": "Motor bölmesi şasesi",
+    "adDe": "Masse 1 Motorraum",
+    "tur": "toprak",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "9..31"
+      ]
+    }
+  },
+  "W0901": {
+    "kod": "W0901",
+    "kisaAd": null,
+    "adTr": "Tavan enine kanal şasesi",
+    "adDe": "Masse 1 Dach(quer)kanal",
+    "tur": "toprak",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "60"
+      ]
+    }
+  },
+  "X02.25-43": {
+    "kod": "X02.25-43",
+    "kisaAd": null,
+    "adTr": null,
+    "adDe": "Steckverbinder Hauptschalttafel (E-Fach)",
+    "tur": "soket",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "60",
+        "63"
+      ]
+    }
+  },
+  "X03.20-54": {
+    "kod": "X03.20-54",
+    "kisaAd": null,
+    "adTr": null,
+    "adDe": "Steckverbinder Nebenschalttafel",
+    "tur": "soket",
+    "not": "Bileşen listesinde kod hücresinden taşıyor ('X03.20-5432..36' bitişik): kod X03.20-54, akım yolu 32..36. Aralık X03.20'den X03.54'e; şemada X03.20, X03.31, X03.53, X03.54 soketleri çizili.",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "32..36"
+      ]
+    }
+  },
+  "X08.11-17": {
+    "kod": "X08.11-17",
+    "kisaAd": null,
+    "adTr": "Kapı soketleri",
+    "adDe": "Steckverbinder Tueren",
+    "tur": "soket",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "4..73"
+      ]
+    }
+  },
+  "X11": {
+    "kod": "X11",
+    "kisaAd": null,
+    "adTr": "Körük soketi",
+    "adDe": "Steckverbinder Gelenk",
+    "tur": "soket",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "21",
+        "23"
+      ]
+    }
+  },
+  "X0203": {
+    "kod": "X0203",
+    "kisaAd": null,
+    "adTr": "Ana pano dağıtıcısı, uç 30/3",
+    "adDe": "Verteiler Hauptschalttafel Kl. 30/3",
+    "tur": "besleme",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "60"
+      ]
+    }
+  },
+  "X0501": {
+    "kod": "X0501",
+    "kisaAd": null,
+    "adTr": "Motor bölmesi dağıtıcısı, uç 30",
+    "adDe": "Verteiler Motorraum Kl. 30",
+    "tur": "besleme",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "9..29"
+      ]
+    }
+  },
+  "X0502": {
+    "kod": "X0502",
+    "kisaAd": null,
+    "adTr": "Alternatör adaptör soketi",
+    "adDe": "Steckverbinder Adapter LIMA",
+    "tur": "soket",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "21..32"
+      ]
+    }
+  },
+  "X0508": {
+    "kod": "X0508",
+    "kisaAd": null,
+    "adTr": null,
+    "adDe": "Steckverbinder Starter Kl. 50 ueber PLD",
+    "tur": "soket",
+    "semalar": [
+      "alternator-mars"
+    ],
+    "yol": {
+      "alternator-mars": [
+        "14"
+      ]
+    }
+  },
+  "X0809": {
+    "kod": "X0809",
+    "kisaAd": null,
+    "adTr": "Konfor CAN yıldız noktası",
+    "adDe": "CAN-Sternpunkt Komfort",
+    "tur": "soket",
+    "semalar": [
+      "kapi-1"
+    ],
+    "yol": {
+      "kapi-1": [
+        "75"
+      ]
+    }
+  }
+}

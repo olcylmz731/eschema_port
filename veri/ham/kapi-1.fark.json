@@ -1,0 +1,601 @@
+{
+ "sema": "kapi-1",
+ "uretim": "2026-10-14 06:03:28",
+ "ozet": {
+  "A": 104,
+  "B": 104,
+  "ayni": 101,
+  "alanFarki": 2,
+  "yalnizA": 1,
+  "yalnizB": 1,
+  "belirsiz": 0,
+  "cihazFarki": 6,
+  "kunyeFarki": 0,
+  "varsayilanFarki": 1,
+  "izgaraFarki": 1,
+  "taslakKablo": 105,
+  "kararBekleyen": 11
+ },
+ "ayni": [
+  {
+   "a": "a001",
+   "b": "b001"
+  },
+  {
+   "a": "a002",
+   "b": "b002"
+  },
+  {
+   "a": "a003",
+   "b": "b003"
+  },
+  {
+   "a": "a004",
+   "b": "b004"
+  },
+  {
+   "a": "a005",
+   "b": "b005"
+  },
+  {
+   "a": "a006",
+   "b": "b006"
+  },
+  {
+   "a": "a007",
+   "b": "b010"
+  },
+  {
+   "a": "a011",
+   "b": "b015"
+  },
+  {
+   "a": "a012",
+   "b": "b013"
+  },
+  {
+   "a": "a013",
+   "b": "b014"
+  },
+  {
+   "a": "a014",
+   "b": "b016"
+  },
+  {
+   "a": "a015",
+   "b": "b017"
+  },
+  {
+   "a": "a016",
+   "b": "b018"
+  },
+  {
+   "a": "a017",
+   "b": "b021"
+  },
+  {
+   "a": "a018",
+   "b": "b022"
+  },
+  {
+   "a": "a019",
+   "b": "b023"
+  },
+  {
+   "a": "a020",
+   "b": "b020"
+  },
+  {
+   "a": "a021",
+   "b": "b012"
+  },
+  {
+   "a": "a022",
+   "b": "b024"
+  },
+  {
+   "a": "a023",
+   "b": "b027"
+  },
+  {
+   "a": "a024",
+   "b": "b025"
+  },
+  {
+   "a": "a025",
+   "b": "b026"
+  },
+  {
+   "a": "a026",
+   "b": "b050"
+  },
+  {
+   "a": "a027",
+   "b": "b028"
+  },
+  {
+   "a": "a028",
+   "b": "b029"
+  },
+  {
+   "a": "a029",
+   "b": "b032"
+  },
+  {
+   "a": "a030",
+   "b": "b030"
+  },
+  {
+   "a": "a031",
+   "b": "b007"
+  },
+  {
+   "a": "a032",
+   "b": "b008"
+  },
+  {
+   "a": "a033",
+   "b": "b009"
+  },
+  {
+   "a": "a034",
+   "b": "b011"
+  },
+  {
+   "a": "a035",
+   "b": "b037"
+  },
+  {
+   "a": "a036",
+   "b": "b035"
+  },
+  {
+   "a": "a037",
+   "b": "b036"
+  },
+  {
+   "a": "a038",
+   "b": "b038"
+  },
+  {
+   "a": "a039",
+   "b": "b039"
+  },
+  {
+   "a": "a040",
+   "b": "b040"
+  },
+  {
+   "a": "a041",
+   "b": "b041"
+  },
+  {
+   "a": "a042",
+   "b": "b042"
+  },
+  {
+   "a": "a043",
+   "b": "b043"
+  },
+  {
+   "a": "a044",
+   "b": "b044"
+  },
+  {
+   "a": "a045",
+   "b": "b045"
+  },
+  {
+   "a": "a046",
+   "b": "b059"
+  },
+  {
+   "a": "a047",
+   "b": "b051"
+  },
+  {
+   "a": "a048",
+   "b": "b052"
+  },
+  {
+   "a": "a049",
+   "b": "b046"
+  },
+  {
+   "a": "a050",
+   "b": "b048"
+  },
+  {
+   "a": "a051",
+   "b": "b049"
+  },
+  {
+   "a": "a052",
+   "b": "b047"
+  },
+  {
+   "a": "a053",
+   "b": "b031"
+  },
+  {
+   "a": "a054",
+   "b": "b053"
+  },
+  {
+   "a": "a055",
+   "b": "b033"
+  },
+  {
+   "a": "a056",
+   "b": "b054"
+  },
+  {
+   "a": "a057",
+   "b": "b055"
+  },
+  {
+   "a": "a058",
+   "b": "b056"
+  },
+  {
+   "a": "a059",
+   "b": "b057"
+  },
+  {
+   "a": "a060",
+   "b": "b058"
+  },
+  {
+   "a": "a061",
+   "b": "b070"
+  },
+  {
+   "a": "a062",
+   "b": "b071"
+  },
+  {
+   "a": "a063",
+   "b": "b072"
+  },
+  {
+   "a": "a064",
+   "b": "b064"
+  },
+  {
+   "a": "a065",
+   "b": "b065"
+  },
+  {
+   "a": "a066",
+   "b": "b066"
+  },
+  {
+   "a": "a067",
+   "b": "b067"
+  },
+  {
+   "a": "a068",
+   "b": "b068"
+  },
+  {
+   "a": "a069",
+   "b": "b069"
+  },
+  {
+   "a": "a070",
+   "b": "b060"
+  },
+  {
+   "a": "a071",
+   "b": "b061"
+  },
+  {
+   "a": "a072",
+   "b": "b062"
+  },
+  {
+   "a": "a073",
+   "b": "b063"
+  },
+  {
+   "a": "a074",
+   "b": "b077"
+  },
+  {
+   "a": "a075",
+   "b": "b073"
+  },
+  {
+   "a": "a076",
+   "b": "b074"
+  },
+  {
+   "a": "a077",
+   "b": "b075"
+  },
+  {
+   "a": "a078",
+   "b": "b076"
+  },
+  {
+   "a": "a079",
+   "b": "b078"
+  },
+  {
+   "a": "a080",
+   "b": "b079"
+  },
+  {
+   "a": "a081",
+   "b": "b080"
+  },
+  {
+   "a": "a082",
+   "b": "b081"
+  },
+  {
+   "a": "a083",
+   "b": "b082"
+  },
+  {
+   "a": "a084",
+   "b": "b085"
+  },
+  {
+   "a": "a085",
+   "b": "b083"
+  },
+  {
+   "a": "a086",
+   "b": "b084"
+  },
+  {
+   "a": "a087",
+   "b": "b086"
+  },
+  {
+   "a": "a088",
+   "b": "b087"
+  },
+  {
+   "a": "a089",
+   "b": "b088"
+  },
+  {
+   "a": "a090",
+   "b": "b104"
+  },
+  {
+   "a": "a091",
+   "b": "b097"
+  },
+  {
+   "a": "a092",
+   "b": "b098"
+  },
+  {
+   "a": "a093",
+   "b": "b099"
+  },
+  {
+   "a": "a094",
+   "b": "b100"
+  },
+  {
+   "a": "a095",
+   "b": "b089"
+  },
+  {
+   "a": "a096",
+   "b": "b090"
+  },
+  {
+   "a": "a097",
+   "b": "b091"
+  },
+  {
+   "a": "a098",
+   "b": "b092"
+  },
+  {
+   "a": "a099",
+   "b": "b093"
+  },
+  {
+   "a": "a100",
+   "b": "b094"
+  },
+  {
+   "a": "a101",
+   "b": "b095"
+  },
+  {
+   "a": "a102",
+   "b": "b101"
+  },
+  {
+   "a": "a103",
+   "b": "b102"
+  },
+  {
+   "a": "a104",
+   "b": "b096"
+  }
+ ],
+ "alanFarki": [
+  {
+   "fid": "F001",
+   "a": "a009",
+   "b": "b019",
+   "eslesme": "bulanik",
+   "farklar": [
+    {
+     "alan": "uc1.tur",
+     "A": "dugum",
+     "B": "cihaz"
+    },
+    {
+     "alan": "uc1.cihaz",
+     "A": null,
+     "B": "41B02"
+    },
+    {
+     "alan": "uc1.pin",
+     "A": null,
+     "B": "1"
+    },
+    {
+     "alan": "uc1.kod",
+     "A": "~d1",
+     "B": null
+    }
+   ],
+   "taslakId": "k022"
+  },
+  {
+   "fid": "F002",
+   "a": "a010",
+   "b": "b034",
+   "eslesme": "bulanik",
+   "farklar": [
+    {
+     "alan": "uc1.tur",
+     "A": "dugum",
+     "B": "soket"
+    },
+    {
+     "alan": "uc1.soket",
+     "A": null,
+     "B": "X08.16"
+    },
+    {
+     "alan": "uc1.pin",
+     "A": null,
+     "B": "2"
+    },
+    {
+     "alan": "uc1.kod",
+     "A": "~d1",
+     "B": null
+    }
+   ],
+   "taslakId": "k020"
+  }
+ ],
+ "yalnizA": [
+  {
+   "fid": "F003",
+   "a": "a008",
+   "metin": "(etiketsiz): 41B02 pin 1 ↔ düğüm ~d1",
+   "adaylarB": [],
+   "kirpinti": "s1/orta/r1c1",
+   "taslakId": "k023"
+  }
+ ],
+ "yalnizB": [
+  {
+   "fid": "F004",
+   "b": "b103",
+   "metin": "(etiketsiz): 41H01 pin 87 ↔ 41H01 pin 30",
+   "adaylarA": [],
+   "kirpinti": "s1/orta/r3c4",
+   "taslakId": "k101"
+  }
+ ],
+ "belirsiz": [],
+ "cihazFarki": [
+  {
+   "fid": "F005",
+   "kod": "41E01.1",
+   "alan": "var-yok",
+   "yalnizOkuyucu": "A",
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "yol": [
+    "46",
+    "49"
+   ]
+  },
+  {
+   "fid": "F006",
+   "kod": "41E01.2",
+   "alan": "var-yok",
+   "yalnizOkuyucu": "A",
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "yol": [
+    "46",
+    "49"
+   ]
+  },
+  {
+   "fid": "F007",
+   "kod": "41S21.1",
+   "alan": "var-yok",
+   "yalnizOkuyucu": "A",
+   "adDe": "Schalter Nothahn Tuer 1",
+   "yol": [
+    "4",
+    "8"
+   ]
+  },
+  {
+   "fid": "F008",
+   "kod": "41S21.2",
+   "alan": "var-yok",
+   "yalnizOkuyucu": "A",
+   "adDe": "Schalter Nothahn Tuer 1",
+   "yol": [
+    "4",
+    "8"
+   ]
+  },
+  {
+   "fid": "F009",
+   "kod": "41E01.1-2",
+   "alan": "var-yok",
+   "yalnizOkuyucu": "B",
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "yol": [
+    "46",
+    "49"
+   ]
+  },
+  {
+   "fid": "F010",
+   "kod": "41S21.1-2",
+   "alan": "var-yok",
+   "yalnizOkuyucu": "B",
+   "adDe": "Schalter Nothahn Tuer 1",
+   "yol": [
+    "4",
+    "8"
+   ]
+  }
+ ],
+ "kunyeFarki": [],
+ "varsayilanFarki": [
+  {
+   "fid": "F011",
+   "alan": "varsayilan.ham",
+   "A": "Alle Leitungen ohne Querschnittangaben haben A = 0.75mm²\nAlle Leitungen ohne Farbangaben sind ws\nDarstellung generell stromlos bzw. drucklos\n------- Variante / # Systemlieferant\n⊛ Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant",
+   "B": "Alle Leitungen ohne Querschnittangaben haben A = 0.75mm2 | Alle Leitungen ohne Farbangaben sind ws | Darstellung generell stromlos bzw. drucklos | ------- Variante / # Systemlieferant | Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant"
+  }
+ ],
+ "izgaraFarki": [
+  {
+   "iid": "I001",
+   "a": "a021",
+   "b": "b012",
+   "A": {
+    "sayfa": 1,
+    "yol": "37",
+    "satir": "A"
+   },
+   "B": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "A"
+   },
+   "not": "yol farkı 2'den büyük ya da satır farklı"
+  }
+ ]
+}

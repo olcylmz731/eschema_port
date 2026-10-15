@@ -1,0 +1,1152 @@
+{
+ "sema": "alternator-mars",
+ "kaynak": {
+  "pdf": "Alternatör - Marş Motoru stromlaufplan.pdf",
+  "sayfalar": [
+   1
+  ]
+ },
+ "kunye": {
+  "baslik": "Stromlaufplan Starter und Generatoren",
+  "parcaNo": "A 311 546 29 96",
+  "format": "A2",
+  "tarih": "2005-12-02",
+  "ham": {
+   "Benennung / title": "Stromlaufplan | Starter und Generatoren",
+   "Sach-Nr. / basic number": "A 311 546 29 96",
+   "Format": "A2",
+   "Sprache/lang.": "deutsch",
+   "EK/el.-code": "01",
+   "ZGS": "001",
+   "ED-KB": "BZ/028",
+   "Auftrags-Nr. / order no.": "WFR 02224/05",
+   "Datum / date (Bearb./ auth.)": "2005-12-02",
+   "Name": "Haering",
+   "Pruef./ check., Norm / stand., Freig./ rel.": "siehe / KEM"
+  }
+ },
+ "varsayilan": {
+  "renk": "ws",
+  "kesit": "0.75",
+  "ham": "BEMERKUNGEN : | Alle Leitungen ohne Querschnittangaben haben A = 0.75mm² | Alle Leitungen ohne Farbangaben sind ws | Darstellung generell stromlos bzw. drucklos | ------- Variante / # Systemlieferant | (Gelenk simgesi) Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant"
+ },
+ "dogrulandi": false,
+ "cihazlar": [
+  {
+   "kod": "04A04",
+   "yol": [
+    "34"
+   ],
+   "adDe": "Steuergeraet Flexibel programmierte Steuerung (FPS",
+   "adTr": "Esnek programlı kumanda modülü 4",
+   "kisaAd": "FPS 4",
+   "tur": "beyin",
+   "not": "Almanca ad listede kapanmayan parantezle '(FPS' diye bitiyor (hücre metni kesiyor); olduğu gibi yazıldı."
+  },
+  {
+   "kod": "10A01",
+   "yol": [
+    "13"
+   ],
+   "adDe": "Steuergeraet Motorregelung MR",
+   "adTr": "Motor kumanda beyni",
+   "kisaAd": "MR",
+   "tur": "beyin"
+  },
+  {
+   "kod": "10A10",
+   "yol": [
+    "20",
+    "22"
+   ],
+   "adDe": "Steuergeraet Common Powertrain Controller CPC",
+   "adTr": "Güç aktarma ana kumanda beyni",
+   "kisaAd": "CPC",
+   "tur": "beyin"
+  },
+  {
+   "kod": "24F01",
+   "yol": [
+    "31"
+   ],
+   "adDe": "Sicherung Druckluftversorgung",
+   "adTr": "Basınçlı hava beslemesi sigortası",
+   "kisaAd": null,
+   "tur": "sigorta"
+  },
+  {
+   "kod": "01G01",
+   "yol": [
+    "21"
+   ],
+   "adDe": "Generator 1",
+   "adTr": "Alternatör 1",
+   "kisaAd": "A1",
+   "tur": "guc"
+  },
+  {
+   "kod": "01G02",
+   "yol": [
+    "32"
+   ],
+   "adDe": "Generator 2",
+   "adTr": "Alternatör 2",
+   "kisaAd": "A2",
+   "tur": "guc",
+   "not": "W ucu çizili ama hiçbir yere bağlı değil (çemberin sağında kısa bir çizgi, ucu boşta)."
+  },
+  {
+   "kod": "10M01",
+   "yol": [
+    "10"
+   ],
+   "adDe": "Starter",
+   "adTr": "Marş motoru",
+   "kisaAd": null,
+   "tur": "motor"
+  },
+  {
+   "kod": "01R02",
+   "yol": [
+    "31"
+   ],
+   "adDe": "Vorerregung Generator 2",
+   "adTr": "A2 ön uyartım direnci",
+   "kisaAd": null,
+   "tur": "direnc"
+  },
+  {
+   "kod": "01V01",
+   "yol": [
+    "32"
+   ],
+   "adDe": "Diode Entkopplung D+",
+   "adTr": "D+ ayırma diyotu",
+   "kisaAd": null,
+   "tur": "diyot"
+  },
+  {
+   "kod": "W0501",
+   "yol": [
+    "9..31"
+   ],
+   "adDe": "Masse 1 Motorraum",
+   "adTr": "Motor bölmesi şasesi",
+   "kisaAd": null,
+   "tur": "toprak"
+  },
+  {
+   "kod": "X03.20-54",
+   "yol": [
+    "32..36"
+   ],
+   "adDe": "Steckverbinder Nebenschalttafel",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket",
+   "not": "Bileşen listesinde kod hücresinden taşıyor ('X03.20-5432..36' bitişik): kod X03.20-54, akım yolu 32..36. Aralık X03.20'den X03.54'e; şemada X03.20, X03.31, X03.53, X03.54 soketleri çizili."
+  },
+  {
+   "kod": "X0501",
+   "yol": [
+    "9..29"
+   ],
+   "adDe": "Verteiler Motorraum Kl. 30",
+   "adTr": "Motor bölmesi dağıtıcısı, uç 30",
+   "kisaAd": null,
+   "tur": "besleme"
+  },
+  {
+   "kod": "X0502",
+   "yol": [
+    "21..32"
+   ],
+   "adDe": "Steckverbinder Adapter LIMA",
+   "adTr": "Alternatör adaptör soketi",
+   "kisaAd": null,
+   "tur": "soket"
+  },
+  {
+   "kod": "X0508",
+   "yol": [
+    "14"
+   ],
+   "adDe": "Steckverbinder Starter Kl. 50 ueber PLD",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket"
+  },
+  {
+   "kod": "X11",
+   "yol": [
+    "21",
+    "23"
+   ],
+   "adDe": "Steckverbinder Gelenk",
+   "adTr": "Körük soketi",
+   "kisaAd": null,
+   "tur": "soket"
+  }
+ ],
+ "kablolar": [
+  {
+   "id": "k001",
+   "etiket": "70sw",
+   "no": null,
+   "isaret": null,
+   "kesit": "70",
+   "renk": "sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0501"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "10M01",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": null
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "9",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k002",
+   "etiket": "70sw",
+   "no": null,
+   "isaret": null,
+   "kesit": "70",
+   "renk": "sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "10M01",
+     "soket": null,
+     "pin": "31",
+     "pinAdi": null,
+     "ham": "31"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0501"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "9",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k003",
+   "etiket": "1,5-1441",
+   "no": "1441",
+   "isaret": null,
+   "kesit": "1.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "10A01",
+     "hedef": null,
+     "ham": "10A01"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0508",
+     "pin": "1",
+     "ham": "X0508. /1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "13",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k004",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0508",
+     "pin": "1",
+     "ham": "X0508. /1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "10M01",
+     "soket": null,
+     "pin": "50",
+     "pinAdi": null,
+     "ham": "50"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "13",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k005",
+   "etiket": "35rt",
+   "no": null,
+   "isaret": null,
+   "kesit": "35",
+   "renk": "rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0501"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "B+",
+     "pinAdi": null,
+     "ham": "B+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k006",
+   "etiket": "0001",
+   "no": "0001",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "10A10",
+     "hedef": null,
+     "ham": "10A10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k007",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "1",
+     "ham": "X0502. /1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k008",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "1",
+     "ham": "X0502. /1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "D+",
+     "pinAdi": null,
+     "ham": "D+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k009",
+   "etiket": "#4201",
+   "no": "4201",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": true,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "1",
+     "ham": "X11.42/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "Kesikli kutu = Gelenk (körük) soketi X11.42: iki uç da kutudaki üst ve alt simge (kutuda tek 'X11.42/1' yazısı), bu yüzden iki uç aynı. Etiketteki '2' ile '0' üst üste basılmış; 1600 dpi büyütmede #4201 okundu. Yalnız körüklü araçta var.",
+   "suphe": null
+  },
+  {
+   "id": "k010",
+   "etiket": "35br",
+   "no": null,
+   "isaret": null,
+   "kesit": "35",
+   "renk": "br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "B-",
+     "pinAdi": null,
+     "ham": "B-"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0501"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k011",
+   "etiket": "0002",
+   "no": "0002",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "10A10",
+     "hedef": null,
+     "ham": "10A10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k012",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "2",
+     "ham": "X0502. /2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k013",
+   "etiket": "#4202",
+   "no": "4202",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": true,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X11.42",
+     "pin": "2",
+     "ham": "X11.42/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "Kesikli kutu = Gelenk (körük) soketi X11.42: iki uç da kutudaki üst ve alt simge (kutuda tek 'X11.42/2' yazısı), bu yüzden iki uç aynı. Etiketteki '2' ile '0' üst üste basılmış; 1600 dpi büyütmede #4202 okundu. Yalnız körüklü araçta var.",
+   "suphe": null
+  },
+  {
+   "id": "k014",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "2",
+     "ham": "X0502. /2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G01",
+     "soket": null,
+     "pin": "W",
+     "pinAdi": null,
+     "ham": "W"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k015",
+   "etiket": "50sw",
+   "no": null,
+   "isaret": null,
+   "kesit": "50",
+   "renk": "sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0501"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "B+",
+     "pinAdi": null,
+     "ham": "B+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "29",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k016",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "4",
+     "ham": "X03. 54/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01V01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k017",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01V01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "3",
+     "ham": "X03. 54/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k018",
+   "etiket": "2029",
+   "no": "2029",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "24F01",
+     "hedef": null,
+     "ham": "24F01"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "4",
+     "ham": "X03. 54/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k019",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "4",
+     "ham": "X03. 53/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01R02",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": null
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k020",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01R02",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": null
+    },
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": null
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "durum": "cozuldu",
+   "not": "A: 01R02 ↔ düğüm ~d1; B: 01R02 ↔ X03.31/3 (ortak uç = direncin alt ucu) → büyütmede dallanma noktası direncin alt ucundan ~3 mm aşağıda, hat üzerinde ayrı bir nokta; arada kısa bir çizgi var (nokta/kod çizilmemiş). Düğüm ~d1 kullanıldı (F001).",
+   "suphe": null
+  },
+  {
+   "id": "k021",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": null
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.20",
+     "pin": "3",
+     "ham": "X03. 20/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "durum": "cozuldu",
+   "not": "A: ~d1 ↔ X03.20/3; B: 01R02 ↔ X03.20/3 → dallanma noktası direncin ucu değil, hat üzerinde ayrı nokta (bkz. k020); ~d1 doğru (F002).",
+   "suphe": null
+  },
+  {
+   "id": "k022",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.20",
+     "pin": "3",
+     "ham": "X03. 20/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "3",
+     "ham": "X0502. /3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k023",
+   "etiket": "1082",
+   "no": "1082",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.54",
+     "pin": "3",
+     "ham": "X03. 54/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "4",
+     "ham": "X03. 53/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k024",
+   "etiket": "1084",
+   "no": "1084",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X0502",
+     "pin": "3",
+     "ham": "X0502. /3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "D+",
+     "pinAdi": null,
+     "ham": "D+"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k025",
+   "etiket": "50sw",
+   "no": null,
+   "isaret": null,
+   "kesit": "50",
+   "renk": "sw",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "B-",
+     "pinAdi": null,
+     "ham": "B-"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0501",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0501"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "31",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k026",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "ic": true,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "D+",
+     "pinAdi": null,
+     "ham": "D+"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "01G02",
+     "soket": null,
+     "pin": "DF",
+     "pinAdi": null,
+     "ham": "DF"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~32",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": "D+ ucundan (1084'ün geldiği noktadan) çıkıp çemberin dışından dolanarak DF ucuna dönen etiketsiz çizgi; iki uç da aynı cihaz. Beyin Listesi: 'D+ ile DF alternatörün üzerinde köprülüdür' → kablo değil, cihaz içi köprü (ic:true). B bunun kablo mu iç köprü mü olduğundan emin değildi.",
+   "suphe": null
+  },
+  {
+   "id": "k027",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "4",
+     "ham": "X03. 53/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.53",
+     "pin": "3",
+     "ham": "X03. 53/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~33",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "Dal X03.53/3 soketinin yay yarısında açık bitiyor; soketin öbür yarısında çizili bağlantı yok.",
+   "suphe": null
+  },
+  {
+   "id": "k028",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "dugum",
+     "kod": "~d1",
+     "ham": null
+    },
+    {
+     "tur": "soket",
+     "soket": "X03.31",
+     "pin": "3",
+     "ham": "X03. 31/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~34",
+    "satir": "B"
+   },
+   "durum": "cozuldu",
+   "not": "Yalnız A okudu; B aynı dalı 01R02'nin alt ucundan çıkan kayıt olarak yazmıştı → büyütmede dal ~d1 noktasından çıkıp çapraz, yatay (yol 32-35) ve dikey inerek X03.31/3 soketinin üst yarısına varıyor (F003).",
+   "suphe": null
+  },
+  {
+   "id": "k029",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X03.31",
+     "pin": "3",
+     "ham": "X03. 31/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "04A04",
+     "soket": "V-9",
+     "pin": "6",
+     "pinAdi": "HI3",
+     "ham": "HI3 V-9/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "35",
+    "satir": "B"
+   },
+   "durum": "cozuldu",
+   "not": "A ve B pin adını ikisi de H13 okudu (fark listesinde yok). 1600 dpi büyütmede ikinci karakter bayraksız düz çubuk = harf I: sayfadaki 'LI' (açıklama kutusu) ve 'KI.15' içindeki I ile aynı; rakam 1'de üstte bayrak var ('15', 'X03. 31/3'). Doğrusu HI3, Beyin Listesi ile de aynı.",
+   "suphe": null
+  }
+ ],
+ "celiskiler": [
+  {
+   "kablo": "k006",
+   "alan": "soket",
+   "sema": "X11.42/1",
+   "beyinListesi": "X1142/1",
+   "not": "Yazım farkı, aynı soket (Gelenk/körük soketi X11, soket 42). Beyin Listesi §3 noktasız yazıyor; §2 ve §6'da X11.57, X11.27 noktalı. Şema değeri değişmedi."
+  },
+  {
+   "kablo": "k011",
+   "alan": "soket",
+   "sema": "X11.42/2",
+   "beyinListesi": "X1142/2",
+   "not": "Yazım farkı, aynı soket (Gelenk/körük soketi X11, soket 42). Beyin Listesi §3 noktasız yazıyor; §2 ve §6'da X11.57, X11.27 noktalı. Şema değeri değişmedi."
+  }
+ ]
+}

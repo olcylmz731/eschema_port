@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Kablo Bulucu — TOKENLAR (tek kaynak)
+   --------------------------------------------------------------------------
+   * Başka hiçbir dosya renk, boyut ya da yazı tipi uydurmaz; yalnız var(--...).
+   * Tema: <html data-tema="acik|koyu">. Öznitelik yoksa sistem tercihi
+     (sistem açık diyorsa açık), sinyal yoksa KOYU.
+   * Kural: satır başına TEK tanım; açıklama satır sonu yorumudur.
+     test/kontrast.mjs ve DESIGN.md tabloları bu dosyadan üretilir.
+   * 3. blok ile 4. blok birebir aynı olmalı (kontrast.mjs denetler).
+   * Bilerek KULLANILMAYAN CSS (eski Android Chrome/WebView'de yok):
+     light-dark(), color-mix(), :has(), iç içe CSS, @layer, dvh.
+   * Büyük harfli etiketleri (ŞÜPHELİ...) CSS text-transform ile değil, doğrudan
+     büyük harfle yaz; <html lang="tr"> şart (i/İ tuzağı).
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. ORTAK — temadan bağımsız
+   ========================================================================== */
+:root {
+  /* --- Yazı tipleri: yalnız sistem fontları --- */
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif; /* arayüz yazısı */
+  --font-kod: ui-monospace, "Roboto Mono", "Cascadia Mono", "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace; /* kod, pin, soket, kablo no */
+
+  /* --- Yazı ölçeği (rem: 1rem = 16 px; kullanıcının yazı boyutu ayarına uyar) --- */
+  --boyut-ipucu: 0.875rem; /* 14 px, EN KÜÇÜK yazı: rozet, dipnot, kaynak satırı */
+  --boyut-govde: 1rem; /* 16 px, gövde, tablo, düğme */
+  --boyut-pin: 1.125rem; /* 18 px, pin / soket / pin adı etiketi (mono) */
+  --boyut-kod: 1.25rem; /* 20 px, cihaz kodu ve kablo no (mono, kalın) */
+  --boyut-baslik: 1.5rem; /* 24 px, bölüm başlığı */
+  --boyut-ekran: 1.75rem; /* 28 px, ekran başlığı */
+  --boyut-vurgu: 2.125rem; /* 34 px, kart tepesindeki kablo no */
+  --satir-sik: 1.25; /* satır yüksekliği: başlık, kod */
+  --satir-tablo: 1.35; /* satır yüksekliği: tablo hücresi, rozet */
+  --satir-govde: 1.5; /* satır yüksekliği: gövde metni */
+  --agirlik-normal: 400; /* normal yazı */
+  --agirlik-orta: 500; /* ikincil vurgu (Roboto'da 500 var; mono'da 400'e düşer) */
+  --agirlik-kalin: 700; /* başlık, kod, rozet */
+  --harf-etiket: 0.04em; /* BÜYÜK HARFLİ etiket aralığı */
+  --harf-kod: 0.02em; /* mono kod aralığı (1/l/I ayrımı için) */
+
+  /* --- Aralık (4 px tabanı) --- */
+  --bosluk-1: 4px; /* en dar boşluk */
+  --bosluk-2: 8px; /* çip içi, dokunma hedefleri arası */
+  --bosluk-3: 12px; /* kart içi dikey */
+  --bosluk-4: 16px; /* sayfa kenarı, kart dolgusu */
+  --bosluk-5: 20px; /* bölüm içi */
+  --bosluk-6: 24px; /* bölüm arası */
+  --bosluk-8: 32px; /* büyük bölüm arası */
+  --bosluk-10: 40px; /* ekran başı/sonu */
+  --bosluk-12: 48px; /* en geniş boşluk */
+
+  /* --- Köşe yarıçapı, çerçeve --- */
+  --yaricap-s: 4px; /* rozet, küçük çip */
+  --yaricap-m: 8px; /* düğme, girdi, kart */
+  --yaricap-b: 12px; /* alt sayfa, büyük kart */
+  --yaricap-tam: 999px; /* hap biçimi (sekme çipi) */
+  --cerceve-ince: 1px; /* yalnız ayırıcı satır */
+  --cerceve: 2px; /* varsayılan çerçeve */
+  --cerceve-kalin: 3px; /* beyin, ŞÜPHELİ, odak halkası */
+
+  /* --- Dokunma ve yerleşim --- */
+  --dokunma: 48px; /* en küçük dokunma hedefi */
+  --dokunma-buyuk: 56px; /* ana düğme, arama alanı, liste satırı */
+  --dokunma-aralik: 8px; /* iki hedef arası en az boşluk */
+  --kenar: 16px; /* sayfanın sağ/sol boşluğu */
+  --icerik-azami: 960px; /* geniş ekranda içerik genişliği */
+  --simge-kucuk: 20px; /* rozet içi simge */
+  --simge: 24px; /* varsayılan simge */
+  --tur-boyut: 40px; /* cihaz türü işareti (çerçeve + glif) */
+  --odak-kalinlik: 3px; /* odak halkası kalınlığı */
+  --odak-bosluk: 2px; /* odak halkası ile öğe arası */
+
+  /* --- Kablo çizgisi --- */
+  --kablo-kalinlik: 3px; /* düz kablo çizgisi */
+  --kablo-tup: 9px; /* renkli kablonun dış çapı (kenar dahil) */
+  --kablo-ic: 5px; /* renkli kablonun iç şeridi */
+  --kablo-kesik: 10 6; /* varyant: stroke-dasharray */
+  --kablo-cizgi: var(--cizgi-guclu); /* kablo çizgisi ve kenarı */
+
+  /* --- Hareket --- */
+  --sure-hizli: 100ms; /* basma geri bildirimi */
+  --sure: 180ms; /* geçişler */
+  --egri: cubic-bezier(0.2, 0, 0, 1); /* ivme eğrisi */
+
+  /* --- Kablo renkleri (gerçek renk, temaya göre DEĞİŞMEZ; hep kenarlı ve yazılı) --- */
+  --kablo-ws: #F2F2EE; /* ws beyaz */
+  --kablo-sw: #17191C; /* sw siyah */
+  --kablo-rt: #D8212E; /* rt kırmızı */
+  --kablo-gn: #1E9E45; /* gn yeşil */
+  --kablo-ge: #F2C200; /* ge sarı */
+  --kablo-bl: #2063D0; /* bl mavi */
+  --kablo-br: #7C4A22; /* br kahverengi */
+  --kablo-gr: #8B9096; /* gr gri */
+  --kablo-li: #8B52C4; /* li lila */
+  --kablo-or: #F28A0C; /* or turuncu */
+  --kablo-rs: #F29BBB; /* rs pembe */
+
+  /* --- Cihaz türü: çerçeve rengi ve iç dolgu (renk yalnız destek; asıl ayrım çerçeve + glif + yazı) --- */
+  --tur-beyin: var(--ton-mavi); /* beyin: çerçeve */
+  --tur-beyin-zemin: var(--ton-mavi-zemin); /* beyin: dolgu */
+  --tur-soket: var(--ton-celik); /* soket */
+  --tur-soket-zemin: var(--ton-celik-zemin); /* soket dolgu */
+  --tur-besleme: var(--ton-gul); /* artı besleme */
+  --tur-besleme-zemin: var(--ton-gul-zemin); /* artı besleme dolgu */
+  --tur-guc: var(--ton-gul); /* güç (akü, alternatör) */
+  --tur-guc-zemin: var(--ton-gul-zemin); /* güç dolgu */
+  --tur-salter: var(--ton-turuncu); /* şalter */
+  --tur-salter-zemin: var(--ton-turuncu-zemin); /* şalter dolgu */
+  --tur-role: var(--ton-turuncu); /* röle */
+  --tur-role-zemin: var(--ton-turuncu-zemin); /* röle dolgu */
+  --tur-sigorta: var(--ton-turuncu); /* sigorta */
+  --tur-sigorta-zemin: var(--ton-turuncu-zemin); /* sigorta dolgu */
+  --tur-toprak: var(--ton-kahve); /* toprak */
+  --tur-toprak-zemin: var(--ton-kahve-zemin); /* toprak dolgu */
+  --tur-motor: var(--ton-zeytin); /* motor */
+  --tur-motor-zemin: var(--ton-zeytin-zemin); /* motor dolgu */
+  --tur-valf: var(--ton-zeytin); /* valf */
+  --tur-valf-zemin: var(--ton-zeytin-zemin); /* valf dolgu */
+  --tur-lamba: var(--ton-sari); /* lamba */
+  --tur-lamba-zemin: var(--ton-sari-zemin); /* lamba dolgu */
+  --tur-ikaz: var(--ton-sari); /* ikaz (uyarı lambası, korna, zil) */
+  --tur-ikaz-zemin: var(--ton-sari-zemin); /* ikaz dolgu */
+  --tur-sensor: var(--ton-turkuaz); /* sensör */
+  --tur-sensor-zemin: var(--ton-turkuaz-zemin); /* sensör dolgu */
+  --tur-direnc: var(--ton-celik); /* direnç */
+  --tur-direnc-zemin: var(--ton-celik-zemin); /* direnç dolgu */
+  --tur-diyot: var(--ton-celik); /* diyot */
+  --tur-diyot-zemin: var(--ton-celik-zemin); /* diyot dolgu */
+  --tur-dugum: var(--ton-celik); /* düğüm (ek / birleşim noktası) */
+  --tur-dugum-zemin: var(--ton-celik-zemin); /* düğüm dolgu */
+  --tur-diger: var(--ton-celik); /* diğer (tanınmayan tür) */
+  --tur-diger-zemin: var(--ton-celik-zemin); /* diğer dolgu */
+  --tur-devam: var(--ton-celik); /* devam ucu (kablo başka şemaya / cihaza gidiyor) */
+  --tur-devam-zemin: var(--ton-celik-zemin); /* devam ucu dolgu */
+}
+
+
+/* ==========================================================================
+   2. KOYU TEMA — varsayılan (atölye, kanal, loş ortam)
+   ========================================================================== */
+:root,
+:root[data-tema="koyu"] {
+  color-scheme: dark;
+
+  --zemin: #0E1216; /* sayfa zemini */
+  --yuzey: #161B21; /* kart, panel, diyagram zemini */
+  --yuzey-ust: #1F262E; /* girdi alanı, çip, etiket zemini */
+  --yuzey-basili: #28323D; /* basılı satır / yüzey */
+  --yazi: #F3F5F7; /* ana metin */
+  --yazi-2: #CDD4DB; /* ikincil metin */
+  --yazi-pasif: #A3ADB8; /* ipucu, yer tutucu, devre dışı */
+  --cizgi: #8791A0; /* çerçeve, ayırıcı, tablo çizgisi */
+  --cizgi-guclu: #AEB9C5; /* diyagram çizgisi, kablo, kablo şeridi kenarı */
+  --ters-zemin: #F3F5F7; /* ters çift: pin numarası kutusu */
+  --ters-yazi: #0E1216; /* ters çift: yazı */
+  --vurgu: #5AA9FF; /* ana düğme, seçili sekme dolgusu */
+  --vurgu-yazi: #07121F; /* vurgu dolgusu üstündeki yazı */
+  --vurgu-basili: #8CC4FF; /* basılı ana düğme */
+  --yazi-vurgu: #8CC4FF; /* bağlantı ve vurgulu metin */
+  --secili-zemin: #19304B; /* seçili satır dolgusu */
+  --odak: #FFD84D; /* odak halkası */
+  --golge-kaplama: 0 8px 24px rgba(0, 0, 0, 0.6); /* yalnız açılır katman (menü, alt sayfa) */
+  --ortu: rgba(0, 0, 0, 0.6); /* katman arkası karartma */
+
+  --supheli-zemin: #FFB020; /* ŞÜPHELİ dolgusu (düz kehribar) */
+  --supheli-yazi: #1A1100; /* ŞÜPHELİ yazısı ve simgesi */
+  --supheli-cizgi: #FFB020; /* ŞÜPHELİ çerçevesi */
+  --hata-zemin: #5E1017; /* ÇELİŞKİLİ / hata dolgusu */
+  --hata-yazi: #FFF1F1; /* ÇELİŞKİLİ / hata yazısı */
+  --hata-cizgi: #FF7B7B; /* ÇELİŞKİLİ / hata çerçevesi */
+  --dogrulanmadi-zemin: #2A1D47; /* DOĞRULANMADI dolgusu */
+  --dogrulanmadi-yazi: #E9DEFF; /* DOĞRULANMADI yazısı */
+  --dogrulanmadi-cizgi: #B999F5; /* DOĞRULANMADI çerçevesi */
+  --dogrulandi-zemin: #0F3321; /* DOĞRULANDI dolgusu */
+  --dogrulandi-yazi: #C4F5D6; /* DOĞRULANDI yazısı */
+  --dogrulandi-cizgi: #4CD27A; /* DOĞRULANDI çerçevesi */
+  --not-zemin: #1C2A3B; /* ŞEMA NOTU dolgusu */
+  --not-yazi: #D3E1F2; /* ŞEMA NOTU yazısı */
+  --not-cizgi: #9DB4D0; /* ŞEMA NOTU çerçevesi */
+
+  --ton-mavi: #6FA8F0; /* beyin tonu */
+  --ton-mavi-zemin: #263446; /* beyin dolgusu */
+  --ton-turkuaz: #4FC4B5; /* sensör tonu */
+  --ton-turkuaz-zemin: #20393C; /* sensör dolgusu */
+  --ton-celik: #A7B3C0; /* soket, düğüm, direnç, diyot, diğer tonu */
+  --ton-celik-zemin: #30363E; /* çelik dolgusu */
+  --ton-gul: #F08BB0; /* artı besleme, güç tonu */
+  --ton-gul-zemin: #3D2F3B; /* gül dolgusu */
+  --ton-turuncu: #F0905A; /* şalter, röle, sigorta tonu */
+  --ton-turuncu-zemin: #3D302B; /* turuncu dolgusu */
+  --ton-zeytin: #A9C45A; /* motor, valf tonu */
+  --ton-zeytin-zemin: #30392B; /* zeytin dolgusu */
+  --ton-sari: #E8C84A; /* lamba, ikaz tonu */
+  --ton-sari-zemin: #3C3A28; /* sarı dolgusu */
+  --ton-kahve: #C49A6C; /* toprak tonu */
+  --ton-kahve-zemin: #35322F; /* kahve dolgusu */
+}
+
+
+/* ==========================================================================
+   3. AÇIK TEMA — data-tema="acik" ile seçilince (güneş, aydınlık yer)
+   ========================================================================== */
+:root[data-tema="acik"] {
+  color-scheme: light;
+
+  --zemin: #EEECE7;
+  --yuzey: #F8F7F4;
+  --yuzey-ust: #FDFCFA;
+  --yuzey-basili: #E2DFD8;
+  --yazi: #12161B;
+  --yazi-2: #2B343E;
+  --yazi-pasif: #4A545F;
+  --cizgi: #5F6873;
+  --cizgi-guclu: #3A444F;
+  --ters-zemin: #12161B;
+  --ters-yazi: #F8F7F4;
+  --vurgu: #0B4FA8;
+  --vurgu-yazi: #FDFCFA;
+  --vurgu-basili: #083A80;
+  --yazi-vurgu: #083C80;
+  --secili-zemin: #D6E4F6;
+  --odak: #8A3A00;
+  --golge-kaplama: 0 8px 24px rgba(18, 22, 27, 0.28);
+  --ortu: rgba(18, 22, 27, 0.55);
+
+  --supheli-zemin: #FFB020;
+  --supheli-yazi: #1A1100;
+  --supheli-cizgi: #4A2C00;
+  --hata-zemin: #73151A;
+  --hata-yazi: #FFF6F6;
+  --hata-cizgi: #4F0B0F;
+  --dogrulanmadi-zemin: #EDE3FF;
+  --dogrulanmadi-yazi: #34176B;
+  --dogrulanmadi-cizgi: #6A3FC0;
+  --dogrulandi-zemin: #D5F2DF;
+  --dogrulandi-yazi: #0A3A1B;
+  --dogrulandi-cizgi: #166B38;
+  --not-zemin: #DCE6F2;
+  --not-yazi: #1B2F4A;
+  --not-cizgi: #3C5A80;
+
+  --ton-mavi: #2563B8;
+  --ton-mavi-zemin: #D8E1EB;
+  --ton-turkuaz: #0B7568;
+  --ton-turkuaz-zemin: #D4E4DF;
+  --ton-celik: #4F5D6A;
+  --ton-celik-zemin: #DFE0DF;
+  --ton-gul: #B03466;
+  --ton-gul-zemin: #EDDADF;
+  --ton-turuncu: #AD4E14;
+  --ton-turuncu-zemin: #EDDED2;
+  --ton-zeytin: #566F0F;
+  --ton-zeytin-zemin: #E0E3D2;
+  --ton-sari: #866600;
+  --ton-sari-zemin: #E7E1CF;
+  --ton-kahve: #75502E;
+  --ton-kahve-zemin: #E4DED6;
+}
+
+
+/* ==========================================================================
+   4. AÇIK TEMA — öznitelik YOK ve sistem açık diyorsa (3. bloğun birebir kopyası)
+   ========================================================================== */
+@media (prefers-color-scheme: light) {
+  :root:not([data-tema]) {
+    color-scheme: light;
+
+    --zemin: #EEECE7;
+    --yuzey: #F8F7F4;
+    --yuzey-ust: #FDFCFA;
+    --yuzey-basili: #E2DFD8;
+    --yazi: #12161B;
+    --yazi-2: #2B343E;
+    --yazi-pasif: #4A545F;
+    --cizgi: #5F6873;
+    --cizgi-guclu: #3A444F;
+    --ters-zemin: #12161B;
+    --ters-yazi: #F8F7F4;
+    --vurgu: #0B4FA8;
+    --vurgu-yazi: #FDFCFA;
+    --vurgu-basili: #083A80;
+    --yazi-vurgu: #083C80;
+    --secili-zemin: #D6E4F6;
+    --odak: #8A3A00;
+    --golge-kaplama: 0 8px 24px rgba(18, 22, 27, 0.28);
+    --ortu: rgba(18, 22, 27, 0.55);
+
+    --supheli-zemin: #FFB020;
+    --supheli-yazi: #1A1100;
+    --supheli-cizgi: #4A2C00;
+    --hata-zemin: #73151A;
+    --hata-yazi: #FFF6F6;
+    --hata-cizgi: #4F0B0F;
+    --dogrulanmadi-zemin: #EDE3FF;
+    --dogrulanmadi-yazi: #34176B;
+    --dogrulanmadi-cizgi: #6A3FC0;
+    --dogrulandi-zemin: #D5F2DF;
+    --dogrulandi-yazi: #0A3A1B;
+    --dogrulandi-cizgi: #166B38;
+    --not-zemin: #DCE6F2;
+    --not-yazi: #1B2F4A;
+    --not-cizgi: #3C5A80;
+
+    --ton-mavi: #2563B8;
+    --ton-mavi-zemin: #D8E1EB;
+    --ton-turkuaz: #0B7568;
+    --ton-turkuaz-zemin: #D4E4DF;
+    --ton-celik: #4F5D6A;
+    --ton-celik-zemin: #DFE0DF;
+    --ton-gul: #B03466;
+    --ton-gul-zemin: #EDDADF;
+    --ton-turuncu: #AD4E14;
+    --ton-turuncu-zemin: #EDDED2;
+    --ton-zeytin: #566F0F;
+    --ton-zeytin-zemin: #E0E3D2;
+    --ton-sari: #866600;
+    --ton-sari-zemin: #E7E1CF;
+    --ton-kahve: #75502E;
+    --ton-kahve-zemin: #E4DED6;
+  }
+}
+
+
+/* ==========================================================================
+   5. HAREKET AZALTMA — sistem "hareketi azalt" diyorsa geçişler kapanır
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sure-hizli: 0ms;
+    --sure: 0ms;
+  }
+}

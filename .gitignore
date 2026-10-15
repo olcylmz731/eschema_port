@@ -1,0 +1,5 @@
+kaynak/png/
+.gecici/
+__pycache__/
+*.pyc
+node_modules/

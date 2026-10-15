@@ -1,0 +1,28 @@
+{
+  "aciklama": "Şema kimliği → PDF dosyası, sayfalar, kapaklar. PDF adları NFC yazımıyla verildi; diskte NFD olduklarından karşılaştırırken unicodedata.normalize('NFC', ...) kullan. 'sayfalar' = okunacak PDF sayfaları (1'den başlar), 'kapak' = yalnız künyesi alınacak sayfalar. 'dilim' = hangi aşamada işleneceği. 'sekmeler' uygulamadaki sekmelerin sırasıdır. Yeni şema eklemek = buraya satır eklemek + veri/<sema>.json üretmek.",
+  "kaynakKlasor": "~/İndirilenler/Yeni Klasör (1)",
+  "sekmeler": [
+    { "id": "alternator-mars", "ad": "Alternatör – Marş", "semalar": ["alternator-mars"] },
+    { "id": "dmux", "ad": "DMUX", "semalar": ["dmux", "kapi-butonu-dmux"] },
+    { "id": "cpc", "ad": "CPC", "semalar": ["cpc"] },
+    { "id": "fps-1-4", "ad": "FPS 1–4", "semalar": ["fps-1-4"] },
+    { "id": "fps-5", "ad": "FPS 5", "semalar": ["fps-5"] },
+    { "id": "fps-6", "ad": "FPS 6", "semalar": ["fps-6"] },
+    { "id": "kapi", "ad": "Kapı 1–4", "semalar": ["kapi-1", "kapi-2", "kapi-3", "kapi-4"] },
+    { "id": "scr", "ad": "SCR", "semalar": ["scr"] }
+  ],
+  "semalar": {
+    "alternator-mars": { "ad": "Alternatör – Marş Motoru", "pdf": "Alternatör - Marş Motoru stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 1 },
+    "kapi-1": { "ad": "Kapı 1", "pdf": "Kapı 1stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 1 },
+    "kapi-2": { "ad": "Kapı 2", "pdf": "Kapı 2 stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 2 },
+    "kapi-3": { "ad": "Kapı 3", "pdf": "Kapı 3 stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 2 },
+    "kapi-4": { "ad": "Kapı 4", "pdf": "Kapı 4 stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 2 },
+    "fps-1-4": { "ad": "FPS 1–4", "pdf": "FPS . 1 - 4 stromlaufplan.pdf", "sayfalar": [2, 3], "kapak": [1], "dilim": 3 },
+    "fps-5": { "ad": "FPS 5", "pdf": "FPS %stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 3 },
+    "fps-6": { "ad": "FPS 6", "pdf": "FPS 6 stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 3 },
+    "dmux": { "ad": "DMUX", "pdf": "DMUX stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 4 },
+    "kapi-butonu-dmux": { "ad": "Kapı Butonu (DMUX)", "pdf": "Kapı Butonu DMUX stromlaufplan.pdf", "sayfalar": [1], "kapak": [], "dilim": 4 },
+    "cpc": { "ad": "CPC", "pdf": "CPC stromlaufplan.pdf", "sayfalar": [2, 3], "kapak": [1], "dilim": 5 },
+    "scr": { "ad": "SCR", "pdf": "SCR stromlaufplan.pdf", "sayfalar": [2, 3], "kapak": [1], "dilim": 6 }
+  }
+}

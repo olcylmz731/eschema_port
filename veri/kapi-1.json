@@ -1,0 +1,3707 @@
+{
+ "sema": "kapi-1",
+ "kaynak": {
+  "pdf": "Kapı 1stromlaufplan.pdf",
+  "sayfalar": [
+   1
+  ]
+ },
+ "kunye": {
+  "baslik": "Stromlaufplan Tuersteuerung Tuer 1 IST E-Antrieb",
+  "parcaNo": "A 628 821 76 50",
+  "format": "A2",
+  "tarih": "2004-05-14"
+ },
+ "varsayilan": {
+  "renk": "ws",
+  "kesit": "0.75",
+  "ham": "BEMERKUNGEN : | Alle Leitungen ohne Querschnittangaben haben A = 0.75mm² | Alle Leitungen ohne Farbangaben sind ws | Darstellung generell stromlos bzw. drucklos | ------- Variante / # Systemlieferant | (Gelenk simgesi) Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant"
+ },
+ "dogrulandi": false,
+ "cihazlar": [
+  {
+   "kod": "HT332",
+   "yol": [
+    "4",
+    "50"
+   ],
+   "adDe": "Variante",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "diger",
+   "not": "Varyant işareti (listede 'Variante'). Çizimde yalnız etiket olarak geçiyor (yol 4'te 41S21 çiftinin altında, yol 50'de 41Y03'ün yanında); hiçbir kablo ucu yok."
+  },
+  {
+   "kod": "04A03",
+   "yol": [
+    "23",
+    "48"
+   ],
+   "adDe": "Steuergeraet Flexibel programmierte Steuerung (FPS",
+   "adTr": "Esnek programlı kumanda modülü 3",
+   "kisaAd": "FPS 3",
+   "tur": "beyin"
+  },
+  {
+   "kod": "41A01",
+   "yol": [
+    "75"
+   ],
+   "adDe": "Steuergeraet Tuer 1",
+   "adTr": "Kapı 1 kumanda beyni",
+   "kisaAd": "Kapı 1 beyni",
+   "tur": "beyin"
+  },
+  {
+   "kod": "42A01",
+   "yol": [
+    "23..66"
+   ],
+   "adDe": "Steuergeraet Tuer 2",
+   "adTr": "Kapı 2 kumanda beyni",
+   "kisaAd": "Kapı 2 beyni",
+   "tur": "beyin"
+  },
+  {
+   "kod": "60A01",
+   "yol": [
+    "62"
+   ],
+   "adDe": "Steuergeraet I-Modul",
+   "adTr": null,
+   "kisaAd": "I-Modul",
+   "tur": "beyin"
+  },
+  {
+   "kod": "41B01",
+   "yol": [
+    "15"
+   ],
+   "adDe": "Druckwellenschalter Einklemmschutz Tuer 1",
+   "adTr": "Sıkışma koruma basınç dalgası şalteri",
+   "kisaAd": null,
+   "tur": "sensor"
+  },
+  {
+   "kod": "41B02",
+   "yol": [
+    "18"
+   ],
+   "adDe": "Druckwellenschalter Einklemmschutz Tuer 1",
+   "adTr": "Sıkışma koruma basınç dalgası şalteri",
+   "kisaAd": null,
+   "tur": "sensor"
+  },
+  {
+   "kod": "41E01.1",
+   "yol": [
+    "46",
+    "49"
+   ],
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "adTr": "Giriş aydınlatması",
+   "kisaAd": null,
+   "tur": "lamba",
+   "not": "Bileşen listesinde '41E01.1-2' tek satır (iki lamba, yol 46 ve 49); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı. Şemada her lamba 20 W (Beyin Listesi: 2 x 20 W)."
+  },
+  {
+   "kod": "41E01.2",
+   "yol": [
+    "46",
+    "49"
+   ],
+   "adDe": "Beleuchtung Einstieg Tuer 1",
+   "adTr": "Giriş aydınlatması",
+   "kisaAd": null,
+   "tur": "lamba",
+   "not": "Bileşen listesinde '41E01.1-2' tek satır (iki lamba, yol 46 ve 49); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı. Şemada her lamba 20 W (Beyin Listesi: 2 x 20 W)."
+  },
+  {
+   "kod": "41F01",
+   "yol": [
+    "59"
+   ],
+   "adDe": "Sicherung Schwenkschiebetuer 1",
+   "adTr": "Çevirmeli-sürgülü kapı 1 sigortası",
+   "kisaAd": null,
+   "tur": "sigorta",
+   "not": "Şemada sigortanın yanında 20A yazıyor (Beyin Listesi: 20 A)."
+  },
+  {
+   "kod": "41H01",
+   "yol": [
+    "74"
+   ],
+   "adDe": "Warnsummer Tuerlauf und Rampe Tuer 1",
+   "adTr": "Kapı hareketi ve rampa ikaz düdüğü",
+   "kisaAd": null,
+   "tur": "ikaz",
+   "not": "Pinler 87, 86 (üst) ve 30 (alt). 87 ile 30 arasında kesikli çizilmiş zil simgesi cihazın iç gösterimidir; kablo ya da köprü değil, kayda alınmadı (F004)."
+  },
+  {
+   "kod": "41K01",
+   "yol": [
+    "57"
+   ],
+   "adDe": "Relais Stromversorgung Elektrotuer 1",
+   "adTr": "Elektrikli kapı 1 besleme rölesi",
+   "kisaAd": null,
+   "tur": "role"
+  },
+  {
+   "kod": "41M02",
+   "yol": [
+    "44"
+   ],
+   "adDe": "Motor Fluegel in Fahrtrichtung HI Tuer 1",
+   "adTr": "Arka kanat motoru",
+   "kisaAd": null,
+   "tur": "motor"
+  },
+  {
+   "kod": "41M03",
+   "yol": [
+    "38"
+   ],
+   "adDe": "Motor Fluegel in Fahrtrichtung VO Tuer 1",
+   "adTr": "Ön kanat motoru",
+   "kisaAd": null,
+   "tur": "motor"
+  },
+  {
+   "kod": "41R01",
+   "yol": [
+    "50"
+   ],
+   "adDe": "Potentiometer Fluegel in Fahrtrichtung VO Tuer 1",
+   "adTr": "Ön kanat konum potansiyometresi",
+   "kisaAd": null,
+   "tur": "direnc"
+  },
+  {
+   "kod": "41R02",
+   "yol": [
+    "56"
+   ],
+   "adDe": "Potentiometer Fluegel in Fahrtrichtung HI Tuer 1",
+   "adTr": "Arka kanat konum potansiyometresi",
+   "kisaAd": null,
+   "tur": "direnc"
+  },
+  {
+   "kod": "41S10",
+   "yol": [
+    "12"
+   ],
+   "adDe": "Schalter Hand/Automatik Tuer 1",
+   "adTr": "El / otomatik şalteri",
+   "kisaAd": null,
+   "tur": "salter"
+  },
+  {
+   "kod": "41S11",
+   "yol": [
+    "21"
+   ],
+   "adDe": "Schalter Werkstatt Tuer 1",
+   "adTr": "Atölye (servis) şalteri",
+   "kisaAd": null,
+   "tur": "salter"
+  },
+  {
+   "kod": "41S21.1",
+   "yol": [
+    "4",
+    "8"
+   ],
+   "adDe": "Schalter Nothahn Tuer 1",
+   "adTr": "Acil vana şalteri",
+   "kisaAd": null,
+   "tur": "salter",
+   "not": "Bileşen listesinde '41S21.1-2' tek satır (iki anahtar, yol 4 ve 8); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı."
+  },
+  {
+   "kod": "41S21.2",
+   "yol": [
+    "4",
+    "8"
+   ],
+   "adDe": "Schalter Nothahn Tuer 1",
+   "adTr": "Acil vana şalteri",
+   "kisaAd": null,
+   "tur": "salter",
+   "not": "Bileşen listesinde '41S21.1-2' tek satır (iki anahtar, yol 4 ve 8); kablo uçlarında tekil kodlar geçtiği için ikiye açıldı."
+  },
+  {
+   "kod": "41S29",
+   "yol": [
+    "42"
+   ],
+   "adDe": "Schalter Antriebsmotor Tuer 1",
+   "adTr": "Tahrik motoru şalteri",
+   "kisaAd": null,
+   "tur": "salter"
+  },
+  {
+   "kod": "41S30",
+   "yol": [
+    "42"
+   ],
+   "adDe": "Schalter Antriebsmotor Tuer 1",
+   "adTr": "Tahrik motoru şalteri",
+   "kisaAd": null,
+   "tur": "salter"
+  },
+  {
+   "kod": "W0901",
+   "yol": [
+    "60"
+   ],
+   "adDe": "Masse 1 Dach(quer)kanal",
+   "adTr": "Tavan enine kanal şasesi",
+   "kisaAd": null,
+   "tur": "toprak"
+  },
+  {
+   "kod": "X02.25-43",
+   "yol": [
+    "60",
+    "63"
+   ],
+   "adDe": "Steckverbinder Hauptschalttafel (E-Fach)",
+   "adTr": null,
+   "kisaAd": null,
+   "tur": "soket"
+  },
+  {
+   "kod": "X0203",
+   "yol": [
+    "60"
+   ],
+   "adDe": "Verteiler Hauptschalttafel Kl. 30/3",
+   "adTr": "Ana pano dağıtıcısı, uç 30/3",
+   "kisaAd": null,
+   "tur": "besleme"
+  },
+  {
+   "kod": "X08.11-17",
+   "yol": [
+    "4..73"
+   ],
+   "adDe": "Steckverbinder Tueren",
+   "adTr": "Kapı soketleri",
+   "kisaAd": null,
+   "tur": "soket"
+  },
+  {
+   "kod": "X0809",
+   "yol": [
+    "75"
+   ],
+   "adDe": "CAN-Sternpunkt Komfort",
+   "adTr": "Konfor CAN yıldız noktası",
+   "kisaAd": null,
+   "tur": "soket"
+  },
+  {
+   "kod": "41Y03",
+   "yol": [
+    "50"
+   ],
+   "adDe": "Magnetventil Ruecksteller Nothahn Tuer 1",
+   "adTr": "Acil vana geri getirme selenoidi (opsiyon)",
+   "kisaAd": null,
+   "tur": "valf"
+  }
+ ],
+ "kablolar": [
+  {
+   "id": "k001",
+   "etiket": "#4004",
+   "no": "4004",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "4",
+     "ham": "X08. 11/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "3",
+     "ham": "X08. 12/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "3",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k002",
+   "etiket": "#4009",
+   "no": "4009",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "11",
+     "ham": "X08. 11/11"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "5",
+     "ham": "X08. 13/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "3",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k003",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.2",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "5",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k004",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.2",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "5",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k005",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "5",
+     "ham": "X08. 13/5"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "5",
+     "ham": "X08. 14/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "6",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k006",
+   "etiket": "#4005",
+   "no": "4005",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "5",
+     "ham": "X08. 11/5"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "4",
+     "ham": "X08. 12/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "7",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k007",
+   "etiket": "#4023",
+   "no": "4023",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "5",
+     "pinAdi": "NHB",
+     "ham": "NHB 15/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "8",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k008",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "5",
+     "ham": "X08. 14/5"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "5",
+     "ham": "X08. 15/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "8",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k009",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S21.1",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S10",
+     "soket": null,
+     "pin": "10",
+     "pinAdi": null,
+     "ham": "10"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "9",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k010",
+   "etiket": "#4037",
+   "no": "4037",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S10",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "12",
+     "pinAdi": "AUTO",
+     "ham": "AUTO 15/12"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "11",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k011",
+   "etiket": "#4006",
+   "no": "4006",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "6",
+     "ham": "X08. 11/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "5",
+     "ham": "X08. 12/5"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "11",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k012",
+   "etiket": "#4010",
+   "no": "4010",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "12",
+     "ham": "X08. 11/12"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "6",
+     "ham": "X08. 13/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "11",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k013",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S10",
+     "soket": null,
+     "pin": "10",
+     "pinAdi": null,
+     "ham": "10"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "12",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k014",
+   "etiket": "#4027",
+   "no": "4027",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "3",
+     "pinAdi": "DW",
+     "ham": "DW 15/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "14",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k015",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "6",
+     "ham": "X08. 13/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "6",
+     "ham": "X08. 14/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "14",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k016",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "15",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k017",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "15",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k018",
+   "etiket": "#4007",
+   "no": "4007",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "7",
+     "ham": "X08. 11/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "6",
+     "ham": "X08. 12/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "15",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k019",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "6",
+     "ham": "X08. 14/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "6",
+     "ham": "X08. 15/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "16",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k020",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "2",
+     "ham": "X08. 17/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "2",
+     "ham": "X08. 16/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "17",
+    "satir": "A"
+   },
+   "durum": "cozuldu",
+   "not": "A: ~d1 ↔ X08.17/2; B: X08.17/2 ↔ X08.16/2 → F001 ile aynı gerekçe: dal X08.16/2 pininin saplamasında bitiyor, ayrı bir düğüm noktası yok; B'nin temsili doğru (F002).",
+   "suphe": null
+  },
+  {
+   "id": "k021",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S11",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k022",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41B02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "2",
+     "ham": "X08. 16/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "18",
+    "satir": "A"
+   },
+   "durum": "cozuldu",
+   "not": "A: 41B02/1 ↔ düğüm ~d1 (+ ~d1 ↔ X08.16/2, ~d1 ↔ X08.17/2); B: 41B02/1 ↔ X08.16/2 (ortak uç X08.16/2 pini) → 1000 dpi büyütmede dallanmada nokta/kod yok; X08.17/2'nin kolu, X08.16/2 pin simgesinin hemen üstündeki kısa saplamaya (200 dpi'de ~19 px) katılıyor; zincirdeki diğer X08.1x pinleriyle (örn. X08.15/3: ~18 px) aynı çizim biçimi. Pin ortak uç yazıldı, düğüm yok (F001).",
+   "suphe": null
+  },
+  {
+   "id": "k023",
+   "etiket": "#4008",
+   "no": "4008",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "8",
+     "ham": "X08. 11/8"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "9",
+     "ham": "X08. 12/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "19",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k024",
+   "etiket": "#4022",
+   "no": "4022",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S11",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "2",
+     "pinAdi": "WFAT",
+     "ham": "WFAT 15/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "20",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k025",
+   "etiket": "#4049",
+   "no": "4049",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "10",
+     "pinAdi": "HWA1",
+     "ham": "HWA1 15/10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "7",
+     "ham": "X08. 15/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "21",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k026",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "4",
+     "ham": "X08. 17/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "4",
+     "ham": "X08. 16/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k027",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "7",
+     "ham": "X08. 15/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "7",
+     "ham": "X08. 14/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k028",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "10",
+     "pinAdi": "HS10",
+     "ham": "HS10 IV-18/10"
+    },
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": "42A01"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "23",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k029",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "4",
+     "ham": "X08. 16/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "11",
+     "ham": "X08. 12/11"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "24",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k030",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "7",
+     "ham": "X08. 14/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "7",
+     "ham": "X08. 13/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "24",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k031",
+   "etiket": "#4048",
+   "no": "4048",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "11",
+     "ham": "X08. 12/11"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "7",
+     "pinAdi": "RMPST",
+     "ham": "RMPST 15/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "25",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k032",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "7",
+     "ham": "X08. 13/7"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "10",
+     "ham": "X08. 11/10"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "26",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k033",
+   "etiket": "#4002",
+   "no": "4002",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "1",
+     "ham": "X08. 11/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "1",
+     "ham": "X08. 12/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "27",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k034",
+   "etiket": "4002",
+   "no": "4002",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "10",
+     "pinAdi": "HS10",
+     "ham": "HS10 IV-18/10"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "1",
+     "ham": "X08. 11/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "27",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k035",
+   "etiket": "#4047",
+   "no": "4047",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "10",
+     "ham": "X08. 12/10"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "8",
+     "pinAdi": "TBL",
+     "ham": "TBL 15/8"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "27",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k036",
+   "etiket": "#4046",
+   "no": "4046",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "3",
+     "ham": "X08. 15/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "11",
+     "pinAdi": "HW",
+     "ham": "HW 15/11"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "29",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k037",
+   "etiket": "#4050",
+   "no": "4050",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "13",
+     "pinAdi": "FGA",
+     "ham": "FGA 15/13"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "2",
+     "ham": "X08. 13/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "29",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k038",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "1",
+     "ham": "X08. 12/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "1",
+     "ham": "X08. 13/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "30",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k039",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "3",
+     "ham": "X08. 15/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "3",
+     "ham": "X08. 14/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "30",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k040",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "2",
+     "ham": "X08. 13/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "2",
+     "ham": "X08. 14/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "30",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k041",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "1",
+     "ham": "X08. 13/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "1",
+     "ham": "X08. 14/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "32",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k042",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "3",
+     "ham": "X08. 14/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "3",
+     "ham": "X08. 13/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "32",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k043",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "2",
+     "ham": "X08. 14/2"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "2",
+     "ham": "X08. 15/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "32",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k044",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "1",
+     "ham": "X08. 14/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "1",
+     "ham": "X08. 15/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "34",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k045",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "3",
+     "ham": "X08. 13/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "8",
+     "ham": "X08. 12/8"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "34",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k046",
+   "etiket": "#2,5-4074",
+   "no": "4074",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "4",
+     "pinAdi": "MOT+V",
+     "ham": "MOT+V 18/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M03",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "35",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k047",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "1",
+     "ham": "X08. 15/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "1",
+     "ham": "X08. 16/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "36",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k048",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S11",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "86",
+     "pinAdi": null,
+     "ham": "86"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~37",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": "Etiketsiz uzun hat: 41S11 pin 2'den (yol 20) yukarı çıkıp sayfanın üst kenarı boyunca yol 55'e gider, orada inip 41K01 pin 86'ya girer. İzgara = yatay kolun ortası (A: yol 37, B: yol 20 = başlangıç; ikisi de hattın üzerinde) (I001).",
+   "suphe": null
+  },
+  {
+   "id": "k049",
+   "etiket": "#4044",
+   "no": "4044",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "3",
+     "ham": "X08. 16/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "6",
+     "pinAdi": "LS",
+     "ham": "LS 15/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "37",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k050",
+   "etiket": "#2,5-4075",
+   "no": "4075",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "5",
+     "pinAdi": "MOT-V",
+     "ham": "MOT-V 18/5"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M03",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "37",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k051",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "1",
+     "ham": "X08. 16/1"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "1",
+     "ham": "X08. 17/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "38",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k052",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "3",
+     "ham": "X08. 16/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "3",
+     "ham": "X08. 17/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "39",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k053",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "1",
+     "ham": "X08. 17/1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S29",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "40",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k054",
+   "etiket": "#4136",
+   "no": "4136",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S29",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41S30",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "41",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k055",
+   "etiket": "#4137",
+   "no": "4137",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S30",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "15",
+     "pinAdi": "EIN2",
+     "ham": "EIN2 15/15"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "41",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k056",
+   "etiket": "#2,5-4083",
+   "no": "4083",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "8",
+     "pinAdi": "MOT-H",
+     "ham": "MOT-H 18/8"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "41",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k057",
+   "etiket": "#2,5-4082",
+   "no": "4082",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "7",
+     "pinAdi": "MOT+H",
+     "ham": "MOT+H 18/7"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41M02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "43",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k058",
+   "etiket": "#4057",
+   "no": "4057",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "11",
+     "pinAdi": "ANGND",
+     "ham": "ANGND 18/11"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "46",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k059",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.2",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "47",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k060",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.2",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "47",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k061",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41S29",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "86",
+     "pinAdi": null,
+     "ham": "86"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "48",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k062",
+   "etiket": "#4031",
+   "no": "4031",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "13",
+     "pinAdi": "POSV",
+     "ham": "POSV 18/13"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "48",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k063",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "4",
+     "pinAdi": "HS8",
+     "ham": "HS8 IV-18/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "9",
+     "ham": "X08. 11/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k064",
+   "etiket": "#4039",
+   "no": "4039",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "9",
+     "ham": "X08. 11/9"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41Y03",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k065",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41Y03",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k066",
+   "etiket": "#4034",
+   "no": "4034",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41E01.1",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "4",
+     "pinAdi": "ESB",
+     "ham": "ESB 15/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k067",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R02",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "49",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k068",
+   "etiket": "#4032",
+   "no": "4032",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "10",
+     "pinAdi": "UREF",
+     "ham": "UREF 18/10"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "50",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k069",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41Y03",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "85",
+     "pinAdi": null,
+     "ham": "85"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "51",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k070",
+   "etiket": "4039",
+   "no": "4039",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "04A03",
+     "soket": "IV-18",
+     "pin": "4",
+     "pinAdi": "HS8",
+     "ham": "HS8 IV-18/4"
+    },
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": "42A01"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "52",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k071",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41R01",
+     "soket": null,
+     "pin": "1",
+     "pinAdi": null,
+     "ham": "1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R02",
+     "soket": null,
+     "pin": "3",
+     "pinAdi": null,
+     "ham": "3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "53",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k072",
+   "etiket": "#4033",
+   "no": "4033",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "16",
+     "pinAdi": "POSH",
+     "ham": "POSH 18/16"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41R02",
+     "soket": null,
+     "pin": "2",
+     "pinAdi": null,
+     "ham": "2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "53",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k073",
+   "etiket": "#br",
+   "no": null,
+   "isaret": "#",
+   "kesit": null,
+   "renk": "br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "85",
+     "pinAdi": null,
+     "ham": "85"
+    },
+    {
+     "tur": "devam",
+     "cihaz": null,
+     "hedef": "74",
+     "ham": "74"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "54",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "Karşılıklı ok çifti: yol 54'teki ok '74' (41H01'in yolu), yol 74'teki ok '54' yazıyor; aynı #br hattının iki ucu (41K01 pin 85 ↔ 41H01 pin 30). İki ayrı devam ucu olarak bırakıldı.",
+   "suphe": null
+  },
+  {
+   "id": "k074",
+   "etiket": "#2,5-4134",
+   "no": "4134",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "3",
+     "ham": "X08. 11/3"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "30",
+     "pinAdi": null,
+     "ham": "30"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "56",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k075",
+   "etiket": "#2,5-4135",
+   "no": "4135",
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41K01",
+     "soket": null,
+     "pin": "87",
+     "pinAdi": null,
+     "ham": "87"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "1",
+     "pinAdi": "Kl.15",
+     "ham": "Kl.15 18/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "56",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k076",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X02.43",
+     "pin": "1",
+     "ham": "X02. 43/1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41F01",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "41F01 20A"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "59",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k077",
+   "etiket": "2,5rt-4001",
+   "no": "4001",
+   "isaret": null,
+   "kesit": "2.5",
+   "renk": "rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "3",
+     "ham": "X08. 11/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X02.43",
+     "pin": "1",
+     "ham": "X02. 43/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "59",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k078",
+   "etiket": "4rt-0027",
+   "no": "0027",
+   "isaret": null,
+   "kesit": "4",
+   "renk": "rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41F01",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "41F01 20A"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "X0203",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "X0203"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "59",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k079",
+   "etiket": "#2,5br",
+   "no": null,
+   "isaret": "#",
+   "kesit": "2.5",
+   "renk": "br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "3",
+     "pinAdi": "GND",
+     "ham": "GND 18/3"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "15",
+     "ham": "X08. 11/15"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "60",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k080",
+   "etiket": "2,5br",
+   "no": null,
+   "isaret": null,
+   "kesit": "2.5",
+   "renk": "br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "15",
+     "ham": "X08. 11/15"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "W0901",
+     "soket": null,
+     "pin": null,
+     "pinAdi": null,
+     "ham": "W0901"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "60",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k081",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "15",
+     "ham": "X08. 11/15"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "12",
+     "ham": "X08. 12/12"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "61",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k082",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X02.25",
+     "pin": "4",
+     "ham": "X02. 25/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "2",
+     "ham": "X08. 11/2"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "62",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k083",
+   "etiket": "6005",
+   "no": "6005",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "60A01",
+     "hedef": null,
+     "ham": "60A01"
+    },
+    {
+     "tur": "soket",
+     "soket": "X02.25",
+     "pin": "4",
+     "ham": "X02. 25/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "62",
+    "satir": "A"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k084",
+   "etiket": "#6005",
+   "no": "6005",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.11",
+     "pin": "2",
+     "ham": "X08. 11/2"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "18",
+     "pin": "12",
+     "pinAdi": "C3",
+     "ham": "C3 18/12"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "62",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k085",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "12",
+     "ham": "X08. 12/12"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "9",
+     "ham": "X08. 13/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "63",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k086",
+   "etiket": "#4045",
+   "no": "4045",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "14",
+     "pinAdi": "KW",
+     "ham": "KW 15/14"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "4",
+     "ham": "X08. 15/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "64",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k087",
+   "etiket": "1sw/rt",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "sw/rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": null
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "4",
+     "pinAdi": "CANHS",
+     "ham": "CANHS 9/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "65",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "Kalın demet çubuğuyla 42A01'e (Kapı 2 beyni) gidiyor: çizimde 42A01 okundan inen kalın çizgi bir çubukta biter, çubuktan iki ince tel ayrılır (1sw/rt CANHS 9/4 ve 1ws/li CANLS 9/6; çaprazlayan eğik çizgi = bükümlü çift). İki tel birbirine bağlı değildir, aynı demetin iki teli; bu yüzden her tel ayrı 'devam → 42A01' ucuna bağlandı.",
+   "suphe": null
+  },
+  {
+   "id": "k088",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "4",
+     "ham": "X08. 15/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "4",
+     "ham": "X08. 14/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "65",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k089",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "9",
+     "ham": "X08. 13/9"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "9",
+     "ham": "X08. 14/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "65",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k091",
+   "etiket": "1ws/li",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "ws/li",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "devam",
+     "cihaz": "42A01",
+     "hedef": null,
+     "ham": null
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "6",
+     "pinAdi": "CANLS",
+     "ham": "CANLS 9/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "67",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "Kalın demet çubuğuyla 42A01'e (Kapı 2 beyni) gidiyor: çizimde 42A01 okundan inen kalın çizgi bir çubukta biter, çubuktan iki ince tel ayrılır (1sw/rt CANHS 9/4 ve 1ws/li CANLS 9/6; çaprazlayan eğik çizgi = bükümlü çift). İki tel birbirine bağlı değildir, aynı demetin iki teli; bu yüzden her tel ayrı 'devam → 42A01' ucuna bağlandı.",
+   "suphe": null
+  },
+  {
+   "id": "k092",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "4",
+     "ham": "X08. 14/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "4",
+     "ham": "X08. 13/4"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "67",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k093",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.14",
+     "pin": "9",
+     "ham": "X08. 14/9"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "9",
+     "ham": "X08. 15/9"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "67",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k094",
+   "etiket": "4060",
+   "no": "4060",
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "5",
+     "pinAdi": "CANRS",
+     "ham": "CANRS 9/5"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "6",
+     "pinAdi": "CANLS",
+     "ham": "CANLS 9/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "69",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "İki ucu da 41A01'in 9 pinli soketinde (CANRS 9/5 ↔ CANLS 9/6). Cihaz çerçevesinin (kesik-noktalı çizgi) dışında, numaralı kablo olarak çizili; cihaz içi çizgi değil (ic işareti konmadı). Beyin Listesi §4.5: sonlandırma ilk ve son kapıda soket içinden köprülenerek devreye alınır.",
+   "suphe": null
+  },
+  {
+   "id": "k095",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.13",
+     "pin": "4",
+     "ham": "X08. 13/4"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.12",
+     "pin": "7",
+     "ham": "X08. 12/7"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "69",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k096",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.15",
+     "pin": "9",
+     "ham": "X08. 15/9"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "6",
+     "ham": "X08. 16/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "69",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k097",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.16",
+     "pin": "6",
+     "ham": "X08. 16/6"
+    },
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "6",
+     "ham": "X08. 17/6"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "71",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k098",
+   "etiket": "1ws/rt",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "ws/rt",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0809",
+     "soket": "I-18",
+     "pin": "4",
+     "pinAdi": null,
+     "ham": "I-18/4"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "1",
+     "pinAdi": "CANHF",
+     "ham": "CANHF 9/1"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "72",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k099",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "soket",
+     "soket": "X08.17",
+     "pin": "6",
+     "ham": "X08. 17/6"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "30",
+     "pinAdi": null,
+     "ham": "30"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "~73",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k100",
+   "etiket": "#4038",
+   "no": "4038",
+   "isaret": "#",
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "15",
+     "pin": "1",
+     "pinAdi": "TSW",
+     "ham": "TSW 15/1"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "87",
+     "pinAdi": null,
+     "ham": "87"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "73",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": null,
+   "suphe": null
+  },
+  {
+   "id": "k101",
+   "etiket": "1gr/li",
+   "no": null,
+   "isaret": null,
+   "kesit": "1",
+   "renk": "gr/li",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "X0809",
+     "soket": "I-18",
+     "pin": "6",
+     "pinAdi": null,
+     "ham": "I-18/6"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41A01",
+     "soket": "9",
+     "pin": "3",
+     "pinAdi": "CANLF",
+     "ham": "CANLF 9/3"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "74",
+    "satir": "B"
+   },
+   "durum": "eslesti",
+   "not": "A etiketin 2. harfinden (g mi q mu) emin değildi (emin:false), B 'gr' okudu. 1600 dpi büyütmede bu yazı tipinde g ile q aynı biçimde (çember + sağda düz sap) çiziliyor; 'Steuergeraet' içindeki g ve 'Dach(quer)kanal' içindeki q ile karşılaştırıldı, harf düzeyinde ayırt edilemedi. 'qr' bir renk kısaltması değil: gr = gri, li = lila (VERI-MODELI §1); Beyin Listesi §4.4 de 1gr/li (gri-lila). 'gr' kabul edildi.",
+   "suphe": null
+  },
+  {
+   "id": "k102",
+   "etiket": null,
+   "no": null,
+   "isaret": null,
+   "kesit": null,
+   "renk": null,
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "87",
+     "pinAdi": null,
+     "ham": "87"
+    },
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "86",
+     "pinAdi": null,
+     "ham": "86"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "74",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": "Etiketsiz; iki ucu da 41H01'in pini: 87'nin kablo tarafındaki noktadan (#4038'in geldiği yer) çıkıp 86 soketinin üstüne iner; 86'nın alt (cihaz) yarısı boş. 86 simgesi 87 ve 30 ile aynı 41H01 bloğunda, başka cihaza ait değil (A, yanında kod yazmıyor diye emin değildi).",
+   "suphe": null
+  },
+  {
+   "id": "k103",
+   "etiket": "#br",
+   "no": null,
+   "isaret": "#",
+   "kesit": null,
+   "renk": "br",
+   "varyant": false,
+   "uclar": [
+    {
+     "tur": "cihaz",
+     "cihaz": "41H01",
+     "soket": null,
+     "pin": "30",
+     "pinAdi": null,
+     "ham": "30"
+    },
+    {
+     "tur": "devam",
+     "cihaz": null,
+     "hedef": "54",
+     "ham": "54"
+    }
+   ],
+   "izgara": {
+    "sayfa": 1,
+    "yol": "74",
+    "satir": "C"
+   },
+   "durum": "eslesti",
+   "not": "Karşılıklı ok çifti: yol 74'teki ok '54', yol 54'teki ok '74' yazıyor; aynı #br hattının iki ucu (41H01 pin 30 ↔ 41K01 pin 85). İki ayrı devam ucu olarak bırakıldı.",
+   "suphe": null
+  }
+ ],
+ "celiskiler": [
+  {
+   "kablo": "k075",
+   "alan": "pinAdi",
+   "sema": "Kl.15",
+   "beyinListesi": "UB",
+   "not": "41A01 18/1 (kablo #2,5-4135): şemada pin adı Kl.15; Beyin Listesi §4.3 kısaltması 'UB' (Almanca sütunu 'Klemme 15', Türkçe 'Kontak beslemesi'). Pin numarası ve kablo uyuşuyor, yalnız ad farkı. Şema değeri değişmedi."
+  },
+  {
+   "kablo": "k087",
+   "alan": "hedef",
+   "sema": "42A01 (kalın demet çubuğu → ok)",
+   "beyinListesi": "X0809",
+   "not": "Beyin Listesi §4.4: 'Hepsi X0809'a gider'. Şemada CANHS (9/4, 1sw/rt) kalın demet çubuğuna, oradan 42A01 okuna (Kapı 2 beyni) gidiyor; X0809'a yalnız CANHF ve CANLF (1ws/rt, 1gr/li) bağlı. Beyin Listesi §4.5 ('diğer kapılar … sistem CAN'ı ile konuşur') şemayla uyumlu; yalnız §4.4 giriş cümlesi uymuyor. Şema değeri değişmedi."
+  },
+  {
+   "kablo": "k091",
+   "alan": "hedef",
+   "sema": "42A01 (kalın demet çubuğu → ok)",
+   "beyinListesi": "X0809",
+   "not": "Beyin Listesi §4.4: 'Hepsi X0809'a gider'. Şemada CANLS (9/6, 1ws/li) kalın demet çubuğuna, oradan 42A01 okuna (Kapı 2 beyni) gidiyor; X0809'a yalnız CANHF ve CANLF bağlı. Şema değeri değişmedi."
+  },
+  {
+   "kablo": "k094",
+   "alan": "hedef",
+   "sema": "41A01 CANLS 9/6 (aynı soket içinde köprü)",
+   "beyinListesi": "X0809",
+   "not": "Beyin Listesi §4.4: 'Hepsi X0809'a gider'. Şemada CANRS (9/5) kablosu 4060, X0809'a değil aynı soketteki CANLS 9/6 pinine gidiyor (sonlandırma köprüsü; Beyin Listesi §4.5 bununla uyumlu). Şema değeri değişmedi."
+  }
+ ]
+}

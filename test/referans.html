@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kablo Bulucu — görsel referans</title>
+<!-- Tek dosya, çevrimdışı. Tokenlar src/tokens.css'in kopyasıdır: değiştirme, `node test/kontrast.mjs --yaz` ile güncellenir. -->
+<style id="kb-tokens">
+/*TOKENS:BASLA*/
+/* ==========================================================================
+   Kablo Bulucu — TOKENLAR (tek kaynak)
+   --------------------------------------------------------------------------
+   * Başka hiçbir dosya renk, boyut ya da yazı tipi uydurmaz; yalnız var(--...).
+   * Tema: <html data-tema="acik|koyu">. Öznitelik yoksa sistem tercihi
+     (sistem açık diyorsa açık), sinyal yoksa KOYU.
+   * Kural: satır başına TEK tanım; açıklama satır sonu yorumudur.
+     test/kontrast.mjs ve DESIGN.md tabloları bu dosyadan üretilir.
+   * 3. blok ile 4. blok birebir aynı olmalı (kontrast.mjs denetler).
+   * Bilerek KULLANILMAYAN CSS (eski Android Chrome/WebView'de yok):
+     light-dark(), color-mix(), :has(), iç içe CSS, @layer, dvh.
+   * Büyük harfli etiketleri (ŞÜPHELİ...) CSS text-transform ile değil, doğrudan
+     büyük harfle yaz; <html lang="tr"> şart (i/İ tuzağı).
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. ORTAK — temadan bağımsız
+   ========================================================================== */
+:root {
+  /* --- Yazı tipleri: yalnız sistem fontları --- */
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif; /* arayüz yazısı */
+  --font-kod: ui-monospace, "Roboto Mono", "Cascadia Mono", "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace; /* kod, pin, soket, kablo no */
+
+  /* --- Yazı ölçeği (rem: 1rem = 16 px; kullanıcının yazı boyutu ayarına uyar) --- */
+  --boyut-ipucu: 0.875rem; /* 14 px, EN KÜÇÜK yazı: rozet, dipnot, kaynak satırı */
+  --boyut-govde: 1rem; /* 16 px, gövde, tablo, düğme */
+  --boyut-pin: 1.125rem; /* 18 px, pin / soket / pin adı etiketi (mono) */
+  --boyut-kod: 1.25rem; /* 20 px, cihaz kodu ve kablo no (mono, kalın) */
+  --boyut-baslik: 1.5rem; /* 24 px, bölüm başlığı */
+  --boyut-ekran: 1.75rem; /* 28 px, ekran başlığı */
+  --boyut-vurgu: 2.125rem; /* 34 px, kart tepesindeki kablo no */
+  --satir-sik: 1.25; /* satır yüksekliği: başlık, kod */
+  --satir-tablo: 1.35; /* satır yüksekliği: tablo hücresi, rozet */
+  --satir-govde: 1.5; /* satır yüksekliği: gövde metni */
+  --agirlik-normal: 400; /* normal yazı */
+  --agirlik-orta: 500; /* ikincil vurgu (Roboto'da 500 var; mono'da 400'e düşer) */
+  --agirlik-kalin: 700; /* başlık, kod, rozet */
+  --harf-etiket: 0.04em; /* BÜYÜK HARFLİ etiket aralığı */
+  --harf-kod: 0.02em; /* mono kod aralığı (1/l/I ayrımı için) */
+
+  /* --- Aralık (4 px tabanı) --- */
+  --bosluk-1: 4px; /* en dar boşluk */
+  --bosluk-2: 8px; /* çip içi, dokunma hedefleri arası */
+  --bosluk-3: 12px; /* kart içi dikey */
+  --bosluk-4: 16px; /* sayfa kenarı, kart dolgusu */
+  --bosluk-5: 20px; /* bölüm içi */
+  --bosluk-6: 24px; /* bölüm arası */
+  --bosluk-8: 32px; /* büyük bölüm arası */
+  --bosluk-10: 40px; /* ekran başı/sonu */
+  --bosluk-12: 48px; /* en geniş boşluk */
+
+  /* --- Köşe yarıçapı, çerçeve --- */
+  --yaricap-s: 4px; /* rozet, küçük çip */
+  --yaricap-m: 8px; /* düğme, girdi, kart */
+  --yaricap-b: 12px; /* alt sayfa, büyük kart */
+  --yaricap-tam: 999px; /* hap biçimi (sekme çipi) */
+  --cerceve-ince: 1px; /* yalnız ayırıcı satır */
+  --cerceve: 2px; /* varsayılan çerçeve */
+  --cerceve-kalin: 3px; /* beyin, ŞÜPHELİ, odak halkası */
+
+  /* --- Dokunma ve yerleşim --- */
+  --dokunma: 48px; /* en küçük dokunma hedefi */
+  --dokunma-buyuk: 56px; /* ana düğme, arama alanı, liste satırı */
+  --dokunma-aralik: 8px; /* iki hedef arası en az boşluk */
+  --kenar: 16px; /* sayfanın sağ/sol boşluğu */
+  --icerik-azami: 960px; /* geniş ekranda içerik genişliği */
+  --simge-kucuk: 20px; /* rozet içi simge */
+  --simge: 24px; /* varsayılan simge */
+  --tur-boyut: 40px; /* cihaz türü işareti (çerçeve + glif) */
+  --odak-kalinlik: 3px; /* odak halkası kalınlığı */
+  --odak-bosluk: 2px; /* odak halkası ile öğe arası */
+
+  /* --- Kablo çizgisi --- */
+  --kablo-kalinlik: 3px; /* düz kablo çizgisi */
+  --kablo-tup: 9px; /* renkli kablonun dış çapı (kenar dahil) */
+  --kablo-ic: 5px; /* renkli kablonun iç şeridi */
+  --kablo-kesik: 10 6; /* varyant: stroke-dasharray */
+  --kablo-cizgi: var(--cizgi-guclu); /* kablo çizgisi ve kenarı */
+
+  /* --- Hareket --- */
+  --sure-hizli: 100ms; /* basma geri bildirimi */
+  --sure: 180ms; /* geçişler */
+  --egri: cubic-bezier(0.2, 0, 0, 1); /* ivme eğrisi */
+
+  /* --- Kablo renkleri (gerçek renk, temaya göre DEĞİŞMEZ; hep kenarlı ve yazılı) --- */
+  --kablo-ws: #F2F2EE; /* ws beyaz */
+  --kablo-sw: #17191C; /* sw siyah */
+  --kablo-rt: #D8212E; /* rt kırmızı */
+  --kablo-gn: #1E9E45; /* gn yeşil */
+  --kablo-ge: #F2C200; /* ge sarı */
+  --kablo-bl: #2063D0; /* bl mavi */
+  --kablo-br: #7C4A22; /* br kahverengi */
+  --kablo-gr: #8B9096; /* gr gri */
+  --kablo-li: #8B52C4; /* li lila */
+  --kablo-or: #F28A0C; /* or turuncu */
+  --kablo-rs: #F29BBB; /* rs pembe */
+
+  /* --- Cihaz türü: çerçeve rengi ve iç dolgu (renk yalnız destek; asıl ayrım çerçeve + glif + yazı) --- */
+  --tur-beyin: var(--ton-mavi); /* beyin: çerçeve */
+  --tur-beyin-zemin: var(--ton-mavi-zemin); /* beyin: dolgu */
+  --tur-soket: var(--ton-celik); /* soket */
+  --tur-soket-zemin: var(--ton-celik-zemin); /* soket dolgu */
+  --tur-besleme: var(--ton-gul); /* artı besleme */
+  --tur-besleme-zemin: var(--ton-gul-zemin); /* artı besleme dolgu */
+  --tur-guc: var(--ton-gul); /* güç (akü, alternatör) */
+  --tur-guc-zemin: var(--ton-gul-zemin); /* güç dolgu */
+  --tur-salter: var(--ton-turuncu); /* şalter */
+  --tur-salter-zemin: var(--ton-turuncu-zemin); /* şalter dolgu */
+  --tur-role: var(--ton-turuncu); /* röle */
+  --tur-role-zemin: var(--ton-turuncu-zemin); /* röle dolgu */
+  --tur-sigorta: var(--ton-turuncu); /* sigorta */
+  --tur-sigorta-zemin: var(--ton-turuncu-zemin); /* sigorta dolgu */
+  --tur-toprak: var(--ton-kahve); /* toprak */
+  --tur-toprak-zemin: var(--ton-kahve-zemin); /* toprak dolgu */
+  --tur-motor: var(--ton-zeytin); /* motor */
+  --tur-motor-zemin: var(--ton-zeytin-zemin); /* motor dolgu */
+  --tur-valf: var(--ton-zeytin); /* valf */
+  --tur-valf-zemin: var(--ton-zeytin-zemin); /* valf dolgu */
+  --tur-lamba: var(--ton-sari); /* lamba */
+  --tur-lamba-zemin: var(--ton-sari-zemin); /* lamba dolgu */
+  --tur-ikaz: var(--ton-sari); /* ikaz (uyarı lambası, korna, zil) */
+  --tur-ikaz-zemin: var(--ton-sari-zemin); /* ikaz dolgu */
+  --tur-sensor: var(--ton-turkuaz); /* sensör */
+  --tur-sensor-zemin: var(--ton-turkuaz-zemin); /* sensör dolgu */
+  --tur-direnc: var(--ton-celik); /* direnç */
+  --tur-direnc-zemin: var(--ton-celik-zemin); /* direnç dolgu */
+  --tur-diyot: var(--ton-celik); /* diyot */
+  --tur-diyot-zemin: var(--ton-celik-zemin); /* diyot dolgu */
+  --tur-dugum: var(--ton-celik); /* düğüm (ek / birleşim noktası) */
+  --tur-dugum-zemin: var(--ton-celik-zemin); /* düğüm dolgu */
+  --tur-diger: var(--ton-celik); /* diğer (tanınmayan tür) */
+  --tur-diger-zemin: var(--ton-celik-zemin); /* diğer dolgu */
+  --tur-devam: var(--ton-celik); /* devam ucu (kablo başka şemaya / cihaza gidiyor) */
+  --tur-devam-zemin: var(--ton-celik-zemin); /* devam ucu dolgu */
+}
+
+
+/* ==========================================================================
+   2. KOYU TEMA — varsayılan (atölye, kanal, loş ortam)
+   ========================================================================== */
+:root,
+:root[data-tema="koyu"] {
+  color-scheme: dark;
+
+  --zemin: #0E1216; /* sayfa zemini */
+  --yuzey: #161B21; /* kart, panel, diyagram zemini */
+  --yuzey-ust: #1F262E; /* girdi alanı, çip, etiket zemini */
+  --yuzey-basili: #28323D; /* basılı satır / yüzey */
+  --yazi: #F3F5F7; /* ana metin */
+  --yazi-2: #CDD4DB; /* ikincil metin */
+  --yazi-pasif: #A3ADB8; /* ipucu, yer tutucu, devre dışı */
+  --cizgi: #8791A0; /* çerçeve, ayırıcı, tablo çizgisi */
+  --cizgi-guclu: #AEB9C5; /* diyagram çizgisi, kablo, kablo şeridi kenarı */
+  --ters-zemin: #F3F5F7; /* ters çift: pin numarası kutusu */
+  --ters-yazi: #0E1216; /* ters çift: yazı */
+  --vurgu: #5AA9FF; /* ana düğme, seçili sekme dolgusu */
+  --vurgu-yazi: #07121F; /* vurgu dolgusu üstündeki yazı */
+  --vurgu-basili: #8CC4FF; /* basılı ana düğme */
+  --yazi-vurgu: #8CC4FF; /* bağlantı ve vurgulu metin */
+  --secili-zemin: #19304B; /* seçili satır dolgusu */
+  --odak: #FFD84D; /* odak halkası */
+  --golge-kaplama: 0 8px 24px rgba(0, 0, 0, 0.6); /* yalnız açılır katman (menü, alt sayfa) */
+  --ortu: rgba(0, 0, 0, 0.6); /* katman arkası karartma */
+
+  --supheli-zemin: #FFB020; /* ŞÜPHELİ dolgusu (düz kehribar) */
+  --supheli-yazi: #1A1100; /* ŞÜPHELİ yazısı ve simgesi */
+  --supheli-cizgi: #FFB020; /* ŞÜPHELİ çerçevesi */
+  --hata-zemin: #5E1017; /* ÇELİŞKİLİ / hata dolgusu */
+  --hata-yazi: #FFF1F1; /* ÇELİŞKİLİ / hata yazısı */
+  --hata-cizgi: #FF7B7B; /* ÇELİŞKİLİ / hata çerçevesi */
+  --dogrulanmadi-zemin: #2A1D47; /* DOĞRULANMADI dolgusu */
+  --dogrulanmadi-yazi: #E9DEFF; /* DOĞRULANMADI yazısı */
+  --dogrulanmadi-cizgi: #B999F5; /* DOĞRULANMADI çerçevesi */
+  --dogrulandi-zemin: #0F3321; /* DOĞRULANDI dolgusu */
+  --dogrulandi-yazi: #C4F5D6; /* DOĞRULANDI yazısı */
+  --dogrulandi-cizgi: #4CD27A; /* DOĞRULANDI çerçevesi */
+  --not-zemin: #1C2A3B; /* ŞEMA NOTU dolgusu */
+  --not-yazi: #D3E1F2; /* ŞEMA NOTU yazısı */
+  --not-cizgi: #9DB4D0; /* ŞEMA NOTU çerçevesi */
+
+  --ton-mavi: #6FA8F0; /* beyin tonu */
+  --ton-mavi-zemin: #263446; /* beyin dolgusu */
+  --ton-turkuaz: #4FC4B5; /* sensör tonu */
+  --ton-turkuaz-zemin: #20393C; /* sensör dolgusu */
+  --ton-celik: #A7B3C0; /* soket, düğüm, direnç, diyot, diğer tonu */
+  --ton-celik-zemin: #30363E; /* çelik dolgusu */
+  --ton-gul: #F08BB0; /* artı besleme, güç tonu */
+  --ton-gul-zemin: #3D2F3B; /* gül dolgusu */
+  --ton-turuncu: #F0905A; /* şalter, röle, sigorta tonu */
+  --ton-turuncu-zemin: #3D302B; /* turuncu dolgusu */
+  --ton-zeytin: #A9C45A; /* motor, valf tonu */
+  --ton-zeytin-zemin: #30392B; /* zeytin dolgusu */
+  --ton-sari: #E8C84A; /* lamba, ikaz tonu */
+  --ton-sari-zemin: #3C3A28; /* sarı dolgusu */
+  --ton-kahve: #C49A6C; /* toprak tonu */
+  --ton-kahve-zemin: #35322F; /* kahve dolgusu */
+}
+
+
+/* ==========================================================================
+   3. AÇIK TEMA — data-tema="acik" ile seçilince (güneş, aydınlık yer)
+   ========================================================================== */
+:root[data-tema="acik"] {
+  color-scheme: light;
+
+  --zemin: #EEECE7;
+  --yuzey: #F8F7F4;
+  --yuzey-ust: #FDFCFA;
+  --yuzey-basili: #E2DFD8;
+  --yazi: #12161B;
+  --yazi-2: #2B343E;
+  --yazi-pasif: #4A545F;
+  --cizgi: #5F6873;
+  --cizgi-guclu: #3A444F;
+  --ters-zemin: #12161B;
+  --ters-yazi: #F8F7F4;
+  --vurgu: #0B4FA8;
+  --vurgu-yazi: #FDFCFA;
+  --vurgu-basili: #083A80;
+  --yazi-vurgu: #083C80;
+  --secili-zemin: #D6E4F6;
+  --odak: #8A3A00;
+  --golge-kaplama: 0 8px 24px rgba(18, 22, 27, 0.28);
+  --ortu: rgba(18, 22, 27, 0.55);
+
+  --supheli-zemin: #FFB020;
+  --supheli-yazi: #1A1100;
+  --supheli-cizgi: #4A2C00;
+  --hata-zemin: #73151A;
+  --hata-yazi: #FFF6F6;
+  --hata-cizgi: #4F0B0F;
+  --dogrulanmadi-zemin: #EDE3FF;
+  --dogrulanmadi-yazi: #34176B;
+  --dogrulanmadi-cizgi: #6A3FC0;
+  --dogrulandi-zemin: #D5F2DF;
+  --dogrulandi-yazi: #0A3A1B;
+  --dogrulandi-cizgi: #166B38;
+  --not-zemin: #DCE6F2;
+  --not-yazi: #1B2F4A;
+  --not-cizgi: #3C5A80;
+
+  --ton-mavi: #2563B8;
+  --ton-mavi-zemin: #D8E1EB;
+  --ton-turkuaz: #0B7568;
+  --ton-turkuaz-zemin: #D4E4DF;
+  --ton-celik: #4F5D6A;
+  --ton-celik-zemin: #DFE0DF;
+  --ton-gul: #B03466;
+  --ton-gul-zemin: #EDDADF;
+  --ton-turuncu: #AD4E14;
+  --ton-turuncu-zemin: #EDDED2;
+  --ton-zeytin: #566F0F;
+  --ton-zeytin-zemin: #E0E3D2;
+  --ton-sari: #866600;
+  --ton-sari-zemin: #E7E1CF;
+  --ton-kahve: #75502E;
+  --ton-kahve-zemin: #E4DED6;
+}
+
+
+/* ==========================================================================
+   4. AÇIK TEMA — öznitelik YOK ve sistem açık diyorsa (3. bloğun birebir kopyası)
+   ========================================================================== */
+@media (prefers-color-scheme: light) {
+  :root:not([data-tema]) {
+    color-scheme: light;
+
+    --zemin: #EEECE7;
+    --yuzey: #F8F7F4;
+    --yuzey-ust: #FDFCFA;
+    --yuzey-basili: #E2DFD8;
+    --yazi: #12161B;
+    --yazi-2: #2B343E;
+    --yazi-pasif: #4A545F;
+    --cizgi: #5F6873;
+    --cizgi-guclu: #3A444F;
+    --ters-zemin: #12161B;
+    --ters-yazi: #F8F7F4;
+    --vurgu: #0B4FA8;
+    --vurgu-yazi: #FDFCFA;
+    --vurgu-basili: #083A80;
+    --yazi-vurgu: #083C80;
+    --secili-zemin: #D6E4F6;
+    --odak: #8A3A00;
+    --golge-kaplama: 0 8px 24px rgba(18, 22, 27, 0.28);
+    --ortu: rgba(18, 22, 27, 0.55);
+
+    --supheli-zemin: #FFB020;
+    --supheli-yazi: #1A1100;
+    --supheli-cizgi: #4A2C00;
+    --hata-zemin: #73151A;
+    --hata-yazi: #FFF6F6;
+    --hata-cizgi: #4F0B0F;
+    --dogrulanmadi-zemin: #EDE3FF;
+    --dogrulanmadi-yazi: #34176B;
+    --dogrulanmadi-cizgi: #6A3FC0;
+    --dogrulandi-zemin: #D5F2DF;
+    --dogrulandi-yazi: #0A3A1B;
+    --dogrulandi-cizgi: #166B38;
+    --not-zemin: #DCE6F2;
+    --not-yazi: #1B2F4A;
+    --not-cizgi: #3C5A80;
+
+    --ton-mavi: #2563B8;
+    --ton-mavi-zemin: #D8E1EB;
+    --ton-turkuaz: #0B7568;
+    --ton-turkuaz-zemin: #D4E4DF;
+    --ton-celik: #4F5D6A;
+    --ton-celik-zemin: #DFE0DF;
+    --ton-gul: #B03466;
+    --ton-gul-zemin: #EDDADF;
+    --ton-turuncu: #AD4E14;
+    --ton-turuncu-zemin: #EDDED2;
+    --ton-zeytin: #566F0F;
+    --ton-zeytin-zemin: #E0E3D2;
+    --ton-sari: #866600;
+    --ton-sari-zemin: #E7E1CF;
+    --ton-kahve: #75502E;
+    --ton-kahve-zemin: #E4DED6;
+  }
+}
+
+
+/* ==========================================================================
+   5. HAREKET AZALTMA — sistem "hareketi azalt" diyorsa geçişler kapanır
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sure-hizli: 0ms;
+    --sure: 0ms;
+  }
+}
+/*TOKENS:BITIS*/
+</style>
+<style>
+/* ===== Sayfa tabanı ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--zemin);color:var(--yazi);font:var(--agirlik-normal) var(--boyut-govde)/var(--satir-govde) var(--font-ui);-webkit-tap-highlight-color:transparent}
+.kod{font-family:var(--font-kod);letter-spacing:var(--harf-kod);font-variant-numeric:slashed-zero;font-feature-settings:"zero" 1}
+h1{font-size:var(--boyut-ekran);line-height:var(--satir-sik);margin:0 0 var(--bosluk-2)}
+h2{font-size:var(--boyut-baslik);line-height:var(--satir-sik);margin:0 0 var(--bosluk-3)}
+h3{font-size:var(--boyut-pin);line-height:var(--satir-sik);margin:var(--bosluk-6) 0 var(--bosluk-2)}
+p{margin:0 0 var(--bosluk-3)}
+.kucuk{font-size:var(--boyut-ipucu);line-height:var(--satir-tablo);color:var(--yazi-2)}
+.sayfa{max-width:var(--icerik-azami);margin:0 auto;padding:0 var(--kenar) var(--bosluk-12)}
+.ust{padding:var(--bosluk-6) 0 var(--bosluk-3)}
+.bolum{border-top:var(--cerceve-kalin) solid var(--cizgi-guclu);padding:var(--bosluk-6) 0 var(--bosluk-2);margin-top:var(--bosluk-6)}
+.izgara{display:grid;gap:var(--bosluk-3);grid-template-columns:repeat(auto-fill,minmax(min(100%,148px),1fr))}
+.izgara-2{display:grid;gap:var(--bosluk-3);align-items:start;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.kutu{display:flex;align-items:center;gap:var(--bosluk-3);padding:var(--bosluk-3);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-m);background:var(--yuzey)}
+.yan{display:flex;flex-wrap:wrap;align-items:center;gap:var(--bosluk-2)}
+.sutun{display:flex;flex-direction:column;gap:var(--bosluk-2)}
+.ad{font-family:var(--font-kod);font-size:var(--boyut-ipucu);color:var(--yazi-2);overflow-wrap:anywhere}
+
+/* ===== Simgeler ===== */
+svg.ik{width:var(--simge);height:var(--simge);flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+svg.ik-k{width:var(--simge-kucuk);height:var(--simge-kucuk)}
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+/* cihaz türü işareti: çerçeve (.tc) + glif (.tg) */
+.tc{fill:var(--t-zemin);stroke:var(--t-cizgi);stroke-width:2.5;stroke-linejoin:round;stroke-dasharray:var(--t-kesik,none)}
+.tg{fill:none;stroke:var(--yazi);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tf{fill:var(--yazi);stroke:none}
+.tn{fill:var(--yazi);stroke:none}
+svg.tm{width:var(--tur-boyut);height:var(--tur-boyut);flex:none;display:block}
+svg.tm-b{width:56px;height:56px}
+.t-beyin{--t-cizgi:var(--tur-beyin);--t-zemin:var(--tur-beyin-zemin)}
+.t-soket{--t-cizgi:var(--tur-soket);--t-zemin:var(--tur-soket-zemin)}
+.t-besleme{--t-cizgi:var(--tur-besleme);--t-zemin:var(--tur-besleme-zemin)}
+.t-guc{--t-cizgi:var(--tur-guc);--t-zemin:var(--tur-guc-zemin)}
+.t-salter{--t-cizgi:var(--tur-salter);--t-zemin:var(--tur-salter-zemin)}
+.t-role{--t-cizgi:var(--tur-role);--t-zemin:var(--tur-role-zemin)}
+.t-sigorta{--t-cizgi:var(--tur-sigorta);--t-zemin:var(--tur-sigorta-zemin)}
+.t-toprak{--t-cizgi:var(--tur-toprak);--t-zemin:var(--tur-toprak-zemin)}
+.t-motor{--t-cizgi:var(--tur-motor);--t-zemin:var(--tur-motor-zemin)}
+.t-valf{--t-cizgi:var(--tur-valf);--t-zemin:var(--tur-valf-zemin)}
+.t-lamba{--t-cizgi:var(--tur-lamba);--t-zemin:var(--tur-lamba-zemin)}
+.t-ikaz{--t-cizgi:var(--tur-ikaz);--t-zemin:var(--tur-ikaz-zemin)}
+.t-sensor{--t-cizgi:var(--tur-sensor);--t-zemin:var(--tur-sensor-zemin)}
+.t-direnc{--t-cizgi:var(--tur-direnc);--t-zemin:var(--tur-direnc-zemin)}
+.t-diyot{--t-cizgi:var(--tur-diyot);--t-zemin:var(--tur-diyot-zemin)}
+.t-dugum{--t-cizgi:var(--tur-dugum);--t-zemin:var(--tur-dugum-zemin)}
+.t-diger{--t-cizgi:var(--tur-diger);--t-zemin:var(--tur-diger-zemin)}
+.t-devam{--t-cizgi:var(--tur-devam);--t-zemin:var(--tur-devam-zemin)}
+.renksiz svg.tm{--t-cizgi:var(--yazi);--t-zemin:transparent}
+
+/* ===== Düğme, sekme, arama ===== */
+.dugme{display:inline-flex;align-items:center;justify-content:center;gap:var(--bosluk-2);min-height:var(--dokunma-buyuk);min-width:var(--dokunma);padding:0 var(--bosluk-5);border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-m);background:var(--yuzey-ust);color:var(--yazi);font:var(--agirlik-kalin) var(--boyut-govde)/1 var(--font-ui);cursor:pointer;touch-action:manipulation;transition:background var(--sure-hizli) var(--egri),transform var(--sure-hizli) var(--egri)}
+.dugme:active,.dugme.basili{background:var(--yuzey-basili);transform:translateY(1px)}
+.dugme:focus-visible,.odakli{outline:var(--odak-kalinlik) solid var(--odak);outline-offset:var(--odak-bosluk)}
+.dugme-ana{background:var(--vurgu);border-color:var(--vurgu);color:var(--vurgu-yazi)}
+.dugme-ana:active,.dugme-ana.basili{background:var(--vurgu-basili);border-color:var(--vurgu-basili)}
+.dugme[aria-pressed="true"],.dugme.secili{background:var(--secili-zemin);border-color:var(--vurgu);border-width:var(--cerceve-kalin);color:var(--yazi)}
+.dugme[disabled],.dugme.pasif{background:transparent;border-color:var(--cizgi);border-style:dashed;color:var(--yazi-pasif);cursor:not-allowed;transform:none}
+.dugme-ikon{width:var(--dokunma);min-width:var(--dokunma);min-height:var(--dokunma);padding:0}
+.dugme-kucuk{min-height:var(--dokunma);padding:0 var(--bosluk-4)}
+.sekme{display:inline-flex;align-items:center;gap:var(--bosluk-2);min-height:var(--dokunma);padding:0 var(--bosluk-4);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-tam);background:var(--yuzey);color:var(--yazi);font:var(--agirlik-orta) var(--boyut-pin)/1 var(--font-ui);white-space:nowrap;cursor:pointer}
+.sekme.secili{background:var(--vurgu);border-color:var(--vurgu);color:var(--vurgu-yazi);font-weight:var(--agirlik-kalin)}
+.sekme.basili{background:var(--yuzey-basili)}
+.sekme.secili.basili{background:var(--vurgu-basili)}
+.sekme.pasif{border-style:dashed;color:var(--yazi-pasif);background:transparent}
+.sekmeler{display:flex;gap:var(--dokunma-aralik);overflow-x:auto;padding:var(--bosluk-1) 0 var(--bosluk-2);scrollbar-width:none}
+.sekmeler::-webkit-scrollbar{display:none}
+.arama{display:flex;align-items:center;gap:var(--bosluk-1);min-height:var(--dokunma-buyuk);padding:0 var(--bosluk-1) 0 var(--bosluk-4);background:var(--yuzey-ust);border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-m);color:var(--yazi-2)}
+.arama input{flex:1;min-width:0;height:var(--dokunma);border:0;outline:0;background:transparent;color:var(--yazi);font:var(--agirlik-normal) var(--boyut-pin)/1 var(--font-ui)}
+.arama input::placeholder{color:var(--yazi-pasif);opacity:1}
+.arama.odakli,.arama:focus-within{outline:var(--odak-kalinlik) solid var(--odak);outline-offset:var(--odak-bosluk)}
+.arama.dolu input{font-family:var(--font-kod);font-weight:var(--agirlik-kalin);font-size:var(--boyut-kod)}
+.satir{display:flex;align-items:center;gap:var(--bosluk-3);min-height:var(--dokunma-buyuk);padding:var(--bosluk-2) var(--bosluk-3);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-m);background:var(--yuzey);color:var(--yazi);text-align:left;width:100%;font:inherit;cursor:pointer}
+.satir.basili{background:var(--yuzey-basili)}
+.satir.secili{background:var(--secili-zemin);border-color:var(--vurgu);border-width:var(--cerceve-kalin)}
+.satir.pasif{border-style:dashed;color:var(--yazi-pasif);background:transparent}
+.satir-metin{flex:1;min-width:0;display:flex;flex-direction:column}
+.satir-kod{font:var(--agirlik-kalin) var(--boyut-kod)/var(--satir-sik) var(--font-kod);letter-spacing:var(--harf-kod)}
+.satir-alt{font-size:var(--boyut-ipucu);color:var(--yazi-2);line-height:var(--satir-tablo)}
+
+/* ===== Rozet ve şerit (durum etiketleri) ===== */
+.rozet{display:inline-flex;align-items:center;gap:var(--bosluk-1);min-height:28px;padding:1px var(--bosluk-2);border:var(--cerceve) solid;border-radius:var(--yaricap-s);font:var(--agirlik-kalin) var(--boyut-ipucu)/var(--satir-tablo) var(--font-ui);letter-spacing:var(--harf-etiket);white-space:nowrap}
+.r-supheli{background:var(--supheli-zemin);color:var(--supheli-yazi);border:var(--cerceve-kalin) solid var(--supheli-cizgi)}
+.r-celiski{background:var(--hata-zemin);color:var(--hata-yazi);border-color:var(--hata-cizgi)}
+.r-dogrulanmadi{background:var(--dogrulanmadi-zemin);color:var(--dogrulanmadi-yazi);border-color:var(--dogrulanmadi-cizgi)}
+.r-dogrulandi{background:var(--dogrulandi-zemin);color:var(--dogrulandi-yazi);border-color:var(--dogrulandi-cizgi)}
+.r-not{background:var(--not-zemin);color:var(--not-yazi);border-color:var(--not-cizgi)}
+.r-varyant{background:transparent;color:var(--yazi);border:var(--cerceve) dashed var(--cizgi-guclu)}
+.serit{position:relative;display:flex;gap:var(--bosluk-3);align-items:flex-start;padding:var(--bosluk-3) var(--bosluk-4);border:var(--cerceve) solid;border-radius:var(--yaricap-m);overflow:hidden;line-height:var(--satir-tablo)}
+.serit svg.ik{width:28px;height:28px;margin-top:1px}
+.serit b{display:block;font-size:var(--boyut-govde);letter-spacing:var(--harf-etiket)}
+.serit span{display:block;font-size:var(--boyut-govde)}
+.s-supheli{background:var(--supheli-zemin);color:var(--supheli-yazi);border:var(--cerceve-kalin) solid var(--supheli-cizgi);padding-left:calc(var(--bosluk-4) + 14px)}
+.s-supheli::before{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:repeating-linear-gradient(135deg,var(--supheli-yazi) 0 6px,var(--supheli-zemin) 6px 12px)}
+.s-celiski{background:var(--hata-zemin);color:var(--hata-yazi);border:var(--cerceve-kalin) solid var(--hata-cizgi)}
+.s-dogrulanmadi{background:var(--dogrulanmadi-zemin);color:var(--dogrulanmadi-yazi);border-color:var(--dogrulanmadi-cizgi)}
+.s-dogrulandi{background:var(--dogrulandi-zemin);color:var(--dogrulandi-yazi);border-color:var(--dogrulandi-cizgi)}
+.s-not{background:var(--not-zemin);color:var(--not-yazi);border-color:var(--not-cizgi)}
+.bel{display:inline-block;min-width:1ch;padding:0 2px;border-radius:2px;background:var(--supheli-zemin);color:var(--supheli-yazi);font-weight:var(--agirlik-kalin);box-shadow:0 0 0 var(--cerceve) var(--supheli-cizgi)}
+
+/* ===== Pin kapsülü ===== */
+.pin{display:inline-flex;flex-wrap:wrap;align-items:stretch;max-width:100%;border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-m);overflow:hidden;background:var(--yuzey-ust);color:var(--yazi);font-family:var(--font-kod);font-size:var(--boyut-pin);line-height:var(--satir-sik);letter-spacing:var(--harf-kod);font-variant-numeric:slashed-zero;font-feature-settings:"zero" 1}
+.pin>*{display:flex;align-items:center;padding:6px var(--bosluk-2);white-space:nowrap}
+.pin>.pin-ad{white-space:normal}
+.pin-soket{gap:var(--bosluk-1);font-weight:var(--agirlik-kalin)}
+.pin-soket svg.ik{width:var(--simge-kucuk);height:var(--simge-kucuk);stroke-width:2.2}
+.pin-no{justify-content:center;min-width:44px;padding:6px var(--bosluk-3);background:var(--ters-zemin);color:var(--ters-yazi);font-size:var(--boyut-kod);font-weight:var(--agirlik-kalin)}
+.pin-ad{flex:0 1 auto;min-width:0;font-weight:var(--agirlik-normal);white-space:normal;overflow-wrap:anywhere}
+.pin-soket,.pin-no{flex:none}
+
+/* ===== Kablo etiketi, renk şeridi ===== */
+.ksw{display:inline-block;width:36px;height:14px;flex:none;border:var(--cerceve) solid var(--cizgi-guclu);border-radius:7px;background:var(--c1)}
+.ksw.iki{background:repeating-linear-gradient(135deg,var(--c1) 0 6px,var(--c2) 6px 10px)}
+.kcip{display:inline-flex;align-items:center;gap:var(--bosluk-2);font:var(--agirlik-kalin) var(--boyut-pin)/1 var(--font-kod);letter-spacing:var(--harf-kod)}
+.ketiket{display:inline-flex;flex-direction:column;align-items:flex-start;width:max-content;max-width:100%;gap:2px;padding:4px var(--bosluk-2);background:var(--yuzey-ust);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-s)}
+.ketiket-no{font:var(--agirlik-kalin) var(--boyut-kod)/var(--satir-sik) var(--font-kod);letter-spacing:var(--harf-kod)}
+.ketiket-alt{display:flex;align-items:center;gap:var(--bosluk-1) var(--bosluk-2);white-space:nowrap;font-size:var(--boyut-ipucu);line-height:var(--satir-tablo);color:var(--yazi-2)}
+
+/* ===== Sonuç kartı ve zincir (dikey, dar ekran) ===== */
+.kart{background:var(--yuzey);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-b);padding:var(--bosluk-4);display:flex;flex-direction:column;gap:var(--bosluk-3)}
+.kart-bas{display:flex;align-items:center;justify-content:space-between;gap:var(--bosluk-2);flex-wrap:wrap}
+.kart-no{margin:0;font:var(--agirlik-kalin) var(--boyut-vurgu)/var(--satir-sik) var(--font-kod);letter-spacing:var(--harf-kod)}
+.kart-etiketler{display:flex;flex-wrap:wrap;align-items:center;gap:var(--bosluk-2)}
+.kaynak{display:flex;align-items:flex-start;gap:var(--bosluk-2);padding-top:var(--bosluk-3);border-top:var(--cerceve) solid var(--cizgi);font-size:var(--boyut-ipucu);line-height:var(--satir-tablo);color:var(--yazi-2)}
+.ozet{padding:var(--bosluk-3);background:var(--yuzey-ust);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-m)}
+.ozet h4{margin:0 0 var(--bosluk-1);font-size:var(--boyut-ipucu);letter-spacing:var(--harf-etiket);color:var(--yazi-2)}
+.ozet p{margin:0;font-size:var(--boyut-govde)}
+.zincir{background:var(--yuzey);border-radius:var(--yaricap-m)}
+.z-dugum{position:relative;display:grid;grid-template-columns:48px 1fr;column-gap:var(--bosluk-2);align-items:start;min-height:var(--dokunma-buyuk);padding:var(--bosluk-2) 0;cursor:pointer}
+.z-dugum svg.tm{margin:0 auto}
+.z-dugum>svg.ik{position:absolute;right:0;top:var(--bosluk-3);color:var(--yazi-2)}
+.z-ad>.z-tur,.z-ad>.z-kod,.z-ad>.z-isim{margin-right:var(--bosluk-8)}
+.z-ad>.pin{align-self:flex-start}
+.z-ad{display:flex;flex-direction:column;gap:var(--bosluk-1);min-width:0}
+.z-kod{font:var(--agirlik-kalin) var(--boyut-kod)/var(--satir-sik) var(--font-kod);letter-spacing:var(--harf-kod)}
+.z-isim{font-size:var(--boyut-govde);color:var(--yazi-2);line-height:var(--satir-tablo)}
+.z-tur{align-self:flex-start;font-size:var(--boyut-ipucu);font-weight:var(--agirlik-kalin);letter-spacing:var(--harf-etiket);color:var(--yazi-2)}
+.z-tel{display:grid;grid-template-columns:48px 1fr;column-gap:var(--bosluk-2);min-height:76px}
+.z-tel-etiket{align-self:center;padding:var(--bosluk-1) 0}
+
+/* ===== Tablolar (kontrast, token) ===== */
+.oran{display:grid;grid-template-columns:104px 1fr;gap:var(--bosluk-3);align-items:center;padding:var(--bosluk-2) 0;border-bottom:var(--cerceve-ince) solid var(--cizgi)}
+.oran-ornek{display:flex;align-items:center;justify-content:center;min-height:var(--dokunma);padding:var(--bosluk-1) var(--bosluk-2);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-m);font:var(--agirlik-kalin) var(--boyut-pin)/1 var(--font-kod)}
+.oran-bilgi{display:flex;flex-direction:column;gap:2px;min-width:0}
+.oran-ad{font-weight:var(--agirlik-orta)}
+.oran-deger{font-family:var(--font-kod);font-size:var(--boyut-ipucu);color:var(--yazi-2)}
+.oran-durum{display:inline-flex;align-items:center;gap:var(--bosluk-1);font-weight:var(--agirlik-kalin);font-size:var(--boyut-ipucu);letter-spacing:var(--harf-etiket)}
+.renk-kutu{display:flex;flex-direction:column;gap:var(--bosluk-1)}
+.renk-kutu i{display:block;height:44px;border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-m);font-style:normal}
+
+/* ===== Aralık, yarıçap ===== */
+.aralik{display:flex;align-items:center;gap:var(--bosluk-3);margin:var(--bosluk-1) 0}
+.aralik i{display:block;height:16px;background:var(--vurgu);border-radius:2px;flex:none}
+.aralik span{font-family:var(--font-kod);font-size:var(--boyut-ipucu);color:var(--yazi-2)}
+.yaricap{display:flex;flex-direction:column;align-items:center;gap:var(--bosluk-1);font-family:var(--font-kod);font-size:var(--boyut-ipucu);color:var(--yazi-2)}
+.yaricap i{display:block;width:64px;height:64px;border:var(--cerceve-kalin) solid var(--cizgi-guclu);background:var(--yuzey-ust)}
+.golge-ornek{padding:var(--bosluk-4);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-b);background:var(--yuzey-ust);box-shadow:var(--golge-kaplama)}
+.dokunma-ornek{display:flex;align-items:center;justify-content:center;border:var(--cerceve) dashed var(--yazi-2);border-radius:var(--yaricap-s);font-family:var(--font-kod);font-size:var(--boyut-ipucu);color:var(--yazi-2);text-align:center}
+
+/* ===== İyi / kötü ===== */
+.cift{padding:var(--bosluk-4) 0;border-bottom:var(--cerceve) solid var(--cizgi)}
+.cift h3{margin:0 0 var(--bosluk-2)}
+.cift-iki{display:grid;align-items:start;gap:var(--bosluk-3);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.iyi,.kotu{display:flex;flex-direction:column;gap:var(--bosluk-2);min-width:0}
+.etiket-iyi,.etiket-kotu{align-self:flex-start;display:inline-flex;align-items:center;gap:var(--bosluk-1);padding:1px var(--bosluk-2);border:var(--cerceve) solid;border-radius:var(--yaricap-s);font-weight:var(--agirlik-kalin);font-size:var(--boyut-ipucu);letter-spacing:var(--harf-etiket)}
+.etiket-iyi{background:var(--dogrulandi-zemin);color:var(--dogrulandi-yazi);border-color:var(--dogrulandi-cizgi)}
+.etiket-kotu{background:var(--hata-zemin);color:var(--hata-yazi);border-color:var(--hata-cizgi)}
+.neden{font-size:var(--boyut-ipucu);line-height:var(--satir-tablo);color:var(--yazi-2);margin:0}
+.ornek-alan{padding:var(--bosluk-3);background:var(--yuzey);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-m);min-height:84px;display:flex;flex-wrap:wrap;gap:var(--bosluk-2);align-items:center}
+/* KÖTÜ örneklerde bilerek token dışı değerler kullanılır; ürün kodunda yasaktır */
+.k-pin{font:11px/1.2 Arial,sans-serif;color:#8a8a8a;background:#bdbdbd;padding:3px 5px}
+.k-nokta{display:inline-block;width:18px;height:18px;border-radius:50%}
+.k-dugme{width:28px;height:28px;margin:0 1px;border:1px solid #888;border-radius:3px;background:transparent;color:inherit;font-size:12px;padding:0}
+.k-supheli{font-size:12px;font-style:italic;color:#8c8c8c}
+.k-sekme{padding:10px 14px;border-radius:999px;background:#2b333b;color:#e6e9ec;border:0;font:15px/1 var(--font-ui)}
+.k-sekme.s{background:#323b44}
+.k-tel{position:relative;width:100%;height:64px}
+
+/* ===== Üst kontrol çubuğu, sınama filtreleri ===== */
+.kontrol{display:flex;flex-wrap:wrap;gap:var(--dokunma-aralik);margin:var(--bosluk-2) 0 var(--bosluk-3)}
+.kontrol-ad{flex:0 0 100%;font-size:var(--boyut-ipucu);font-weight:var(--agirlik-kalin);letter-spacing:var(--harf-etiket);color:var(--yazi-2)}
+.durum-cubugu{font-family:var(--font-kod);font-size:var(--boyut-ipucu);color:var(--yazi-2)}
+html[data-gorus="gri"] body{filter:grayscale(1)}
+html[data-gorus="protan"] body{filter:url(#f-protan)}
+html[data-gorus="deuter"] body{filter:url(#f-deuter)}
+html[data-gorus="tritan"] body{filter:url(#f-tritan)}
+html[data-gorus="gunes"] body{filter:contrast(.54) brightness(1.3)}
+.sadece-genis{display:none}
+@media (min-width:1000px){.sadece-genis{display:block}}
+
+/* ===== Ek bileşenler ===== */
+.dugme .sec{display:none}
+.dugme[aria-pressed="true"] .sec{display:inline-block}
+.segment{display:inline-flex;border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-m);overflow:hidden;background:var(--yuzey)}
+.segment button{display:inline-flex;align-items:center;gap:var(--bosluk-2);min-height:var(--dokunma);padding:0 var(--bosluk-4);border:0;background:transparent;color:var(--yazi);font:var(--agirlik-orta) var(--boyut-govde)/1 var(--font-ui);cursor:pointer}
+.segment button+button{border-left:var(--cerceve) solid var(--cizgi-guclu)}
+.segment button .sec{display:none}
+.segment button[aria-pressed="true"]{background:var(--vurgu);color:var(--vurgu-yazi);font-weight:var(--agirlik-kalin)}
+.segment button[aria-pressed="true"] .sec{display:inline-block}
+.ketiket.supheli{background:var(--supheli-zemin);border:var(--cerceve-kalin) solid var(--supheli-cizgi);color:var(--supheli-yazi)}
+.ketiket.supheli .ketiket-alt{color:var(--supheli-yazi)}
+.ketiket.supheli .ketiket-no{display:flex;align-items:center;gap:var(--bosluk-1)}
+.ketiket-alt.nota{padding:1px var(--bosluk-2);background:var(--not-zemin);color:var(--not-yazi);border:var(--cerceve) solid var(--not-cizgi);border-radius:var(--yaricap-s)}
+.ketiket-alt .kcip{font-size:var(--boyut-ipucu)}
+.z-hat{justify-self:center;align-self:stretch;width:var(--kablo-kalinlik);background:var(--kablo-cizgi)}
+.z-hat.renkli{width:var(--kablo-tup);border-left:var(--cerceve) solid var(--cizgi-guclu);border-right:var(--cerceve) solid var(--cizgi-guclu);background:var(--c1)}
+.z-hat.iki{background:repeating-linear-gradient(135deg,var(--c1) 0 6px,var(--c2) 6px 10px)}
+.z-hat.kesik{-webkit-mask-image:repeating-linear-gradient(180deg,#000 0 10px,transparent 10px 16px);mask-image:repeating-linear-gradient(180deg,#000 0 10px,transparent 10px 16px)}
+.pin-satir{display:grid;grid-template-columns:auto 1fr 24px;gap:var(--bosluk-3);align-items:center;min-height:var(--dokunma-buyuk);padding:var(--bosluk-2) var(--bosluk-3);border-bottom:var(--cerceve-ince) solid var(--cizgi);cursor:pointer}
+.pin-satir .pin-no{border-radius:var(--yaricap-s);min-width:48px;min-height:40px;display:flex;align-items:center;justify-content:center;font-family:var(--font-kod);background:var(--ters-zemin);color:var(--ters-yazi);font-size:var(--boyut-kod);font-weight:var(--agirlik-kalin);padding:0 var(--bosluk-2)}
+.pin-satir-ad{font:var(--agirlik-kalin) var(--boyut-pin)/var(--satir-sik) var(--font-kod)}
+.pin-satir-alt{font-size:var(--boyut-govde);line-height:var(--satir-tablo);color:var(--yazi-2)}
+.pin-satir-alt b{color:var(--yazi);font-family:var(--font-kod)}
+.pin-satir>svg.ik{color:var(--yazi-2)}
+.soket-bas{display:flex;align-items:center;gap:var(--bosluk-2);padding:var(--bosluk-2) var(--bosluk-3);background:var(--yuzey-ust);border-top:var(--cerceve) solid var(--cizgi-guclu);border-bottom:var(--cerceve) solid var(--cizgi-guclu);font:var(--agirlik-kalin) var(--boyut-pin)/var(--satir-sik) var(--font-kod);letter-spacing:var(--harf-kod)}
+.soket-bas span{margin-left:auto;font:var(--agirlik-normal) var(--boyut-ipucu)/1 var(--font-ui);color:var(--yazi-2)}
+.bos{display:flex;flex-direction:column;align-items:center;gap:var(--bosluk-3);padding:var(--bosluk-6) var(--bosluk-4);text-align:center;background:var(--yuzey);border:var(--cerceve) solid var(--cizgi);border-radius:var(--yaricap-b)}
+.bos svg.ik-b{width:48px;height:48px;color:var(--yazi-2)}
+.bos h4{margin:0;font-size:var(--boyut-baslik);line-height:var(--satir-sik)}
+.bos p{margin:0;color:var(--yazi-2)}
+.oneri{display:inline-flex;align-items:center;justify-content:center;min-height:var(--dokunma);padding:0 var(--bosluk-4);border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-tam);background:var(--yuzey-ust);color:var(--yazi);font:var(--agirlik-kalin) var(--boyut-pin)/1 var(--font-kod);letter-spacing:var(--harf-kod);cursor:pointer}
+.tel-satir{display:flex;flex-direction:column;gap:2px;padding:var(--bosluk-2) 0;border-bottom:var(--cerceve-ince) solid var(--cizgi)}
+.tel-kutu{position:relative;display:flex;align-items:center;justify-content:center;width:100%;min-height:72px;padding:var(--bosluk-2) 0}
+.tel-kutu>svg.tel{position:absolute;left:0;top:0;width:100%;height:100%}
+.tel-kutu>.ketiket{position:relative}
+
+/* ===== Geniş düzen: soldan sağa zincir ===== */
+.y-zincir{display:flex;align-items:center}
+.y-dugum{display:flex;flex-direction:column;align-items:flex-start;gap:var(--bosluk-1);flex:none;width:132px;padding:var(--bosluk-3);border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-m);background:var(--yuzey-ust);cursor:pointer}
+.y-dugum.beyin{border:var(--cerceve-kalin) solid var(--tur-beyin)}
+.y-dugum.varyant{border-style:dashed}
+.y-zincir>.pin{flex:none}
+.y-zincir>.pin.sol{margin-left:-2px;border-radius:0 var(--yaricap-m) var(--yaricap-m) 0}
+.y-zincir>.pin.sag{margin-right:-2px;border-radius:var(--yaricap-m) 0 0 var(--yaricap-m)}
+.y-tel{position:relative;flex:1;min-width:200px;align-self:stretch;display:flex;align-items:center;justify-content:center;min-height:84px}
+.y-tel>svg.tel{position:absolute;left:0;top:0;width:100%;height:100%}
+.y-tel>.ketiket{position:relative}
+</style>
+</head>
+<body>
+
+<!-- ======================= SPRITE: işaretler ve simgeler ======================= -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="f-protan" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.152286 1.052583 -0.204868 0 0  0.114503 0.786281 0.099216 0 0  -0.003882 -0.048116 1.051998 0 0  0 0 0 1 0"/></filter>
+    <filter id="f-deuter" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0.367322 0.860646 -0.227968 0 0  0.280085 0.672501 0.047413 0 0  -0.011820 0.042940 0.968881 0 0  0 0 0 1 0"/></filter>
+    <filter id="f-tritan" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="1.255528 -0.076749 -0.178779 0 0  -0.078411 0.930809 0.147602 0 0  0.004733 0.691367 0.303900 0 0  0 0 0 1 0"/></filter>
+  </defs>
+
+  <!-- Cihaz türü işaretleri: viewBox 40x40. Çerçeve (.tc) + glif (.tg). Renk yalnız --t-cizgi / --t-zemin değişkenleriyle. -->
+  <symbol id="t-beyin" viewBox="0 0 40 40"><path class="tc" d="M10 2.5h20l7.5 7.5v20L30 37.5H10L2.5 30V10z"/><g class="tg" transform="translate(8 8)"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect class="tf" x="9.5" y="9.5" width="5" height="5" rx=".5"/><path d="M9.5 6V3M14.5 6V3M9.5 21v-3M14.5 21v-3M6 9.5H3M6 14.5H3M21 9.5h-3M21 14.5h-3"/></g></symbol>
+  <symbol id="t-soket" viewBox="0 0 40 40"><path class="tc" d="M3.5 6.5h33l-5 27H8.5z"/><g class="tg" transform="translate(8 8)"><circle class="tf" cx="6.5" cy="8" r="1.7"/><circle class="tf" cx="12" cy="8" r="1.7"/><circle class="tf" cx="17.5" cy="8" r="1.7"/><circle class="tf" cx="9.2" cy="14.5" r="1.7"/><circle class="tf" cx="14.8" cy="14.5" r="1.7"/></g></symbol>
+  <symbol id="t-besleme" viewBox="0 0 40 40"><path class="tc" d="M11 3h18l9 17-9 17H11L2 20z"/><g class="tg" transform="translate(8 9)"><path d="M12 2v6M9 5h6M12 8v4M4 12h16M6 12v8M12 12v8M18 12v8"/></g></symbol>
+  <symbol id="t-guc" viewBox="0 0 40 40"><rect class="tc" x="7" y="2.5" width="26" height="35" rx="13"/><g class="tg" transform="translate(8 8)"><rect x="7" y="5" width="10" height="16" rx="1.5"/><path d="M10 3h4M12 9v4M10 11h4M10 17h4"/></g></symbol>
+  <symbol id="t-salter" viewBox="0 0 40 40"><path class="tc" d="M9.5 5.5h28.5l-7.5 29H2z"/><g class="tg" transform="translate(8 8)"><circle class="tf" cx="5" cy="16" r="1.8"/><circle class="tf" cx="19" cy="16" r="1.8"/><path d="M2 16h1.2M20.8 16H22M5 16l12-8"/></g></symbol>
+  <symbol id="t-role" viewBox="0 0 40 40"><path class="tc" d="M4.5 36.5V18a15.5 15.5 0 0 1 31 0v18.5z"/><g class="tg" transform="translate(9.2 12) scale(.9)"><rect x="2.5" y="7" width="8" height="10" rx="1"/><path d="M6.5 4v3M6.5 17v3M17 3v5M17 21v-6M17 15l4-6M10.5 12h3"/></g></symbol>
+  <symbol id="t-sigorta" viewBox="0 0 40 40"><rect class="tc" x="1.5" y="8" width="37" height="24" rx="12"/><g class="tg" transform="translate(8 8)"><rect x="5" y="8.5" width="14" height="7" rx="1"/><path d="M2 12h20"/></g></symbol>
+  <symbol id="t-toprak" viewBox="0 0 40 40"><path class="tc" d="M3 4.5h34V22L20 36 3 22z"/><g class="tg" transform="translate(8 4.5)"><path d="M12 3v8M5 11h14M8 15h8M10.5 19h3"/></g></symbol>
+  <symbol id="t-motor" viewBox="0 0 40 40"><circle class="tc" cx="20" cy="20" r="17.5"/><g class="tg" transform="translate(8 8)"><path d="M6 17V7.5l6 6.5 6-6.5V17"/></g></symbol>
+  <symbol id="t-valf" viewBox="0 0 40 40"><path class="tc" d="M20 2.5L37.5 20 20 37.5 2.5 20z"/><g class="tg" transform="translate(8 8)"><path d="M4 7.5l8 4.5-8 4.5zM20 7.5L12 12l8 4.5z"/></g></symbol>
+  <symbol id="t-lamba" viewBox="0 0 40 40"><circle class="tc" cx="20" cy="20" r="17.5"/><g class="tg" transform="translate(8 8)"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></g></symbol>
+  <symbol id="t-ikaz" viewBox="0 0 40 40"><rect class="tc" x="3" y="3" width="34" height="34" rx="8"/><g class="tg" transform="translate(8 8)"><path d="M6 17V11a6 6 0 0 1 12 0v6l1.5 1.5h-15zM10 21a2 2 0 0 0 4 0"/></g></symbol>
+  <symbol id="t-sensor" viewBox="0 0 40 40"><path class="tc" d="M2.5 6.5H28L37.5 20 28 33.5H2.5z"/><g class="tg" transform="translate(4 8)"><circle class="tf" cx="6" cy="17" r="2"/><path d="M6 11a6 6 0 0 1 6 6M6 5a12 12 0 0 1 12 12"/></g></symbol>
+  <symbol id="t-direnc" viewBox="0 0 40 40"><rect class="tc" x="2.5" y="7.5" width="35" height="25" rx="1.5"/><g class="tg" transform="translate(8 8)"><path d="M2 12h3.5l1.5-5 3 10 3-10 3 10 1.5-5H22"/></g></symbol>
+  <symbol id="t-diyot" viewBox="0 0 40 40"><rect class="tc" x="2.5" y="7.5" width="35" height="25" rx="1.5"/><g class="tg" transform="translate(8 8)"><path d="M7 6l10 6-10 6zM17 6v12M2 12h5M17 12h5"/></g></symbol>
+  <symbol id="t-dugum" viewBox="0 0 40 40"><circle class="tn" cx="13" cy="20" r="6"/><path class="tg" d="M2.5 20H13M13 20L25 9h12.5M13 20l12 11h12.5" style="stroke-width:2.5"/></symbol>
+  <symbol id="t-diger" viewBox="0 0 40 40"><rect class="tc" x="3" y="3" width="34" height="34" rx="8"/><g class="tg" transform="translate(8 8)"><circle class="tf" cx="6" cy="12" r="1.8"/><circle class="tf" cx="12" cy="12" r="1.8"/><circle class="tf" cx="18" cy="12" r="1.8"/></g></symbol>
+  <symbol id="t-devam" viewBox="0 0 40 40"><path class="tc" d="M2.5 6.5H28L37.5 20 28 33.5H2.5z"/><g class="tg" transform="translate(4 8)"><path d="M3 12h11M10 7l5 5-5 5M18 5v14"/></g></symbol>
+
+  <!-- Durum ve arayüz simgeleri: viewBox 24x24, çizgi simgeler (currentColor) -->
+  <symbol id="i-supheli" viewBox="0 0 24 24"><path d="M12 3.2L2.4 20h19.2z"/><path d="M12 9.5v5M12 17.3h.01"/></symbol>
+  <symbol id="i-celiski" viewBox="0 0 24 24"><path d="M5 9h14M5 15h14M15.5 4.5l-7 15"/></symbol>
+  <symbol id="i-dogrulanmadi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke-dasharray="4.2 3"/><path d="M7.7 12.4l3 3 5.6-6.4" stroke-dasharray="2.6 2.4"/></symbol>
+  <symbol id="i-dogrulandi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M7.7 12.4l3 3 5.6-6.4"/></symbol>
+  <symbol id="i-not" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-varyant" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="3" stroke-dasharray="3.5 3"/><path d="M12 8.5v7M8.5 12h7"/></symbol>
+  <symbol id="i-iyi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M7.7 12.4l3 3 5.6-6.4"/></symbol>
+  <symbol id="i-kotu" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 8.5l7 7M15.5 8.5l-7 7"/></symbol>
+  <symbol id="i-ara" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></symbol>
+  <symbol id="i-temizle" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-gecmis" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-geri" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-sag" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-secili" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></symbol>
+  <symbol id="i-gunes" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5V5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></symbol>
+  <symbol id="i-ay" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-sistem" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/></symbol>
+  <symbol id="i-kaynak" viewBox="0 0 24 24"><path d="M3 5.5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0zM12 5.5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0z"/></symbol>
+  <symbol id="i-soket" viewBox="0 0 24 24"><path d="M3.5 6.5h17l-2.2 11H5.7z"/><path d="M8 10.5h.01M12 10.5h.01M16 10.5h.01M10 14h.01M14 14h.01" stroke-width="2.6"/></symbol>
+</svg>
+
+<div class="sayfa">
+
+  <header class="ust">
+    <h1>Kablo Bulucu — görsel referans</h1>
+    <p>Bütün renk, yazı, işaret ve etiketlerin tek sayfası. Değerler <b>uydurmadır</b> (<span class="kod">99A01</span>, <span class="kod">9999</span>); gerçek veri sanma. Tokenlar <span class="kod">src/tokens.css</span>'ten gelir.</p>
+
+    <div class="kontrol" role="group" aria-label="Tema">
+      <div class="kontrol-ad">TEMA</div>
+      <button class="dugme dugme-kucuk" data-tema-sec="" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg><svg class="ik"><use href="#i-sistem"/></svg>Sistem</button>
+      <button class="dugme dugme-kucuk" data-tema-sec="acik" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg><svg class="ik"><use href="#i-gunes"/></svg>Açık</button>
+      <button class="dugme dugme-kucuk" data-tema-sec="koyu" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg><svg class="ik"><use href="#i-ay"/></svg>Koyu</button>
+    </div>
+    <div class="kontrol" role="group" aria-label="Sınama görünümü">
+      <div class="kontrol-ad">SINAMA GÖRÜNÜMÜ (yalnız bu sayfada)</div>
+      <button class="dugme dugme-kucuk" data-gorus-sec="" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg>Normal</button>
+      <button class="dugme dugme-kucuk" data-gorus-sec="gri" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg>Gri</button>
+      <button class="dugme dugme-kucuk" data-gorus-sec="protan" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg>Kırmızı körü</button>
+      <button class="dugme dugme-kucuk" data-gorus-sec="deuter" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg>Yeşil körü</button>
+      <button class="dugme dugme-kucuk" data-gorus-sec="tritan" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg>Mavi körü</button>
+      <button class="dugme dugme-kucuk" data-gorus-sec="gunes" aria-pressed="false"><svg class="ik sec"><use href="#i-secili"/></svg><svg class="ik"><use href="#i-gunes"/></svg>Güneş</button>
+    </div>
+    <div class="durum-cubugu" id="durum-cubugu">…</div>
+  </header>
+
+  <section class="bolum" id="renk">
+    <h2>1. Renk</h2>
+    <p>Koyu tema atölye ve kanal içindir (telefondan sinyal gelmezse varsayılan), açık tema güneş içindir. İkisi de aynı kurala göre ayarlıdır: gövde metni ≥ 7:1, hiçbir metin 4,5:1 altında değil, çizgi ve simge ≥ 3:1. Zeminler parlamaz: saf beyaz ya da saf siyah yok.</p>
+    <h3>Yüzeyler, çizgiler, vurgu</h3>
+    <div class="izgara" id="yuzeyler"></div>
+    <h3>Metin / zemin çiftleri (canlı hesap, en kötü zemin)</h3>
+    <div id="oranlar"></div>
+    <h3>Durum renkleri</h3>
+    <div class="izgara" id="durumlar"></div>
+    <h3>Cihaz tonları (yalnız destek; asıl ayrım şekil + glif + yazı)</h3>
+    <div class="izgara" id="tonlar"></div>
+    <h3>Kablo renkleri (gerçek renk; temaya göre değişmez, hep kenarlı ve yazılı)</h3>
+    <div class="izgara" id="kablo-renkleri"></div>
+  </section>
+  <section class="bolum" id="yazi">
+    <h2>2. Yazı</h2>
+    <p>Yalnız sistem fontları; dış font yok. Arayüz yazısı <span class="ad">--font-ui</span>, kod / pin / soket / kablo no eş aralıklı <span class="ad">--font-kod</span>. Boyutlar <b>rem</b>: telefondaki yazı boyutu ayarına uyar.</p>
+    <div id="olcek"></div>
+    <h3>Eş aralıklı yazıda karışan karakterler</h3>
+    <div class="ornek-alan" id="karisan"></div>
+    <p class="kucuk" id="font-bilgi"></p>
+    <h3>Kod, pin, kablo no örnekleri</h3>
+    <div class="ornek-alan" id="kodlar"></div>
+  </section>
+  <section class="bolum" id="aralik">
+    <h2>3. Aralık, köşe, çerçeve, dokunma</h2>
+    <h3>Aralık ölçeği (4 px tabanı)</h3>
+    <div id="aralik-liste"></div>
+    <h3>Köşe yarıçapı</h3>
+    <div class="yan" id="yaricaplar"></div>
+    <h3>Çerçeve kalınlığı</h3>
+    <div class="sutun">
+      <div style="border-top:var(--cerceve-ince) solid var(--cizgi-guclu);padding-top:4px" class="ad">--cerceve-ince · 1 px · yalnız ayırıcı satır</div>
+      <div style="border-top:var(--cerceve) solid var(--cizgi-guclu);padding-top:4px" class="ad">--cerceve · 2 px · varsayılan çerçeve</div>
+      <div style="border-top:var(--cerceve-kalin) solid var(--cizgi-guclu);padding-top:4px" class="ad">--cerceve-kalin · 3 px · beyin, ŞÜPHELİ, odak halkası</div>
+    </div>
+    <h3>Gölge: yalnız açılır katman</h3>
+    <p class="kucuk">Güneş altında gölgeler kaybolur; hiyerarşi gölgeyle değil çerçeve ve dolguyla kurulur. Gölge yalnız menü / alt sayfa gibi üstte açılan katmanda, çerçevenin yanında.</p>
+    <div class="golge-ornek kod">açılır katman</div>
+    <h3>Dokunma hedefi</h3>
+    <div class="yan">
+      <div class="dokunma-ornek" style="width:var(--dokunma);height:var(--dokunma)">48</div>
+      <div class="dokunma-ornek" style="width:var(--dokunma-buyuk);height:var(--dokunma-buyuk)">56</div>
+      <span class="yan" style="gap:var(--dokunma-aralik)"><span class="dokunma-ornek" style="width:var(--dokunma);height:var(--dokunma)">48</span><span class="dokunma-ornek" style="width:var(--dokunma);height:var(--dokunma)">48</span></span>
+      <span class="ad">↔ 8 px aralık</span>
+      <span class="kucuk" style="flex:1 1 220px">48 px en küçük hedef; ana düğme, arama alanı ve liste satırı 56 px. Hedefler arası en az 8 px.</span>
+    </div>
+  </section>
+  <section class="bolum" id="tur">
+    <h2>4. Cihaz türleri</h2>
+    <p>Her tür: <b>şekil</b> (çerçeve) + <b>glif</b> + <b>yazı etiketi</b> + ton. Renk yalnız destektir. Yukarıdaki "Gri" ve "körlük" düğmeleriyle sına; aşağıdaki renksiz sıra yalnız şekil ve glifle ayrışmayı gösterir.</p>
+    <div class="izgara" id="tur-izgara"></div>
+    <h3>Renksiz sınama: yalnız şekil + glif</h3>
+    <div class="yan renksiz" id="tur-renksiz"></div>
+    <h3>Gerçek boyut (40 px)</h3>
+    <div class="yan" id="tur-kucuk"></div>
+    <h3>Varyant cihaz: kesikli çerçeve + VARYANT</h3>
+    <div class="yan" id="tur-varyant" style="gap:20px"></div>
+  </section>
+  <section class="bolum" id="kablo">
+    <h2>5. Kablo çizgisi</h2>
+    <p>Düz kablo 3 px çizgi. Rengi yazan kablo 9 px <b>tüp</b>: 2 px kenar + 5 px renk; iki renkli kabloda ana renk üstünde çapraz çizgiler. Varyant <b>kesikli</b>. Etiket çipi telin ortasında, telin üstünü örter; renk kısaltması hep yazılıdır.</p>
+    <div id="tel-ornekleri"></div>
+    <h3>Renk şeridi ve kısaltma (HTML çipi)</h3>
+    <div class="yan" id="tel-cipleri"></div>
+  </section>
+  <section class="bolum" id="pin">
+    <h2>6. Pin rozeti</h2>
+    <p>soket · <b>pin</b> · pin adı. Pin numarası ters renkli kutuda: en çok aranan bilgi o. Soket adının önünde soket simgesi var; "15" gibi bir soket adı pin sanılmasın. Okunamayan karakter <span class="kod"><span class="bel">?</span></span> olarak kalır ve işaretlenir.</p>
+    <div class="sutun" id="pin-ornekleri" style="gap:16px"></div>
+  </section>
+  <section class="bolum" id="etiket">
+    <h2>7. Durum etiketleri</h2>
+    <p>Her durum: <b>simge + yazı + çerçeve</b>; renk yalnız destek. Rozet satır içindedir; şerit kartın tepesindedir ve <b>atlanamaz</b>: kapatma düğmesi, daraltma, kaydırınca kaybolma yok. Büyük harfli yazılar CSS ile değil doğrudan büyük harfle yazılır (<span class="kod">lang="tr"</span> şart; i/İ).</p>
+    <h3>Rozet</h3>
+    <div class="yan" id="rozetler"></div>
+    <h3>Şerit (kart tepesi)</h3>
+    <div class="sutun" id="seritler"></div>
+  </section>
+  <section class="bolum" id="dugme">
+    <h2>8. Düğme, sekme, arama: durumlar</h2>
+    <p>Hedef ≥ 48 px (ana düğme, arama, liste satırı 56 px), hedefler arası ≥ 8 px. Her durum şekille de ayrışır: <b>basılı</b> yüzey değişir + 1 px iner, <b>odak</b> 3 px halka, <b>seçili</b> dolgu + kalın yazı/çerçeve + onay simgesi, <b>pasif</b> kesikli çerçeve + soluk yazı. Hareket <span class="kod">prefers-reduced-motion</span>'a uyar (süre 0).</p>
+    <div id="dugme-matrisleri"></div>
+  </section>
+  <section class="bolum" id="kart">
+    <h2>9. Sonuç ekranı örnekleri</h2>
+    <p>Bileşenlerin bir arada nasıl durduğu. Değerler uydurmadır. Dar ekranda zincir <b>dikey</b> akar (kablo = sol omurga); geniş ekranda soldan sağa.</p>
+    <div class="izgara-2" id="kartlar"></div>
+    <div class="sadece-genis"><h3>Geniş ekran: soldan sağa (≥ 1000 px; dar genişlikte zincir dikeye döner, ölçek küçülmez)</h3><div id="yatay-ornek"></div></div>
+    <h3>Cihaz sorgusu</h3>
+    <div id="cihaz-sorgusu"></div>
+    <h3>Boş ve hata durumları</h3>
+    <div class="izgara-2" id="bos-durumlar"></div>
+  </section>
+  <section class="bolum" id="iyikotu">
+    <h2>10. İyi ve kötü örnekler</h2>
+    <p>Kötü örneklerde bilerek token dışı değerler kullanılır; ürün kodunda yasaktır. "Güneş" ve "Gri" düğmeleriyle bu sayfada deneyip farkı gör.</p>
+    <div id="iyikotu-liste"></div>
+  </section>
+
+</div>
+
+<script>
+/*CIFTLER:BASLA*/
+const CIFTLER = [{"grup":"Metin","ad":"Ana metin","esik":7,"cift":[["--yazi","--zemin"],["--yazi","--yuzey"],["--yazi","--yuzey-ust"],["--yazi","--secili-zemin"],["--yazi","--yuzey-basili"]]},{"grup":"Metin","ad":"İkincil metin","esik":7,"cift":[["--yazi-2","--zemin"],["--yazi-2","--yuzey"],["--yazi-2","--yuzey-ust"],["--yazi-2","--secili-zemin"],["--yazi-2","--yuzey-basili"]]},{"grup":"Metin","ad":"Bağlantı, vurgulu metin","esik":7,"cift":[["--yazi-vurgu","--zemin"],["--yazi-vurgu","--yuzey"],["--yazi-vurgu","--yuzey-ust"],["--yazi-vurgu","--secili-zemin"],["--yazi-vurgu","--yuzey-basili"]]},{"grup":"Metin","ad":"İpucu, yer tutucu, devre dışı","esik":4.5,"cift":[["--yazi-pasif","--zemin"],["--yazi-pasif","--yuzey"],["--yazi-pasif","--yuzey-ust"]]},{"grup":"Metin","ad":"Ana düğme yazısı","esik":7,"cift":[["--vurgu-yazi","--vurgu"],["--vurgu-yazi","--vurgu-basili"]]},{"grup":"Metin","ad":"Ters çift (pin numarası kutusu)","esik":7,"cift":[["--ters-yazi","--ters-zemin"]]},{"grup":"Metin","ad":"ŞÜPHELİ yazısı","esik":7,"cift":[["--supheli-yazi","--supheli-zemin"]]},{"grup":"Metin","ad":"ÇELİŞKİLİ yazısı","esik":7,"cift":[["--hata-yazi","--hata-zemin"]]},{"grup":"Metin","ad":"DOĞRULANMADI yazısı","esik":7,"cift":[["--dogrulanmadi-yazi","--dogrulanmadi-zemin"]]},{"grup":"Metin","ad":"DOĞRULANDI yazısı","esik":7,"cift":[["--dogrulandi-yazi","--dogrulandi-zemin"]]},{"grup":"Metin","ad":"ŞEMA NOTU yazısı","esik":7,"cift":[["--not-yazi","--not-zemin"]]},{"grup":"Metin","ad":"Ana metin, cihaz türü dolgusu (8 ton)","esik":7,"cift":[["--yazi","--ton-mavi-zemin"],["--yazi","--ton-turkuaz-zemin"],["--yazi","--ton-celik-zemin"],["--yazi","--ton-gul-zemin"],["--yazi","--ton-turuncu-zemin"],["--yazi","--ton-zeytin-zemin"],["--yazi","--ton-sari-zemin"],["--yazi","--ton-kahve-zemin"]]},{"grup":"Çizgi ve simge","ad":"Çerçeve, ayırıcı, tablo çizgisi","esik":3,"cift":[["--cizgi","--zemin"],["--cizgi","--yuzey"],["--cizgi","--yuzey-ust"],["--cizgi","--secili-zemin"],["--cizgi","--yuzey-basili"]]},{"grup":"Çizgi ve simge","ad":"Diyagram ve kablo çizgisi, şerit kenarı","esik":7,"cift":[["--cizgi-guclu","--zemin"],["--cizgi-guclu","--yuzey"],["--cizgi-guclu","--yuzey-ust"],["--kablo-cizgi","--zemin"],["--kablo-cizgi","--yuzey"],["--kablo-cizgi","--yuzey-ust"]]},{"grup":"Çizgi ve simge","ad":"Ana renk (düğme, seçili sekme dolgusu)","esik":3,"cift":[["--vurgu","--zemin"],["--vurgu","--yuzey"],["--vurgu","--yuzey-ust"]]},{"grup":"Çizgi ve simge","ad":"Odak halkası","esik":3,"cift":[["--odak","--zemin"],["--odak","--yuzey"],["--odak","--yuzey-ust"],["--odak","--secili-zemin"],["--odak","--yuzey-basili"]]},{"grup":"Çizgi ve simge","ad":"Durum çerçeveleri (5 durum)","esik":4.5,"cift":[["--supheli-cizgi","--zemin"],["--supheli-cizgi","--yuzey"],["--supheli-cizgi","--yuzey-ust"],["--hata-cizgi","--zemin"],["--hata-cizgi","--yuzey"],["--hata-cizgi","--yuzey-ust"],["--dogrulanmadi-cizgi","--zemin"],["--dogrulanmadi-cizgi","--yuzey"],["--dogrulanmadi-cizgi","--yuzey-ust"],["--dogrulandi-cizgi","--zemin"],["--dogrulandi-cizgi","--yuzey"],["--dogrulandi-cizgi","--yuzey-ust"],["--not-cizgi","--zemin"],["--not-cizgi","--yuzey"],["--not-cizgi","--yuzey-ust"]]},{"grup":"Çizgi ve simge","ad":"Cihaz türü çerçevesi (8 ton)","esik":4.5,"cift":[["--ton-mavi","--zemin"],["--ton-mavi","--yuzey"],["--ton-mavi","--yuzey-ust"],["--ton-turkuaz","--zemin"],["--ton-turkuaz","--yuzey"],["--ton-turkuaz","--yuzey-ust"],["--ton-celik","--zemin"],["--ton-celik","--yuzey"],["--ton-celik","--yuzey-ust"],["--ton-gul","--zemin"],["--ton-gul","--yuzey"],["--ton-gul","--yuzey-ust"],["--ton-turuncu","--zemin"],["--ton-turuncu","--yuzey"],["--ton-turuncu","--yuzey-ust"],["--ton-zeytin","--zemin"],["--ton-zeytin","--yuzey"],["--ton-zeytin","--yuzey-ust"],["--ton-sari","--zemin"],["--ton-sari","--yuzey"],["--ton-sari","--yuzey-ust"],["--ton-kahve","--zemin"],["--ton-kahve","--yuzey"],["--ton-kahve","--yuzey-ust"]]}];
+/*CIFTLER:BITIS*/
+</script>
+<script>
+(function () {
+  'use strict';
+  var kok = document.documentElement;
+  var q = function (s, k) { return (k || document).querySelector(s); };
+  var qa = function (s, k) { return Array.prototype.slice.call((k || document).querySelectorAll(s)); };
+  var sade = function (v) { return (v || '').trim(); };
+
+  /* ---------- renk hesabı (kontrast.mjs ile aynı formül) ---------- */
+  function hex2rgb(h) { var m = /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.exec(sade(h)); if (!m) return null; var x = m[1]; if (x.length === 3) x = x.split('').map(function (c) { return c + c; }).join(''); return [0, 2, 4].map(function (i) { return parseInt(x.slice(i, i + 2), 16); }); }
+  function dogrusal(v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }
+  function lum(c) { return 0.2126 * dogrusal(c[0]) + 0.7152 * dogrusal(c[1]) + 0.0722 * dogrusal(c[2]); }
+  function oran(a, b) { var x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
+  function tok(ad) { return sade(getComputedStyle(kok).getPropertyValue(ad)); }
+  function kes1(x) { return (Math.floor(x * 10) / 10).toFixed(1).replace('.', ','); }
+
+  /* ---------- tema ve sınama görünümü ---------- */
+  function durumYaz() {
+    var t = kok.getAttribute('data-tema') || 'sistem';
+    var gercek = getComputedStyle(kok).colorScheme || '';
+    var el = q('#durum-cubugu');
+    el.textContent = innerWidth + ' px · tema: ' + t + ' (' + (tok('--zemin') === '#0E1216' ? 'koyu' : 'açık') + ')' + (kok.getAttribute('data-gorus') ? ' · ' + kok.getAttribute('data-gorus') : '');
+  }
+  function temaSec(v) { if (v) kok.setAttribute('data-tema', v); else kok.removeAttribute('data-tema'); isaretle(); doldur(); }
+  function gorusSec(v) { if (v) kok.setAttribute('data-gorus', v); else kok.removeAttribute('data-gorus'); isaretle(); }
+  function isaretle() {
+    var t = kok.getAttribute('data-tema') || '', g = kok.getAttribute('data-gorus') || '';
+    qa('[data-tema-sec]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-tema-sec') === t)); });
+    qa('[data-gorus-sec]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-gorus-sec') === g)); });
+    durumYaz();
+  }
+  qa('[data-tema-sec]').forEach(function (b) { b.addEventListener('click', function () { temaSec(b.getAttribute('data-tema-sec')); }); });
+  qa('[data-gorus-sec]').forEach(function (b) { b.addEventListener('click', function () { gorusSec(b.getAttribute('data-gorus-sec')); }); });
+  (function () { var m = /[?&]tema=(acik|koyu)/.exec(location.search); if (m) kok.setAttribute('data-tema', m[1]); var g = /[?&]gorus=(gri|protan|deuter|tritan|gunes)/.exec(location.search); if (g) kok.setAttribute('data-gorus', g[1]); })();
+
+  /* ---------- JS ile üretilen bölümler ---------- */
+  var BOLUM = window.KB_BOLUMLER = {};
+  function doldur() { Object.keys(BOLUM).forEach(function (k) { BOLUM[k](); }); }
+  window.addEventListener('resize', durumYaz);
+
+  /* ---------- küçük yardımcılar ---------- */
+  var NS = 'http://www.w3.org/2000/svg';
+  function ikon(id, ek) { return '<svg class="ik ' + (ek || '') + '" aria-hidden="true"><use href="#' + id + '"/></svg>'; }
+  function tm(tur, ek) { return '<svg class="tm t-' + tur + ' ' + (ek || '') + '" viewBox="0 0 40 40" aria-hidden="true"><use href="#t-' + tur + '"/></svg>'; }
+  function virgul(x) { return String(x).replace('.', ','); }
+
+  var TURLER = [
+    /* [anahtar, ad, etiket, çerçeve, glif, ton, kod harfi] */
+    ['beyin', 'Beyin', 'BEYİN', 'pah (köşeleri kesik kare)', 'çip', 'mavi', 'A'],
+    ['soket', 'Soket', 'SOKET', 'yamuk (D konnektör)', 'pin delikleri', 'çelik', 'X'],
+    ['besleme', 'Artı besleme', 'BESLEME', 'altıgen', 'bara + artı', 'gül', 'X (Verteiler)'],
+    ['guc', 'Güç', 'GÜÇ', 'kapsül (dikey hap)', 'akü', 'gül', 'G'],
+    ['salter', 'Şalter', 'ŞALTER', 'paralelkenar', 'açık kontak', 'turuncu', 'S'],
+    ['role', 'Röle', 'RÖLE', 'kemer (üstü yuvarlak)', 'bobin + kontak', 'turuncu', 'K'],
+    ['sigorta', 'Sigorta', 'SİGORTA', 'hap (yatay)', 'telli gövde', 'turuncu', 'F'],
+    ['toprak', 'Toprak', 'TOPRAK', 'kalkan (ucu aşağı)', 'üç basamaklı çubuk', 'kahve', 'W'],
+    ['motor', 'Motor', 'MOTOR', 'daire', 'M harfi', 'zeytin', 'M'],
+    ['valf', 'Valf', 'VALF', 'eşkenar dörtgen', 'kelebek (iki üçgen)', 'zeytin', 'Y'],
+    ['lamba', 'Lamba', 'LAMBA', 'daire', 'çarpı', 'sarı', 'E'],
+    ['ikaz', 'İkaz', 'İKAZ', 'yuvarlak kare', 'çan', 'sarı', 'H'],
+    ['sensor', 'Sensör', 'SENSÖR', 'ok (sağa bakan beşgen)', 'sinyal yayları', 'turkuaz', 'B'],
+    ['direnc', 'Direnç', 'DİRENÇ', 'dikdörtgen (keskin)', 'zikzak', 'çelik', 'R'],
+    ['diyot', 'Diyot', 'DİYOT', 'dikdörtgen (keskin)', 'üçgen + çubuk', 'çelik', 'V'],
+    ['dugum', 'Düğüm', 'DÜĞÜM', 'çerçevesiz: nokta + dallar', 'Y dal', 'çelik', 'Z'],
+    ['diger', 'Diğer', 'DİĞER', 'yuvarlak kare', 'üç nokta', 'çelik', 'tanınmayan'],
+    ['devam', 'Devam', 'DEVAM', 'ok (sağa bakan beşgen)', 'duvara ok', 'çelik', 'uç türü (kablo başka yere gidiyor)']
+  ];
+  var ETIKET = {}; TURLER.forEach(function (t) { ETIKET[t[0]] = t[2]; });
+
+  var TR_RENK = { ws: 'beyaz', sw: 'siyah', rt: 'kırmızı', gn: 'yeşil', ge: 'sarı', bl: 'mavi', br: 'kahverengi', gr: 'gri', li: 'lila', or: 'turuncu', rs: 'pembe' };
+
+  /* iki renkli kablo: ana renk + çapraz tracer; desen gerektiğinde SVG <defs>'e eklenir */
+  function desen(a, b) {
+    var id = 'p-' + a + '-' + b;
+    if (!document.getElementById(id)) {
+      var p = document.createElementNS(NS, 'pattern');
+      p.setAttribute('id', id); p.setAttribute('patternUnits', 'userSpaceOnUse'); p.setAttribute('width', '10'); p.setAttribute('height', '10'); p.setAttribute('patternTransform', 'rotate(45)');
+      p.innerHTML = '<rect width="10" height="10" style="fill:var(--kablo-' + a + ')"/><rect y="3" width="10" height="4" style="fill:var(--kablo-' + b + ')"/>';
+      q('.sprite defs').appendChild(p);
+    }
+    return 'url(#' + id + ')';
+  }
+  function renkVar(k) { return tok('--kablo-' + k) ? 'var(--kablo-' + k + ')' : 'var(--yazi-pasif)'; }
+  /* yatay ya da dikey kablo çizgisi: renk yok → düz; renk var → kenarlı tüp; varyant → kesikli */
+  function telCiz(x1, y1, x2, y2, o) {
+    o = o || {};
+    var kes = o.varyant ? ' style="stroke-dasharray:var(--kablo-kesik)"' : '';
+    var koor = 'x1="' + x1 + '" y1="' + y1 + '" x2="' + x2 + '" y2="' + y2 + '"';
+    if (!o.renk) return '<line ' + koor + ' stroke="var(--kablo-cizgi)" stroke-width="3"' + kes + '/>';
+    var p = o.renk.split('/'), dolgu = p.length > 1 ? desen(p[0], p[1]) : renkVar(p[0]);
+    return '<line ' + koor + ' stroke="var(--cizgi-guclu)" stroke-width="9"' + kes + '/><line ' + koor + ' stroke="' + dolgu + '" stroke-width="5"' + kes + '/>';
+  }
+  /* kablo rengi çipi (HTML): şerit + yazılı kısaltma */
+  function renkCipi(renk, notmu) {
+    var p = renk.split('/'), st = '--c1:' + renkVar(p[0]) + (p[1] ? ';--c2:' + renkVar(p[1]) : '');
+    return '<span class="kcip"><span class="ksw' + (p[1] ? ' iki' : '') + '" style="' + st + '"></span>' + renk + '</span>' + (notmu ? ' ' + rozet('not', 'ŞEMA NOTU') : '');
+  }
+  var R_IKON = { supheli: 'i-supheli', celiski: 'i-celiski', dogrulanmadi: 'i-dogrulanmadi', dogrulandi: 'i-dogrulandi', not: 'i-not', varyant: 'i-varyant' };
+  function rozet(tur, yazi) { return '<span class="rozet r-' + tur + '">' + ikon(R_IKON[tur], 'ik-k') + yazi + '</span>'; }
+  function serit(tur, baslik, metin) { return '<div class="serit s-' + tur + '" role="note">' + ikon(R_IKON[tur]) + '<div><b>' + baslik + '</b><span>' + metin + '</span></div></div>'; }
+  /* ? karakterlerini belirgin işaretle */
+  function bel(s) { return String(s).replace(/\?/g, '<span class="bel">?</span>'); }
+  /* pin kapsülü: soket · pin · pin adı */
+  function pin(soket, no, ad, ek) {
+    return '<span class="pin' + (ek ? ' ' + ek : '') + '">' + (soket ? '<span class="pin-soket">' + ikon('i-soket') + bel(soket) + '</span>' : '') + '<b class="pin-no">' + bel(no) + '</b>' + (ad ? '<span class="pin-ad">' + bel(ad) + '</span>' : '') + '</span>';
+  }
+
+  /* ---------- 1. renk ---------- */
+  BOLUM.renk = function () {
+    var Y = [['--zemin', 'sayfa zemini'], ['--yuzey', 'kart, panel'], ['--yuzey-ust', 'girdi, çip'], ['--yuzey-basili', 'basılı yüzey'], ['--secili-zemin', 'seçili satır'], ['--cizgi', 'çerçeve, ayırıcı'], ['--cizgi-guclu', 'diyagram çizgisi'], ['--yazi', 'ana metin'], ['--yazi-2', 'ikincil metin'], ['--yazi-pasif', 'pasif, ipucu'], ['--vurgu', 'ana renk'], ['--vurgu-basili', 'basılı ana renk'], ['--yazi-vurgu', 'bağlantı'], ['--odak', 'odak halkası'], ['--ters-zemin', 'ters çift']];
+    q('#yuzeyler').innerHTML = Y.map(function (t) {
+      return '<div class="renk-kutu"><i style="background:var(' + t[0] + ')"></i><span class="oran-ad">' + t[1] + '</span><span class="ad">' + t[0] + '<br>' + tok(t[0]) + '</span></div>';
+    }).join('');
+
+    q('#oranlar').innerHTML = CIFTLER.map(function (r) {
+      var kotu = null;
+      r.cift.forEach(function (c) { var a = hex2rgb(tok(c[0])), b = hex2rgb(tok(c[1])); if (!a || !b) return; var o = oran(a, b); if (!kotu || o < kotu.o) kotu = { o: o, on: c[0], arka: c[1] }; });
+      var gec = kotu && kotu.o >= r.esik;
+      var ornek = r.grup === 'Çizgi ve simge'
+        ? '<div class="oran-ornek" style="background:var(' + kotu.arka + ')"><i style="display:block;width:100%;height:6px;border-radius:3px;background:var(' + kotu.on + ')"></i></div>'
+        : '<div class="oran-ornek" style="color:var(' + kotu.on + ');background:var(' + kotu.arka + ')">Aa 04A02</div>';
+      return '<div class="oran">' + ornek + '<div class="oran-bilgi"><span class="oran-ad">' + r.ad + '</span><span class="oran-deger">' + kotu.on + ' / ' + kotu.arka + '</span><span class="oran-durum">' + ikon(gec ? 'i-iyi' : 'i-kotu', 'ik-k') + kes1(kotu.o) + ' : 1 · eşik ≥ ' + virgul(r.esik) + ' · ' + (gec ? 'TAMAM' : 'HATA') + '</span></div></div>';
+    }).join('');
+
+    var D = [['supheli', 'ŞÜPHELİ'], ['hata', 'ÇELİŞKİLİ / hata'], ['dogrulanmadi', 'DOĞRULANMADI'], ['dogrulandi', 'DOĞRULANDI'], ['not', 'ŞEMA NOTU']];
+    q('#durumlar').innerHTML = D.map(function (d) {
+      var n = d[0];
+      return '<div class="renk-kutu"><i style="display:flex;align-items:center;justify-content:center;font-weight:700;background:var(--' + n + '-zemin);color:var(--' + n + '-yazi);border:3px solid var(--' + n + '-cizgi)">' + d[1] + '</i><span class="ad">--' + n + '-zemin<br>--' + n + '-yazi<br>--' + n + '-cizgi</span></div>';
+    }).join('');
+
+    var TON = { mavi: 'beyin', turkuaz: 'sensör', celik: 'soket, düğüm, direnç, diyot, diğer, devam', gul: 'artı besleme, güç', turuncu: 'şalter, röle, sigorta', zeytin: 'motor, valf', sari: 'lamba, ikaz', kahve: 'toprak' };
+    q('#tonlar').innerHTML = Object.keys(TON).map(function (n) {
+      return '<div class="renk-kutu"><i style="display:flex;align-items:center;justify-content:center;font-weight:700;background:var(--ton-' + n + '-zemin);border:3px solid var(--ton-' + n + ')">Aa</i><span class="oran-ad">' + n + '</span><span class="ad">' + TON[n] + '</span></div>';
+    }).join('');
+
+    var R = ['ws', 'sw', 'rt', 'gn', 'ge', 'bl', 'br', 'gr', 'li', 'or', 'rs', 'sw/rt', 'ge/gn'];
+    q('#kablo-renkleri').innerHTML = R.map(function (r) {
+      var ad = r.split('/').map(function (x) { return TR_RENK[x]; }).join('-');
+      return '<div class="kutu" style="flex-direction:column;align-items:flex-start;gap:6px">' + renkCipi(r) + '<span class="ad">' + ad + '</span></div>';
+    }).join('');
+  };
+
+  /* ---------- 2. yazı ---------- */
+  BOLUM.yazi = function () {
+    var O = [['--boyut-ipucu', 'ipucu, rozet, kaynak satırı (EN KÜÇÜK)', 'Kaynak: Örnek.pdf · sayfa 1 · yol 24', 0], ['--boyut-govde', 'gövde, tablo, düğme', 'Kablo 9999 iki ucu birleştirir.', 0], ['--boyut-pin', 'pin, soket, pin adı (mono)', 'IV-18 · 10 · HS10', 1], ['--boyut-kod', 'cihaz kodu, kablo no (mono, kalın)', '99A01   9999', 1], ['--boyut-baslik', 'bölüm başlığı', 'Soketler', 0], ['--boyut-ekran', 'ekran başlığı', 'Cihaz 99A01', 0], ['--boyut-vurgu', 'kart tepesi: kablo no (mono, kalın)', '9999', 1]];
+    q('#olcek').innerHTML = O.map(function (o, i) {
+      return '<div class="oran" style="grid-template-columns:1fr"><div class="oran-deger">' + o[0] + ' · <span data-px="' + i + '"></span> px · ' + o[1] + '</div><div id="olcek-' + i + '" class="' + (o[3] ? 'kod' : '') + '" style="font-size:var(' + o[0] + ');line-height:var(--satir-sik);' + (o[3] ? 'font-weight:700' : '') + '">' + o[2] + '</div></div>';
+    }).join('');
+    O.forEach(function (o, i) { q('[data-px="' + i + '"]').textContent = Math.round(parseFloat(getComputedStyle(q('#olcek-' + i)).fontSize)); });
+
+    var K = [['0', 'sıfır'], ['O', 'O harfi'], ['1', 'bir'], ['l', 'küçük L'], ['I', 'büyük i'], ['5', 'beş'], ['S', 'S harfi'], ['8', 'sekiz'], ['B', 'B harfi'], ['2', 'iki'], ['Z', 'Z harfi']];
+    q('#karisan').innerHTML = K.map(function (k) {
+      return '<div class="sutun" style="align-items:center;min-width:52px"><span class="kod" style="font-size:2rem;line-height:1;font-weight:700">' + k[0] + '</span><span class="ad">' + k[1] + '</span></div>';
+    }).join('');
+    q('#font-bilgi').innerHTML = 'Etkin aile (kod): <span class="ad">' + getComputedStyle(q('#karisan .kod')).fontFamily.replace(/"/g, '') + '</span>';
+
+    var C = ['99A01', '98K03', '97S02', 'IV-18', 'X99.1', 'HS10', 'KL.15', '70sw', '2,5-4135', '#9999', 'sw/rt'];
+    q('#kodlar').innerHTML = C.map(function (c) { return '<span class="kod" style="font-size:var(--boyut-kod);font-weight:700">' + c + '</span>'; }).join('<span style="color:var(--cizgi)"> │ </span>');
+  };
+
+  /* ---------- 3. aralık ---------- */
+  BOLUM.aralik = function () {
+    q('#aralik-liste').innerHTML = [1, 2, 3, 4, 5, 6, 8, 10, 12].map(function (n) {
+      return '<div class="aralik"><i style="width:var(--bosluk-' + n + ')"></i><span>--bosluk-' + n + ' · ' + (n * 4) + ' px</span></div>';
+    }).join('');
+    q('#yaricaplar').innerHTML = [['s', '4'], ['m', '8'], ['b', '12'], ['tam', 'tam']].map(function (r) {
+      return '<div class="yaricap"><i style="border-radius:var(--yaricap-' + r[0] + ')"></i><span>--yaricap-' + r[0] + '<br>' + (r[1] === 'tam' ? '999 px' : r[1] + ' px') + '</span></div>';
+    }).join('');
+  };
+
+  /* ---------- 4. cihaz türleri ---------- */
+  BOLUM.tur = function () {
+    q('#tur-izgara').innerHTML = TURLER.map(function (t) {
+      return '<div class="kutu" style="flex-direction:column;align-items:center;text-align:center;gap:6px;padding:12px 8px">' + tm(t[0], 'tm-b') + '<b>' + t[1] + '</b><span class="rozet" style="border-color:var(--cizgi);font-size:var(--boyut-ipucu)">' + t[2] + '</span><span class="ad">' + t[3] + '<br>glif: ' + t[4] + '<br>ton: ' + t[5] + '<br>kod harfi: ' + t[6] + '</span></div>';
+    }).join('');
+    q('#tur-renksiz').innerHTML = TURLER.map(function (t) { return '<span class="sutun" style="align-items:center;width:68px">' + tm(t[0], 'tm-b') + '<span class="ad" style="text-align:center">' + t[2] + '</span></span>'; }).join('');
+    q('#tur-kucuk').innerHTML = TURLER.map(function (t) { return tm(t[0]); }).join('');
+    q('#tur-varyant').innerHTML = ['beyin', 'role', 'lamba'].map(function (t) { return '<span class="sutun" style="align-items:center;gap:4px"><svg class="tm tm-b t-' + t + '" viewBox="0 0 40 40" style="--t-kesik:5 3.5" aria-hidden="true"><use href="#t-' + t + '"/></svg>' + rozet('varyant', 'VARYANT') + '</span>'; }).join('');
+  };
+
+  /* ---------- kablo etiketi çipi (HTML) ---------- */
+  /* t: {no, renk, kesit, not, varyant, supheli}: üst satır numara; alt satır renk şeridi + kısaltma + kesit.
+     Renk/kesit şema notundan geliyorsa alt satır "not" bandına girer (not simgesi + slate zemin). */
+  function ketiketHtml(t) {
+    var alt = [];
+    if (t.renk) alt.push(renkCipi(t.renk));
+    if (t.kesit) alt.push(virgul(t.kesit) + ' mm²');
+    var h = '<span class="ketiket' + (t.supheli ? ' supheli' : '') + '"><span class="ketiket-no">' + (t.supheli ? ikon('i-supheli', 'ik-k') : '') + bel(t.no) + '</span>';
+    if (alt.length) h += '<span class="ketiket-alt' + (t.not ? ' nota' : '') + '">' + (t.not ? ikon('i-not', 'ik-k') : '') + alt.join(' · ') + '</span>';
+    if (t.varyant) h += '<span class="ketiket-alt">' + ikon('i-varyant', 'ik-k') + 'VARYANT</span>';
+    return h + '</span>';
+  }
+
+  /* ---------- 5. kablo çizgisi ---------- */
+  BOLUM.kablo = function () {
+    var T = [
+      ['Düz: renk ve kesit yazmıyor', { no: '9999' }, {}],
+      ['Renkli: tek renk', { no: '9999', renk: 'rt', kesit: '1' }, { renk: 'rt' }],
+      ['Renkli: iki renk (ana renk + çapraz çizgi)', { no: '9999', renk: 'sw/rt', kesit: '1' }, { renk: 'sw/rt' }],
+      ['Varyant: kesikli çizgi + VARYANT', { no: '9999', renk: 'ge', kesit: '0.75', varyant: true }, { renk: 'ge', varyant: true }],
+      ['Şema notundan: renk ve kesit kabloda yazmıyor', { no: '9999', renk: 'ws', kesit: '0.75', not: true }, {}],
+      ['Numarasız kablo: etiket olduğu gibi (70sw)', { no: '70sw', renk: 'sw', kesit: '70' }, { renk: 'sw' }],
+      ['ŞÜPHELİ kablo: çip amber, simgeli', { no: '9999', supheli: true }, {}]
+    ];
+    q('#tel-ornekleri').innerHTML = T.map(function (x) {
+      return '<div class="tel-satir"><span class="kucuk">' + x[0] + '</span><div class="tel-kutu"><svg class="tel" width="100%" height="100%">' + telCiz(0, '50%', '100%', '50%', x[2]) + '</svg>' + ketiketHtml(x[1]) + '</div></div>';
+    }).join('');
+    q('#tel-cipleri').innerHTML = [renkCipi('sw/rt'), renkCipi('ge'), '<span class="ketiket-alt nota" style="font-size:var(--boyut-ipucu)">' + ikon('i-not', 'ik-k') + renkCipi('ws') + ' · 0,75 mm²</span>', renkCipi('zz') + ' <span class="kucuk">tanınmayan kısaltma: olduğu gibi yazılır, şerit nötr</span>'].map(function (x) { return '<div class="kutu">' + x + '</div>'; }).join('');
+  };
+
+  /* ---------- 6. pin ---------- */
+  BOLUM.pin = function () {
+    var P = [
+      ['Cihaz pini (FPS): soket (pin sayısı), pin, pin adı', pin('IV-18', '10', 'HS10')],
+      ['Beyin pini: 15 pinli soketin 5. pini', pin('15', '5', 'NHB')],
+      ['Ara soket (iki demet arası konnektör)', pin('X99.1', '4')],
+      ['Soketsiz cihaz ucu: uç adı pin sayılır', pin('', 'B+')],
+      ['Okunamayan karakter ? ile kalır, işaretli; kapsülle birlikte ŞÜPHELİ', pin('X?', '1?', 'HS?') + ' ' + rozet('supheli', 'ŞÜPHELİ')],
+      ['Uzun pin adı alt satıra kırılır, bilgi kaybolmaz', pin('IV-18', '10', 'ÇOK_UZUN_PİN_ADI_ÖRNEĞİ_12345', 'pin-uzun')]
+    ];
+    q('#pin-ornekleri').innerHTML = P.map(function (x) { return '<div class="sutun"><span class="kucuk">' + x[0] + '</span><div class="yan">' + x[1] + '</div></div>'; }).join('');
+  };
+
+  /* ---------- 7. durum etiketleri ---------- */
+  BOLUM.etiket = function () {
+    q('#rozetler').innerHTML = rozet('supheli', 'ŞÜPHELİ') + rozet('celiski', 'ÇELİŞKİLİ') + rozet('dogrulanmadi', 'DOĞRULANMADI') + rozet('dogrulandi', 'DOĞRULANDI') + rozet('not', 'ŞEMA NOTU') + rozet('varyant', 'VARYANT');
+    q('#seritler').innerHTML = [
+      serit('supheli', 'ŞÜPHELİ', 'Şemada net okunamadı: pin 1? (11 mi, 17 mi?). Aracı sökmeden önce şemadan kontrol et.'),
+      serit('celiski', 'ÇELİŞKİLİ', 'İki şemada bu kablo farklı yerlere gidiyor. İkisi de gösteriliyor; şemadan teyit et.'),
+      serit('dogrulanmadi', 'DOĞRULANMADI', 'Bu şema henüz kontrol edilmedi. Şemadan teyit et.'),
+      serit('dogrulandi', 'DOĞRULANDI', 'Bu şema şemayla karşılaştırıldı.'),
+      serit('not', 'ŞEMA NOTU', 'Renk ve kesit kabloda yazmıyor; şemanın notuna göre: ws, 0,75 mm².')
+    ].join('');
+  };
+
+  /* ---------- 8. düğme, sekme, arama ---------- */
+  BOLUM.dugme = function () {
+    var D = [['', 'normal'], ['basili', 'basılı'], ['odakli', 'odak'], ['secili', 'seçili'], ['pasif', 'pasif']];
+    function matris(baslik, uret, hangi, dikey) {
+      var d = D.filter(function (x) { return !hangi || hangi.indexOf(x[0]) >= 0; });
+      return '<h3>' + baslik + '</h3><div class="' + (dikey ? 'sutun' : 'yan') + '" style="' + (dikey ? '' : 'align-items:flex-start;gap:16px 12px') + '">' + d.map(function (x) { return '<div class="sutun" style="align-items:flex-start' + (dikey ? ';width:100%' : '') + '">' + uret(x[0]) + '<span class="ad">' + x[1] + '</span></div>'; }).join('') + '</div>';
+    }
+    var tik = ikon('i-secili', 'sec');
+    var h = '';
+    h += matris('Ana düğme (56 px)', function (d) { return '<button class="dugme dugme-ana ' + d + '"' + (d === 'pasif' ? ' disabled' : '') + '>' + ikon('i-ara') + 'Ara</button>'; }, ['', 'basili', 'odakli', 'pasif']);
+    h += matris('İkincil düğme (56 px)', function (d) { return '<button class="dugme ' + d + '"' + (d === 'secili' ? ' aria-pressed="true"' : '') + (d === 'pasif' ? ' disabled' : '') + '>' + (d === 'secili' ? tik : '') + 'Geri</button>'; });
+    h += matris('Simge düğmesi (48 × 48)', function (d) { return '<button class="dugme dugme-ikon ' + d + '" aria-label="Temizle"' + (d === 'pasif' ? ' disabled' : '') + (d === 'secili' ? ' aria-pressed="true"' : '') + '>' + ikon('i-temizle') + '</button>'; });
+    h += matris('Sekme (48 px, yatay kaydırılan şerit)', function (d) { return '<button class="sekme ' + d + '">' + (d === 'secili' ? ikon('i-secili', 'ik-k') : '') + 'Kapı 1–4</button>'; });
+    h += matris('Liste satırı (56 px+)', function (d) {
+      return '<button class="satir ' + d + '">' + tm('beyin') + '<span class="satir-metin"><span class="satir-kod">99A01</span><span class="satir-alt">Örnek beyin · 2 soket</span></span>' + (d === 'secili' ? ikon('i-secili') : ikon('i-sag')) + '</button>';
+    }, null, true);
+    h += '<h3>Arama alanı (56 px)</h3><div class="sutun">' +
+      '<div class="arama">' + ikon('i-ara') + '<input placeholder="Cihaz, kablo ya da soket ara" aria-label="Ara"></div><span class="ad">boş (yer tutucu ≥ 4,5:1)</span>' +
+      '<div class="arama dolu">' + ikon('i-ara') + '<input value="99A01" aria-label="Ara"><button class="dugme dugme-ikon" style="border:0;background:transparent" aria-label="Temizle">' + ikon('i-temizle') + '</button></div><span class="ad">dolu: kod yazısı mono ve kalın; temizle düğmesi 48 px</span>' +
+      '<div class="arama odakli">' + ikon('i-ara') + '<input value="99A0" aria-label="Ara"></div><span class="ad">odak</span></div>';
+    h += '<h3>Sekmeler (kaydırılır)</h3><div class="sekmeler" role="tablist">' + ['Tümü', 'Alternatör – Marş', 'DMUX', 'CPC', 'FPS 1–4', 'FPS 5', 'FPS 6', 'Kapı 1–4', 'SCR'].map(function (a, i) { return '<button class="sekme' + (i === 0 ? ' secili' : '') + '" role="tab" aria-selected="' + (i === 0) + '">' + (i === 0 ? ikon('i-secili', 'ik-k') : '') + a + '</button>'; }).join('') + '</div>';
+    h += '<h3>Tema düğmesi (başlıkta, her zaman görünür)</h3><div class="segment" role="group" aria-label="Tema"><button aria-pressed="true">' + tik + ikon('i-ay') + 'Koyu</button><button aria-pressed="false">' + tik + ikon('i-gunes') + 'Açık</button></div><p class="kucuk" style="margin-top:8px">İki seçenek de görünür; seçili olan dolgu + onay simgesiyle belli. Tek tuşlu "değiştir" düğmesi kullanma: hangi durumda olduğu belli olmaz.</p>';
+    q('#dugme-matrisleri').innerHTML = h;
+  };
+
+  /* ---------- zincir (dikey akış: kablo = sol omurga) ---------- */
+  function zDugum(d) {
+    return '<div class="z-dugum" role="button" tabindex="0" aria-label="' + ETIKET[d.tur] + ' ' + d.kod + '">' + tm(d.tur) +
+      '<div class="z-ad"><span class="z-tur">' + ETIKET[d.tur] + '</span><span class="z-kod">' + bel(d.kod) + '</span><span class="z-isim">' + d.ad + '</span>' + (d.pin ? pin.apply(null, d.pin) : '') + '</div>' + ikon('i-sag') + '</div>';
+  }
+  function zTel(t) {
+    var iki = t.renk && t.renk.indexOf('/') > 0, st = '';
+    if (t.renk) { var p = t.renk.split('/'); st = '--c1:' + renkVar(p[0]) + (p[1] ? ';--c2:' + renkVar(p[1]) : ''); }
+    return '<div class="z-tel"><div class="z-hat' + (t.renk ? ' renkli' : '') + (iki ? ' iki' : '') + (t.varyant ? ' kesik' : '') + '" style="' + st + '"></div><div class="z-tel-etiket">' + ketiketHtml(t) + '</div></div>';
+  }
+  function zincir(dugumler, teller) {
+    var h = '';
+    dugumler.forEach(function (d, i) { h += zDugum(d); if (teller[i]) h += zTel(teller[i]); });
+    return '<div class="zincir">' + h + '</div>';
+  }
+  /* dallanma: düğümden sonra her dal solda kalın bir ayraçla girintilenir */
+  function dallar(dallarListesi) {
+    return '<div style="border-left:var(--cerceve-kalin) solid var(--cizgi-guclu);padding-left:var(--bosluk-2);margin-left:22px;display:flex;flex-direction:column;gap:var(--bosluk-2)">' + dallarListesi.map(function (d, i) {
+      return '<div><span class="z-tur">DAL ' + (i + 1) + '</span>' + zincir(d.dugumler, d.teller) + '</div>';
+    }).join('') + '</div>';
+  }
+  function kart(o) {
+    var h = '<article class="kart">';
+    if (!o.dogrulandi) h += serit('dogrulanmadi', 'DOĞRULANMADI', 'Bu şema henüz kontrol edilmedi. Şemadan teyit et.');
+    h += '<div class="kart-bas"><div><span class="z-tur">' + (o.tur || 'KABLO') + '</span><h4 class="kart-no">' + bel(o.no) + '</h4></div><div class="kart-etiketler">' + (o.rozetler || '') + '</div></div>';
+    if (o.ozellik) h += '<div class="yan">' + o.ozellik + '</div>';
+    if (o.supheli) h += serit('supheli', 'ŞÜPHELİ', o.supheli);
+    h += o.govde;
+    h += '<div class="ozet"><h4>METİN</h4><p class="kod" style="font-size:var(--boyut-govde)">' + bel(o.metin) + '</p></div>';
+    h += '<div class="kaynak">' + ikon('i-kaynak', 'ik-k') + '<span>' + o.kaynak + '</span></div>';
+    return h + '</article>';
+  }
+
+  /* ---------- 9. sonuç ekranı örnekleri ---------- */
+  BOLUM.kart = function () {
+    var A = kart({
+      no: '9999', ozellik: renkCipi('sw/rt') + '<span>·</span><span>1 mm²</span>',
+      govde: zincir([
+        { tur: 'beyin', kod: '99A01', ad: 'Örnek beyin', pin: ['IV-18', '10', 'HS10'] },
+        { tur: 'soket', kod: 'X99.1', ad: 'Ara soket', pin: ['X99.1', '4'] },
+        { tur: 'role', kod: '98K03', ad: 'Örnek röle', pin: ['P4-5', '3', 'K1'] }
+      ], [{ no: '9999', renk: 'sw/rt', kesit: '1' }, { no: '9999', renk: 'ws', kesit: '0.75', not: true }]),
+      metin: 'Kablo 9999 · Örnek beyin (99A01) soket IV-18 pin 10 (HS10) → ara soket X99.1 pin 4 → Örnek röle (98K03) soket P4-5 pin 3 (K1)',
+      kaynak: 'Ornek.pdf · sayfa 1 · yol 24 · satır A'
+    });
+    var B = kart({
+      no: '9998', rozetler: rozet('supheli', 'ŞÜPHELİ') + rozet('varyant', 'VARYANT'),
+      supheli: 'Şemada net okunamadı: pin 1? (11 mi, 17 mi?). Aracı sökmeden önce şemadan kontrol et.',
+      govde: zincir([
+        { tur: 'beyin', kod: '99A02', ad: 'Örnek beyin 2', pin: ['IV-18', '1?', 'HS?'] },
+        { tur: 'lamba', kod: '97E02', ad: 'Örnek lamba', pin: ['', '+'] },
+        { tur: 'devam', kod: '2/27', ad: 'Başka sayfada devam eder', pin: null }
+      ], [{ no: '9998', renk: 'ge/gn', kesit: '0.75', varyant: true, supheli: true }, { no: '9998' }]),
+      metin: 'Kablo 9998 · Örnek beyin 2 (99A02) soket IV-18 pin 1? (HS?) → Örnek lamba (97E02) uç + → devam: 2/27',
+      kaynak: 'Ornek.pdf · sayfa 1 · yol ~31 · satır B'
+    });
+    var C = kart({
+      tur: 'KABLO (DALLANIYOR)', no: '9997',
+      govde: zincir([{ tur: 'beyin', kod: '99A01', ad: 'Örnek beyin', pin: ['IV-18', '12', 'HS12'] }, { tur: 'dugum', kod: '~d1', ad: 'Ek noktası (şemada kodu yok)', pin: null }], [{ no: '9997' }]) +
+        dallar([
+          { dugumler: [{ tur: 'role', kod: '98K03', ad: 'Örnek röle', pin: ['P4-5', '2', 'K1'] }], teller: [] },
+          { dugumler: [{ tur: 'toprak', kod: '97W01', ad: 'Örnek toprak', pin: ['', '31'] }], teller: [] }
+        ]),
+      metin: 'Kablo 9997 · Örnek beyin (99A01) soket IV-18 pin 12 (HS12) → ek ~d1 → [1] Örnek röle (98K03) soket P4-5 pin 2 · [2] Örnek toprak (97W01) uç 31',
+      kaynak: 'Ornek.pdf · sayfa 1 · yol 40 · satır C'
+    });
+    q('#kartlar').innerHTML = A + B + C;
+
+    /* cihaz sorgusu */
+    var sat = function (no, ad, alt) { return '<div class="pin-satir" role="button" tabindex="0"><b class="pin-no">' + bel(no) + '</b><div><div class="pin-satir-ad">' + bel(ad) + '</div><div class="pin-satir-alt">' + alt + '</div></div>' + ikon('i-sag') + '</div>'; };
+    q('#cihaz-sorgusu').innerHTML = '<article class="kart">' + serit('dogrulanmadi', 'DOĞRULANMADI', 'Bu şema henüz kontrol edilmedi. Şemadan teyit et.') +
+      '<div class="yan" style="gap:12px;flex-wrap:nowrap">' + tm('beyin', 'tm-b') + '<div><span class="z-tur">BEYİN</span><div class="kart-no" style="font-size:var(--boyut-ekran)">99A01</div><span class="z-isim">Örnek beyin · 2 soket · 5 pin</span></div></div>' +
+      '<div style="border:var(--cerceve) solid var(--cizgi-guclu);border-radius:var(--yaricap-m);overflow:hidden">' +
+      '<div class="soket-bas">' + ikon('i-soket') + 'IV-18<span>3 pin</span></div>' +
+      sat('10', 'HS10', 'kablo <b>9999</b> → <b>98K03</b> · soket P4-5 · pin 3') +
+      sat('11', 'HS11', 'kablo <b>9998</b> → <b>97E02</b> · uç +') +
+      sat('12', 'HS12', 'kablo <b>9997</b> → ek ~d1 · 2 dal') +
+      '<div class="soket-bas">' + ikon('i-soket') + '15<span>2 pin</span></div>' +
+      sat('5', 'NHB', 'kablo <b>9996</b> → <b>X99.1</b> · pin 4') +
+      sat('6', '?', 'kablo yok') +
+      '</div><div class="kaynak">' + ikon('i-kaynak', 'ik-k') + '<span>Ornek.pdf · sayfa 1 · yol 12 · satır A</span></div></article>';
+
+    /* boş ve hata */
+    q('#bos-durumlar').innerHTML =
+      '<div class="bos">' + ikon('i-ara', 'ik-b') + '<h4>Ne arıyorsun?</h4><p>Cihaz kodu, kablo numarası ya da soket yaz.</p><div class="yan" style="justify-content:center">' + ['99A01', '9999', 'X99.1'].map(function (c) { return '<button class="oneri">' + c + '</button>'; }).join('') + '</div></div>' +
+      '<div class="bos">' + ikon('i-ara', 'ik-b') + '<h4>“98Z9” bulunamadı</h4><p>Şunu mu demek istediniz?</p><div class="yan" style="justify-content:center">' + ['98K03', '98K30'].map(function (c) { return '<button class="oneri">' + c + '</button>'; }).join('') + '</div><p class="kucuk">Büyük/küçük harf, boşluk ve tire fark etmez.</p></div>';
+  };
+
+  /* geniş düzen: kart — kapsül — tel (çip ortada) — kapsül — kart */
+  function yDugum(d) {
+    return '<div class="y-dugum' + (d.tur === 'beyin' ? ' beyin' : '') + (d.varyant ? ' varyant' : '') + '" role="button" tabindex="0">' + tm(d.tur, 'tm-b') + '<span class="z-tur">' + ETIKET[d.tur] + '</span><span class="z-kod">' + bel(d.kod) + '</span><span class="z-isim">' + d.ad + '</span></div>';
+  }
+  function yTel(t) {
+    return '<div class="y-tel"><svg class="tel" width="100%" height="100%">' + telCiz(0, '50%', '100%', '50%', { renk: t.renk, varyant: t.varyant }) + '</svg>' + ketiketHtml(t) + '</div>';
+  }
+  BOLUM.yatay = function () {
+    var kap = q('#yatay-ornek'); if (!kap) return;
+    kap.innerHTML = '<article class="kart">' + serit('dogrulanmadi', 'DOĞRULANMADI', 'Bu şema henüz kontrol edilmedi. Şemadan teyit et.') +
+      '<div class="kart-bas"><div><span class="z-tur">KABLO</span><h4 class="kart-no">9999</h4></div></div>' +
+      '<div class="y-zincir">' + yDugum({ tur: 'beyin', kod: '99A01', ad: 'Örnek beyin' }) + pin('IV-18', '10', 'HS10', 'sol') +
+      yTel({ no: '9999', renk: 'sw/rt', kesit: '1' }) + pin('P4-5', '3', 'K1', 'sag') + yDugum({ tur: 'role', kod: '98K03', ad: 'Örnek röle' }) + '</div>' +
+      '<div class="ozet"><h4>METİN</h4><p class="kod">Kablo 9999 · Örnek beyin (99A01) soket IV-18 pin 10 (HS10) → Örnek röle (98K03) soket P4-5 pin 3 (K1)</p></div>' +
+      '<div class="kaynak">' + ikon('i-kaynak', 'ik-k') + '<span>Ornek.pdf · sayfa 1 · yol 24 · satır A</span></div></article>';
+  };
+
+  /* ---------- 10. iyi / kötü ---------- */
+  BOLUM.iyikotu = function () {
+    function cift(baslik, kotu, kotuNeden, iyi, iyiNeden) {
+      return '<div class="cift"><h3>' + baslik + '</h3><div class="cift-iki">' +
+        '<div class="kotu"><span class="etiket-kotu">' + ikon('i-kotu', 'ik-k') + 'KÖTÜ</span><div class="ornek-alan">' + kotu + '</div><p class="neden">' + kotuNeden + '</p></div>' +
+        '<div class="iyi"><span class="etiket-iyi">' + ikon('i-iyi', 'ik-k') + 'İYİ</span><div class="ornek-alan">' + iyi + '</div><p class="neden">' + iyiNeden + '</p></div></div></div>';
+    }
+    var h = '';
+    h += cift('Pin etiketi',
+      '<span class="k-pin">IV-18 10 HS10</span>', '11 px, gri üstüne gri (~1,5:1), orantılı font: kol mesafesinde okunmaz, soket / pin / ad ayrımı yok.',
+      pin('IV-18', '10', 'HS10'), '18 px eş aralıklı, kontrast ≥ 7:1, pin numarası ters kutuda, soket simgeli.');
+    h += cift('Bilgi yalnız renkle verilmez',
+      ['role', 'guc', 'motor', 'lamba'].map(function (t, i) { return '<span class="yan" style="gap:6px"><span class="k-nokta" style="background:var(--tur-' + t + ')"></span><span class="kod">' + ['K1', 'G1', 'M1', 'E1'][i] + '</span></span>'; }).join(''),
+      'Renk körü ya da gri tonlamada dört nokta aynı görünür. (Üstteki "Gri" düğmesiyle dene.)',
+      ['role', 'guc', 'motor', 'lamba'].map(function (t, i) { return '<span class="sutun" style="align-items:center">' + tm(t) + '<span class="ad">' + ETIKET[t] + '</span></span>'; }).join(''),
+      'Her tür şekil + glif + yazı taşır; renk yalnız destek.');
+    h += cift('Dokunma hedefi',
+      [1, 2, 3, 4, 5].map(function () { return '<button class="k-dugme" aria-label="x">' + 'x' + '</button>'; }).join(''),
+      '28 px hedefler 2 px arayla: yağlı parmakla yan düğmeye basılır.',
+      [1, 2, 3, 4, 5].map(function () { return '<button class="dugme dugme-ikon" aria-label="x">' + ikon('i-temizle') + '</button>'; }).join(''),
+      '48 px hedef, 8 px boşluk.');
+    h += cift('ŞÜPHELİ görünürlüğü',
+      pin('IV-18', '1?', 'HS10') + ' <span class="k-supheli">(emin değil)</span>',
+      'Küçük, soluk, italik, gri: "atlanabilir" görünür. Oysa bu pine bakıp araca müdahale edilecek.',
+      serit('supheli', 'ŞÜPHELİ', 'Pin 1? net okunamadı. Şemadan kontrol et.'),
+      'Düz amber dolgu + simge + kalın çerçeve + yazı + neden. Kartta kapatılamaz.');
+    h += cift('DOĞRULANMADI konumu',
+      '<div style="width:100%"><div class="kod" style="font-size:var(--boyut-kod);font-weight:700">9999</div><div class="k-supheli" style="margin-top:20px">doğrulanmadı</div></div>',
+      'Altta, küçük, gri: kimse görmez.',
+      '<div style="width:100%">' + serit('dogrulanmadi', 'DOĞRULANMADI', 'Henüz kontrol edilmedi.') + '<div class="kod" style="font-size:var(--boyut-kod);font-weight:700;margin-top:8px">9999</div></div>',
+      'Kartın en üstünde, her sonuçta, şerit olarak.');
+    h += cift('Kablo rengi şeridi',
+      '<span style="display:inline-block;width:36px;height:14px;border-radius:7px;background:var(--kablo-sw)"></span> <span style="display:inline-block;width:36px;height:14px;border-radius:7px;background:var(--kablo-ws)"></span> <span style="display:inline-block;width:36px;height:14px;border-radius:7px;background:var(--kablo-rt)"></span>',
+      'Kenarsız: siyah koyu zeminde, beyaz açık zeminde kaybolur; yazı yok, renk körü okuyamaz.',
+      renkCipi('sw') + renkCipi('ws') + renkCipi('rt'),
+      'Hep 2 px kenarlı (--cizgi-guclu) ve yanında yazılı kısaltma.');
+    h += cift('Çizgi üstünde etiket',
+      '<svg width="100%" height="72" style="display:block"><line x1="0" y1="36" x2="100%" y2="36" stroke="var(--kablo-cizgi)" stroke-width="3"/><line x1="14%" y1="0" x2="14%" y2="100%" stroke="var(--kablo-cizgi)" stroke-width="3"/><line x1="48%" y1="0" x2="48%" y2="100%" stroke="var(--kablo-cizgi)" stroke-width="3"/><text x="42%" y="43" style="font:700 20px var(--font-kod);fill:var(--yazi)">9999</text></svg>',
+      'Yazı çizgilerin üstüne biniyor; rakamlar okunmuyor.',
+      '<div class="tel-kutu" style="min-height:72px"><svg class="tel" width="100%" height="100%"><line x1="0" y1="50%" x2="100%" y2="50%" stroke="var(--kablo-cizgi)" stroke-width="3"/><line x1="14%" y1="0" x2="14%" y2="100%" stroke="var(--kablo-cizgi)" stroke-width="3"/></svg>' + ketiketHtml({ no: '9999' }) + '</div>',
+      'Etiket çipi: dolgulu zemin çizgiyi örter, çevresinde ≥ 8 px boşluk. (Çizim motorunun işi: üst üste binme otomatik testle yakalanır.)');
+    h += cift('Seçili sekme',
+      '<button class="k-sekme">Kapı 1–4</button><button class="k-sekme s">DMUX</button><button class="k-sekme">CPC</button>',
+      'Yalnız zemin tonu biraz farklı: güneşte ve gri tonlamada fark yok.',
+      '<button class="sekme">Kapı 1–4</button><button class="sekme secili">' + ikon('i-secili', 'ik-k') + 'DMUX</button><button class="sekme">CPC</button>',
+      'Dolgu + kalın yazı + onay simgesi.');
+    h += cift('Hiyerarşi: gölge mi çerçeve mi',
+      '<div style="width:100%;padding:12px;border-radius:12px;background:var(--yuzey);box-shadow:0 1px 3px rgba(0,0,0,.18)" class="kod">Cihaz 99A01</div>',
+      'Kartı yalnız hafif gölge ayırıyor; güneşte gölge görünmez, kart zeminle karışır.',
+      '<div style="width:100%;padding:12px;border-radius:12px;background:var(--yuzey);border:var(--cerceve) solid var(--cizgi)" class="kod">Cihaz 99A01</div>',
+      '2 px çerçeve (≥ 3:1). Gölge yalnız açılır katmanda.');
+    h += cift('Büyük harf: i / İ',
+      '<span lang="en" style="text-transform:uppercase;font-weight:700">şüpheli doğrulanmadı</span>',
+      '"lang" yanlışsa ya da yoksa i → I olur: "ŞÜPHELI". Türkçe okuyucu hatayı görür, güveni kırılır.',
+      '<span lang="tr" style="font-weight:700">ŞÜPHELİ DOĞRULANMADI</span>',
+      'Büyük harfli etiketleri doğrudan büyük harfle yaz; <span class="kod">lang="tr"</span>.');
+    h += cift('Ölçek: sığdırmak için küçültme',
+      '<div style="width:100%;height:76px;overflow:hidden"><div style="display:flex;align-items:center;gap:12px;width:760px;transform:scale(.38);transform-origin:left top">' + tm('beyin') + pin('IV-18', '10', 'HS10') + '<span style="flex:1;height:3px;background:var(--kablo-cizgi)"></span>' + ketiketHtml({ no: '9999', renk: 'rt', kesit: '1' }) + '<span style="flex:1;height:3px;background:var(--kablo-cizgi)"></span>' + pin('15', '5', 'NHB') + tm('role') + '</div></div>',
+      'Geniş çizim 360 px\'e sığsın diye %38 küçüldü: pin yazısı ~7 px. (Diyagram ölçeği hiçbir zaman 1\'in altına inmez.)',
+      '<div style="width:100%;display:flex;flex-direction:column">' + zDugum({ tur: 'beyin', kod: '99A01', ad: 'Örnek beyin', pin: ['IV-18', '10', 'HS10'] }) + zTel({ no: '9999', renk: 'rt', kesit: '1' }) + '</div>',
+      'Dar ekranda zincir dikeye döner; yazı boyutu sabit (≥ 16 px), yatay kaydırma yok.');
+    q('#iyikotu-liste').innerHTML = h;
+  };
+
+  isaretle();
+  doldur();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* ==========================================================================
+   diyagram.css — SVG çizim motorunun biçimleri.
+   Renk, boyut, yazı tipi YALNIZ src/tokens.css değişkenlerinden (DESIGN.md). Yerleşim ölçüleri (px) JS'tedir.
+   ========================================================================== */
+
+/* ---- sprite + tür işareti (DESIGN §6; test/referans.html'deki kurallarla aynı, ata-bağımsız seçiciler) ---- */
+.dy-sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+svg.ik { width: var(--simge); height: var(--simge); flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+svg.ik-k { width: var(--simge-kucuk); height: var(--simge-kucuk); }
+.tc { fill: var(--t-zemin); stroke: var(--t-cizgi); stroke-width: 2.5; stroke-linejoin: round; stroke-dasharray: var(--t-kesik, none); }
+.tg { fill: none; stroke: var(--yazi); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.tf, .tn { fill: var(--yazi); stroke: none; }
+svg.tm { width: var(--tur-boyut); height: var(--tur-boyut); flex: none; display: block; }
+svg.tm-b { width: 56px; height: 56px; }
+.t-beyin { --t-cizgi: var(--tur-beyin); --t-zemin: var(--tur-beyin-zemin); }
+.t-soket { --t-cizgi: var(--tur-soket); --t-zemin: var(--tur-soket-zemin); }
+.t-besleme { --t-cizgi: var(--tur-besleme); --t-zemin: var(--tur-besleme-zemin); }
+.t-guc { --t-cizgi: var(--tur-guc); --t-zemin: var(--tur-guc-zemin); }
+.t-salter { --t-cizgi: var(--tur-salter); --t-zemin: var(--tur-salter-zemin); }
+.t-role { --t-cizgi: var(--tur-role); --t-zemin: var(--tur-role-zemin); }
+.t-sigorta { --t-cizgi: var(--tur-sigorta); --t-zemin: var(--tur-sigorta-zemin); }
+.t-toprak { --t-cizgi: var(--tur-toprak); --t-zemin: var(--tur-toprak-zemin); }
+.t-motor { --t-cizgi: var(--tur-motor); --t-zemin: var(--tur-motor-zemin); }
+.t-valf { --t-cizgi: var(--tur-valf); --t-zemin: var(--tur-valf-zemin); }
+.t-lamba { --t-cizgi: var(--tur-lamba); --t-zemin: var(--tur-lamba-zemin); }
+.t-ikaz { --t-cizgi: var(--tur-ikaz); --t-zemin: var(--tur-ikaz-zemin); }
+.t-sensor { --t-cizgi: var(--tur-sensor); --t-zemin: var(--tur-sensor-zemin); }
+.t-direnc { --t-cizgi: var(--tur-direnc); --t-zemin: var(--tur-direnc-zemin); }
+.t-diyot { --t-cizgi: var(--tur-diyot); --t-zemin: var(--tur-diyot-zemin); }
+.t-dugum { --t-cizgi: var(--tur-dugum); --t-zemin: var(--tur-dugum-zemin); }
+.t-diger { --t-cizgi: var(--tur-diger); --t-zemin: var(--tur-diger-zemin); }
+.t-devam { --t-cizgi: var(--tur-devam); --t-zemin: var(--tur-devam-zemin); }
+
+/* ---- kapsayıcı ve kök SVG ---- */
+.dy-kap { position: relative; overflow: hidden; width: 100%; max-width: 100%; touch-action: pan-x pan-y; -webkit-tap-highlight-color: transparent; }
+.dy-kap.dy-yakin { touch-action: none; }
+.dy-kap:focus-visible { outline: var(--odak-kalinlik) solid var(--odak); outline-offset: calc(-1 * var(--odak-kalinlik)); }
+.dy-kap.dy-yakin svg.dy { cursor: grab; }
+svg.dy:focus-visible { outline: var(--odak-kalinlik) solid var(--odak); outline-offset: calc(-1 * var(--odak-kalinlik)); }
+svg.dy { display: block; max-width: none; color: var(--yazi); font-family: var(--font-ui); user-select: none; -webkit-user-select: none; }
+svg.dy .dy-dunya { transform-origin: 0 0; }
+
+/* ---- yazı: DESIGN §4 boyutları; çizgi üstünde 4 px halo (§7) ---- */
+svg.dy text { fill: var(--yazi); stroke: var(--dy-halo, var(--yuzey)); stroke-width: 4px; stroke-linejoin: round; paint-order: stroke; dominant-baseline: central; white-space: pre; font-family: var(--font-ui); }
+svg.dy .dy-e { font-size: var(--boyut-ipucu); font-weight: var(--agirlik-kalin); letter-spacing: var(--harf-etiket); line-height: var(--satir-tablo); fill: var(--yazi-2); }
+svg.dy .dy-i { font-size: var(--boyut-ipucu); font-weight: var(--agirlik-normal); line-height: var(--satir-tablo); fill: var(--yazi-2); }
+svg.dy .dy-g { font-size: var(--boyut-govde); font-weight: var(--agirlik-normal); line-height: var(--satir-tablo); }
+svg.dy .dy-p, svg.dy .dy-pa, svg.dy .dy-k, svg.dy .dy-kb, svg.dy .dy-ki { font-family: var(--font-kod); letter-spacing: var(--harf-kod); font-variant-numeric: slashed-zero; }
+svg.dy .dy-p { font-size: var(--boyut-pin); font-weight: var(--agirlik-kalin); }
+svg.dy .dy-pa { font-size: var(--boyut-pin); font-weight: var(--agirlik-normal); }
+svg.dy .dy-k { font-size: var(--boyut-kod); font-weight: var(--agirlik-kalin); }
+svg.dy .dy-kb { font-size: var(--boyut-ekran); font-weight: var(--agirlik-kalin); }
+svg.dy .dy-ki { font-size: var(--boyut-ipucu); font-weight: var(--agirlik-kalin); }
+svg.dy .dy-yz2 { fill: var(--yazi-2); }
+svg.dy .dy-pasif { fill: var(--yazi-pasif); }
+svg.dy .dy-ters { fill: var(--ters-yazi); stroke: none; }
+svg.dy .dy-yz-supheli { fill: var(--supheli-yazi); stroke: none; }
+svg.dy .dy-yz-hata { fill: var(--hata-yazi); stroke: none; }
+svg.dy .dy-yz-dogrulanmadi { fill: var(--dogrulanmadi-yazi); stroke: none; }
+svg.dy .dy-yz-not { fill: var(--not-yazi); stroke: none; }
+svg.dy .dy-yz-vurgu { fill: var(--yazi-vurgu); }
+svg.dy .dy-prob { visibility: hidden; }
+
+/* çip / kapsül içindeki yazının halo rengi dolguyla aynı olsun */
+svg.dy .dy-halo-ust { --dy-halo: var(--yuzey-ust); }
+svg.dy .dy-halo-supheli { --dy-halo: var(--supheli-zemin); }
+svg.dy .dy-halo-hata { --dy-halo: var(--hata-zemin); }
+svg.dy .dy-halo-secili { --dy-halo: var(--secili-zemin); }
+svg.dy .dy-halo-basili { --dy-halo: var(--yuzey-basili); }
+
+/* ---- simgeler (currentColor, i-… 24×24) ---- */
+svg.dy .dy-ik { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+svg.dy .dy-ik.ik-supheli { color: var(--supheli-yazi); }
+svg.dy .dy-ik.ik-hata { color: var(--hata-yazi); }
+svg.dy .dy-ik.ik-dogrulanmadi { color: var(--dogrulanmadi-yazi); }
+svg.dy .dy-ik.ik-not { color: var(--not-yazi); }
+svg.dy .dy-ik.ik-yz2 { color: var(--yazi-2); }
+svg.dy .dy-ik.ik-yazi { color: var(--yazi); }
+svg.dy .dy-ik.ik-ters { color: var(--ters-yazi); }
+svg.dy .dy-ik.ik-vurgu { color: var(--yazi-vurgu); }
+
+/* ---- kartlar, kapsül, çip ---- */
+svg.dy .dy-kart { fill: var(--yuzey); stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); }
+svg.dy .dy-kart-beyin { stroke: var(--tur-beyin); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-kart-odak { fill: var(--secili-zemin); stroke: var(--vurgu); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-kart-hata { stroke: var(--hata-cizgi); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-kapsul { fill: var(--yuzey-ust); stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); }
+svg.dy .dy-kapsul-bos { fill: none; stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); }
+svg.dy .dy-pinkutu { fill: var(--ters-zemin); stroke: none; }
+svg.dy .dy-cip { fill: var(--yuzey-ust); stroke: var(--cizgi); stroke-width: var(--cerceve); }
+svg.dy .dy-cip-supheli { fill: var(--supheli-zemin); stroke: var(--supheli-cizgi); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-cip-hata { fill: var(--hata-zemin); stroke: var(--hata-cizgi); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-serit { stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); }
+svg.dy .dy-serit-pasif { fill: var(--yazi-pasif); }
+svg.dy .dy-soru { fill: var(--supheli-zemin); stroke: var(--supheli-cizgi); stroke-width: var(--cerceve); }
+svg.dy .dy-soru-y { fill: var(--supheli-yazi); stroke: none; }
+
+/* durum rozetleri (DESIGN §9) */
+svg.dy .dy-roz-supheli { fill: var(--supheli-zemin); stroke: var(--supheli-cizgi); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-roz-hata { fill: var(--hata-zemin); stroke: var(--hata-cizgi); stroke-width: var(--cerceve-kalin); }
+svg.dy .dy-roz-dogrulanmadi { fill: var(--dogrulanmadi-zemin); stroke: var(--dogrulanmadi-cizgi); stroke-width: var(--cerceve); }
+svg.dy .dy-roz-varyant { fill: none; stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); stroke-dasharray: var(--kablo-kesik); }
+svg.dy .dy-roz-not { fill: var(--not-zemin); stroke: var(--not-cizgi); stroke-width: var(--cerceve); }
+svg.dy .dy-roz-yok { fill: var(--yuzey-ust); stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); }
+
+/* ---- tel (DESIGN §7) ---- */
+svg.dy .dy-tel { fill: none; stroke-linejoin: round; stroke-linecap: butt; }
+svg.dy .dy-tel-duz { stroke: var(--kablo-cizgi); stroke-width: var(--kablo-kalinlik); }
+svg.dy .dy-tel-tup { stroke: var(--cizgi-guclu); stroke-width: var(--kablo-tup); }
+svg.dy .dy-tel-ic { stroke-width: var(--kablo-ic); }
+svg.dy .dy-tel-kesik { stroke-dasharray: var(--kablo-kesik); }
+svg.dy .dy-tel-nokta { stroke: var(--kablo-cizgi); stroke-width: var(--cerceve-kalin); stroke-dasharray: 0.1 7; stroke-linecap: round; }
+svg.dy .dy-bag { fill: none; stroke: var(--cizgi-guclu); stroke-width: var(--cerceve-kalin); stroke-linejoin: round; stroke-linecap: butt; }
+svg.dy .dy-ayrac { fill: none; stroke: var(--cizgi-guclu); stroke-width: var(--cerceve-kalin); }
+
+/* ---- cihaz sorgusu bandı ---- */
+svg.dy .dy-bant { fill: var(--yuzey-ust); stroke: none; }
+svg.dy .dy-bant-cizgi { fill: none; stroke: var(--cizgi-guclu); stroke-width: var(--cerceve); }
+svg.dy .dy-ince { fill: none; stroke: var(--cizgi); stroke-width: var(--cerceve-ince); }
+svg.dy .dy-baslik-zemin { fill: var(--yuzey); stroke: none; }
+
+/* ---- dokunulabilir bölgeler ---- */
+svg.dy .dy-dokun { cursor: pointer; outline: none; }
+svg.dy .dy-zemin { fill: transparent; stroke: none; }
+svg.dy .dy-dokun:active > .dy-zemin { fill: var(--yuzey-basili); }
+svg.dy .dy-dokun:active .dy-kart { fill: var(--yuzey-basili); }
+svg.dy .dy-odak-halka { fill: none; stroke: none; pointer-events: none; }
+svg.dy .dy-dokun:focus-visible > .dy-odak-halka { stroke: var(--odak); stroke-width: var(--odak-kalinlik); }
+svg.dy .dy-sag { color: var(--yazi-2); }

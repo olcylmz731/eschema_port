@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0E1216">
+<title>Kablo Bulucu</title>
+<script>
+/* Erken tema: kayıtlı tercih varsa ilk boyamadan önce uygulanır (ışık parlaması olmasın). localStorage hata verebilir. */
+(function () {
+  try {
+    var t = localStorage.getItem('kb-tema');
+    if (t === 'acik' || t === 'koyu') document.documentElement.setAttribute('data-tema', t);
+  } catch (e) { /* dosya yöneticisinden açılışta erişim olmayabilir */ }
+})();
+</script>
+<!--KB:CSS-->
+</head>
+<body>
+<div class="sayfa" id="kb-kok">
+  <header class="ust" id="kb-ust">
+    <div class="ust-satir">
+      <h1 class="ust-baslik">Kablo Bulucu</h1>
+      <div id="kb-tema"></div>
+    </div>
+    <div id="kb-arama"></div>
+    <nav id="kb-sekmeler" aria-label="Sistemler"></nav>
+  </header>
+  <main id="kb-icerik" tabindex="-1">
+    <p class="bilgi" id="kb-yukleniyor" role="status">Yükleniyor…</p>
+  </main>
+  <footer class="alt" id="kb-alt"><p>Veri imzası: <!--KB:IMZA--></p></footer>
+</div>
+<noscript><p class="bilgi">Bu uygulama JavaScript ister. Tarayıcınızda JavaScript kapalı.</p></noscript>
+<!--KB:VERI-->
+<!--KB:JS-->
+</body>
+</html>

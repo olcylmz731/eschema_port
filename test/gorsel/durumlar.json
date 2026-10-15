@@ -1,0 +1,174 @@
+{
+  "_aciklama": "gorsel-elestirmen: ornek sorgular. Gercek veriden KB API ile (KB.izle.kablo(KB.arayuz.db, anahtar)) secildi; secim olcutu notlarda. 'suphe' durumu icin gercek veride kayit YOK (db.istatistik.suphe = 0), arayuz ajaninin sahte verisiyle derlenmis surum kullanilir.",
+  "uygulamalar": {
+    "gercek": ".gecici/gorsel-elestirmen/tur1/kablo-bulucu.kopya.html",
+    "sahte": ".gecici/gorsel-elestirmen/tur1/sahte.kopya.html",
+    "_not": "gercek = dist/kablo-bulucu.html'in 15.10.2026 01:11:38 tarihli kopyasi (sha256 38707e5399c9a42b...; ayni veriyle build.py yeniden derlenince bayt bayt ayni). sahte = ayni kaynakla (src/) .gecici/arayuz/sahte-veri kopyasindan derlendi; veri/ ve sahte-veri/ klasorlerine yazilmadi."
+  },
+  "genislikler": [
+    {
+      "w": 360,
+      "h": 800,
+      "mobil": true
+    },
+    {
+      "w": 412,
+      "h": 915,
+      "mobil": true
+    },
+    {
+      "w": 768,
+      "h": 1024,
+      "mobil": true
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "mobil": false
+    }
+  ],
+  "temalar": [
+    "acik",
+    "koyu"
+  ],
+  "durumlar": [
+    {
+      "id": "bos",
+      "ad": "bos acilis",
+      "sorgu": "",
+      "uygulama": "gercek",
+      "not": "Yeni acilis, sorgu yok."
+    },
+    {
+      "id": "kablo",
+      "ad": "kablo sorgusu",
+      "sorgu": "1sw/rt",
+      "uygulama": "gercek",
+      "not": "Sade, iki uclu, iki renkli (siyah-kirmizi) kablo: 2 dugum, 1 kenar; uygulamanin kendi ornek cipi."
+    },
+    {
+      "id": "uzun",
+      "ad": "uzun zincirli kablo",
+      "sorgu": "0027",
+      "uygulama": "gercek",
+      "not": "Dallanmayan en uzun zincir: 6 dugum, 5 kenar, rt 4 mm2. (Daha uzunlari dalli: 1082/1084/2029 = 16 dugum, 4002/4136/4137 = 15 dugum; 4046 = 5 dugum.)"
+    },
+    {
+      "id": "dalli",
+      "ad": "dallanan kablo",
+      "sorgu": "4002",
+      "uygulama": "gercek",
+      "not": "4002: 15 dugum, 14 kenar, 2 dal (Kapi 1 sema); 7 ara soket, 2 beyin ucu, 1 baska semaya devam."
+    },
+    {
+      "id": "beyin",
+      "ad": "cok soketli beyin",
+      "sorgu": "41A01",
+      "uygulama": "gercek",
+      "not": "Kapi 1 beyni: 30 pin, uc soket (cihaz sorgusu)."
+    },
+    {
+      "id": "bulunamadi",
+      "ad": "bulunamadi",
+      "sorgu": "ZZ999",
+      "uygulama": "gercek",
+      "not": "Veride olmayan kod."
+    },
+    {
+      "id": "suphe",
+      "ad": "supheli iceren sonuc",
+      "sorgu": "9800",
+      "uygulama": "sahte",
+      "not": "SAHTE VERIYLE: gercek veride supheli kayit yok. sahte-1 semasinda 9800 supheli parca (durum 'suphe') iceriyor."
+    }
+  ],
+  "ek": [
+    {
+      "id": "en-uzun-1084",
+      "sorgu": "1084",
+      "uygulama": "gercek",
+      "w": 360,
+      "tema": "acik",
+      "not": "En uzun zincir (16 dugum, dalli): sayfa uzunlugu ve gezinme."
+    },
+    {
+      "id": "liste-40",
+      "sorgu": "40",
+      "uygulama": "gercek",
+      "w": 360,
+      "tema": "acik",
+      "not": "Kismi sorgu: cok sonuclu liste (satir kartlari)."
+    },
+    {
+      "id": "soket-X08.11",
+      "sorgu": "X08.11",
+      "uygulama": "gercek",
+      "w": 360,
+      "tema": "acik",
+      "not": "Soket sorgusu (ornek cipi)."
+    },
+    {
+      "id": "pinadi-D+",
+      "sorgu": "D+",
+      "uygulama": "gercek",
+      "w": 360,
+      "tema": "acik",
+      "not": "Semadaki pin adiyla arama (ornek cipi)."
+    },
+    {
+      "id": "celiskili-9010",
+      "sorgu": "9010",
+      "uygulama": "sahte",
+      "w": 360,
+      "tema": "acik",
+      "not": "SAHTE VERIYLE: celiskili kablo."
+    },
+    {
+      "id": "varyant-9900",
+      "sorgu": "9900",
+      "uygulama": "sahte",
+      "w": 360,
+      "tema": "acik",
+      "not": "SAHTE VERIYLE: varyant kablo."
+    },
+    {
+      "id": "dongulu-9950",
+      "sorgu": "9950",
+      "uygulama": "sahte",
+      "w": 360,
+      "tema": "acik",
+      "not": "SAHTE VERIYLE: dallanan + dongulu zincir."
+    },
+    {
+      "id": "bulunamadi-oneri-41A10",
+      "sorgu": "41A10",
+      "uygulama": "gercek",
+      "w": 360,
+      "tema": "acik",
+      "not": "Yakin yazimli sorgu: 'Sunu mu demek istediniz?' onerisi (bulunamadi durumunun oneri cikan hali)."
+    },
+    {
+      "id": "bulunamadi-oneri-4003",
+      "sorgu": "4003",
+      "uygulama": "gercek",
+      "w": 360,
+      "tema": "acik",
+      "not": "Yakin yazimli sorgu: 'Sunu mu demek istediniz?' onerisi (bulunamadi durumunun oneri cikan hali)."
+    }
+  ],
+  "yaziOlcegi": {
+    "_aciklama": "Android 'yazi boyutu' ayari emulasyonu: kok font-size yuzdesi (rem tabanli olculer buyur). 360x800 mobil, acik tema. Hepsi olculur; goruntu yalniz asagidaki durumlar icin alinir.",
+    "olcekler": [
+      1.75,
+      2.0
+    ],
+    "goruntu": [
+      "bos",
+      "kablo",
+      "dalli",
+      "beyin",
+      "suphe"
+    ]
+  },
+  "_notlar": "tur1: dist 15.10 01:11:38 kopyasi + ayni kaynaktan derlenen sahte surum. Tur2'de 'uygulamalar' yollarini yeni dist ve yeniden derlenen sahte kopyaya cevir (cek.mjs durumlar.json'dan okur). Yazi olcegi vakalari yalniz kaydirmali dilim uretir (captureBeyondViewport Page.setFontSizes'i sifirlar)."
+}

@@ -1,0 +1,236 @@
+{
+ "sema": "alternator-mars",
+ "uretim": "2026-10-14 01:04:00",
+ "ozet": {
+  "A": 29,
+  "B": 28,
+  "ayni": 26,
+  "alanFarki": 2,
+  "yalnizA": 1,
+  "yalnizB": 0,
+  "belirsiz": 0,
+  "cihazFarki": 0,
+  "kunyeFarki": 0,
+  "varsayilanFarki": 1,
+  "izgaraFarki": 2,
+  "taslakKablo": 29,
+  "kararBekleyen": 4
+ },
+ "ayni": [
+  {
+   "a": "a001",
+   "b": "b020"
+  },
+  {
+   "a": "a002",
+   "b": "b001"
+  },
+  {
+   "a": "a003",
+   "b": "b027"
+  },
+  {
+   "a": "a004",
+   "b": "b002"
+  },
+  {
+   "a": "a005",
+   "b": "b005"
+  },
+  {
+   "a": "a006",
+   "b": "b028"
+  },
+  {
+   "a": "a007",
+   "b": "b008"
+  },
+  {
+   "a": "a008",
+   "b": "b009"
+  },
+  {
+   "a": "a009",
+   "b": "b010"
+  },
+  {
+   "a": "a010",
+   "b": "b011"
+  },
+  {
+   "a": "a011",
+   "b": "b012"
+  },
+  {
+   "a": "a012",
+   "b": "b019"
+  },
+  {
+   "a": "a013",
+   "b": "b003"
+  },
+  {
+   "a": "a014",
+   "b": "b004"
+  },
+  {
+   "a": "a015",
+   "b": "b025"
+  },
+  {
+   "a": "a016",
+   "b": "b006"
+  },
+  {
+   "a": "a017",
+   "b": "b007"
+  },
+  {
+   "a": "a018",
+   "b": "b026"
+  },
+  {
+   "a": "a019",
+   "b": "b013"
+  },
+  {
+   "a": "a022",
+   "b": "b017"
+  },
+  {
+   "a": "a023",
+   "b": "b023"
+  },
+  {
+   "a": "a025",
+   "b": "b016"
+  },
+  {
+   "a": "a026",
+   "b": "b024"
+  },
+  {
+   "a": "a027",
+   "b": "b018"
+  },
+  {
+   "a": "a028",
+   "b": "b021"
+  },
+  {
+   "a": "a029",
+   "b": "b022"
+  }
+ ],
+ "alanFarki": [
+  {
+   "fid": "F001",
+   "a": "a020",
+   "b": "b015",
+   "eslesme": "bulanik",
+   "farklar": [
+    {
+     "alan": "uc2.tur",
+     "A": "dugum",
+     "B": "soket"
+    },
+    {
+     "alan": "uc2.soket",
+     "A": null,
+     "B": "X03.31"
+    },
+    {
+     "alan": "uc2.pin",
+     "A": null,
+     "B": "3"
+    },
+    {
+     "alan": "uc2.kod",
+     "A": "~d1",
+     "B": null
+    }
+   ],
+   "taslakId": "k020"
+  },
+  {
+   "fid": "F002",
+   "a": "a021",
+   "b": "b014",
+   "eslesme": "bulanik",
+   "farklar": [
+    {
+     "alan": "uc1.tur",
+     "A": "dugum",
+     "B": "cihaz"
+    },
+    {
+     "alan": "uc1.cihaz",
+     "A": null,
+     "B": "01R02"
+    },
+    {
+     "alan": "uc1.kod",
+     "A": "~d1",
+     "B": null
+    }
+   ],
+   "taslakId": "k021"
+  }
+ ],
+ "yalnizA": [
+  {
+   "fid": "F003",
+   "a": "a024",
+   "metin": "(etiketsiz): düğüm ~d1 ↔ soket X03.31 pin 3",
+   "adaylarB": [],
+   "kirpinti": "s1/orta/r2c2",
+   "taslakId": "k028"
+  }
+ ],
+ "yalnizB": [],
+ "belirsiz": [],
+ "cihazFarki": [],
+ "kunyeFarki": [],
+ "varsayilanFarki": [
+  {
+   "fid": "F004",
+   "alan": "varsayilan.ham",
+   "A": "BEMERKUNGEN : Alle Leitungen ohne Querschnittangaben haben A = 0.75mm2 | Alle Leitungen ohne Farbangaben sind ws | Darstellung generell stromlos bzw. drucklos | ------- Variante / # Systemlieferant | (Gelenk simgesi) Darstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant",
+   "B": "Alle Leitungen ohne Querschnittangaben haben A = 0.75mm²\nAlle Leitungen ohne Farbangaben sind ws\nDarstellung generell stromlos bzw. drucklos\n------- Variante / # Systemlieferant\nDarstellung der Steckverbindung Gelenk nur bei Gelenkfahrzeugen relevant"
+  }
+ ],
+ "izgaraFarki": [
+  {
+   "iid": "I001",
+   "a": "a012",
+   "b": "b019",
+   "A": {
+    "sayfa": 1,
+    "yol": "13",
+    "satir": "B"
+   },
+   "B": {
+    "sayfa": 1,
+    "yol": "13",
+    "satir": "C"
+   },
+   "not": "yol farkı 2'den büyük ya da satır farklı"
+  },
+  {
+   "iid": "I002",
+   "a": "a018",
+   "b": "b026",
+   "A": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "B"
+   },
+   "B": {
+    "sayfa": 1,
+    "yol": "22",
+    "satir": "C"
+   },
+   "not": "yol farkı 2'den büyük ya da satır farklı"
+  }
+ ]
+}
